@@ -1,7 +1,3 @@
-#
-
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -12,4 +8,4 @@ alias git='LC_ALL=en_GB git'
 PS1='[\u@\h]\$'
 
 eval "$(starship init bash)"
-eval "$(zoxide init bash --cmd cd)"
+eval "$(zoxide init bash)"
