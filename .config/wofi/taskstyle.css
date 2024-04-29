@@ -1,0 +1,25 @@
+window {
+background-color: transparent;
+}
+
+#input {
+    border: none;
+    color: transparent
+    font-weight: bold;
+    background-color: transparent;
+   	outline: none;
+    margin-bottom: -32px;
+}
+
+#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}
+#text{
+color:#cdd6f4;
+}
+#entry {
+  background-color: rgba(26,27,38,0.75);
+}
+#entry:selected {
+  outline: 2px solid #cdd6f4;
+}

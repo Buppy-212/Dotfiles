@@ -1,0 +1,40 @@
+## Wallpaper Config
+
+## General
+show=dmenu
+prompt=Choose...
+normal_window=false
+layer=overlay
+term=kitty
+columns=3
+
+## Geometry
+width=90%
+height=96%
+location=top
+orientation=vertical
+halign=fill
+line_wrap=off
+dynamic_lines=false
+
+## Images
+allow_images=true
+image_size=560
+
+## Search
+exec_search=false
+hide_search=false
+parse_search=false
+insensitive=true
+matching=fuzzy
+
+## Other
+hide_scroll=true
+no_actions=true
+sort_order=alphabetical
+gtk_dark=true
+filter_rate=100
+
+## Keys
+key_forward=Tab
+key_exit=Escape

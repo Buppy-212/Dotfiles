@@ -1,0 +1,41 @@
+## Task Switcher Config
+
+## General
+show=dmenu
+prompt=
+normal_window=false
+layer=overlay
+term=kitty
+columns=1
+
+## Geometry
+width=100%
+height=98%
+location=center
+orientation=vertical
+halign=fill
+valign=start
+line_wrap=on
+dynamic_lines=false
+
+## Images
+allow_images=true
+image_size=128
+
+## Search
+exec_search=false
+hide_search=false
+parse_search=false
+insensitive=true
+matching=fuzzy
+
+## Other
+hide_scroll=true
+no_actions=true
+sort_order=alphabetical
+gtk_dark=true
+filter_rate=100
+
+## Keys
+key_forward=Tab
+key_exit=Escape
