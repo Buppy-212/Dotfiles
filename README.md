@@ -6,17 +6,25 @@ Ensure you have the following installed on your system
 
 ### Git 
 ```
-pacman -S git 
+sudo pacman -S git 
 ``` 
+
+### Github Cli (optional)
+
+``` 
+sudo pacman -S github-cli
+```
+
 ### Stow 
 
 ``` 
-pacman -S stow 
+sudo pacman -S stow 
 ```
 
 ## Installation 
 ```
-$ git clone git@github.com/Buppy-212/Dotfiles.git
+$ gh repo clone Buppy-212/Dotfiles (github-cli way)
+$ https://github.com/Buppy-212/Dotfiles.git (normal way)
 $ cd dotfiles 
 $ stow .
 ```
