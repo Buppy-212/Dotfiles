@@ -24,7 +24,7 @@ $docker_context\
 [ ](fg:#33658A)\
 """
 command_timeout = 5000
-add_newline = false
+add_newline = true
 
 [username]
 style_user = "bg:#3B4252"
