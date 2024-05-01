@@ -1,16 +1,39 @@
 format = """
+[](#3B4252)\
+$python\
+$username\
+[](bg:#434C5E fg:#3B4252)\
 $directory\
+[](fg:#434C5E bg:#4C566A)\
 $git_branch\
 $git_status\
-$nodejs\
-$rust\
+[](fg:#4C566A bg:#86BBD8)\
+$c\
+$elixir\
+$elm\
 $golang\
-$php\
-$time\
-$character"""
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+[ ](fg:#33658A)\
+"""
+command_timeout = 5000
+add_newline = false
+
+[username]
+style_user = "bg:#3B4252"
+style_root = "bg:#3B4252"
+show_always = true
+format = '[$user ]($style)'
 
 [directory]
-style = "fg:#e3e5e5"
+style = "bg:#434C5E"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
@@ -23,31 +46,70 @@ truncation_symbol = "…/"
 "Videos" = "󰕧"
 ".config" = ""
 
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
 [git_branch]
-symbol = ""
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+symbol = ""
+style = "bg:#4C566A"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#4C566A"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#3B4252"
+format = '[(\($virtualenv\) )]($style)'
 
 [rust]
 symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[golang]
-symbol = "ﳑ"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[php]
-symbol = ""
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[time]
-disabled = true
-time_format = "%R" # Hour:Minute Format
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
-
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
