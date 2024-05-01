@@ -42,36 +42,28 @@
             "keyColor": "red"
         },
         {
-            "type": "font",
-            "keyColor": "green"
-        },
-        {
-            "type": "cursor",
-            "keyColor": "yellow"
-        },
-        {
             "type": "terminal",
-            "keyColor": "blue"
+            "keyColor": "green"
         },
         {
             "type": "terminalfont",
-            "keyColor": "magenta"
+            "keyColor": "yellow"
         },
         {
             "type": "cpu",
-            "keyColor": "cyan"
+            "keyColor": "blue"
         },
         {
             "type": "gpu",
-            "keyColor": "white"
+            "keyColor": "magenta"
         },
         {
             "type": "memory",
-            "keyColor": "red"
+            "keyColor": "cyan"
         },
         {
             "type": "display",
-            "keyColor": "green"
+            "keyColor": "white"
         },
     ]
 }
