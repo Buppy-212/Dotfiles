@@ -12,3 +12,4 @@ bind -m vi-insert 'Control-l: clear-screen'
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash --cmd cd)"
+eval "$(fzf --bash)"
