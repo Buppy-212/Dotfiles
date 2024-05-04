@@ -11,7 +11,7 @@ columns=1
 ## Geometry
 width=100%
 height=98%
-location=center
+location=top
 orientation=vertical
 halign=fill
 valign=start
