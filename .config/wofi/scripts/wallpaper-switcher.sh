@@ -3,7 +3,7 @@
 # WALLPAPERS PATH
 DIR=$HOME/Pictures/wallpapers/
 
-PICS=($(ls ${DIR} | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
+PICS=($(find ${DIR} -maxdepth 2 | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
 
 RANDOM_PIC=${PICS[$RANDOM % ${#PICS[@]}]}
 
@@ -15,11 +15,11 @@ STYLE="$HOME/.config/wofi/style.css"
 wofi_command="wofi  --conf $CONFIG --style $STYLE"
 
 menu() {
-	printf "img:%s/random/random.jpg\n" "$DIR"
+	printf "img:%s/.ignore/random/random.jpg\n" "$DIR"
 	# Here we are looping in the PICS array that is composed of all images in the $DIR
 	# folder
 	for i in "${!PICS[@]}"; do
-		printf "img:%s%s\n" "$DIR" "${PICS[$i]}"
+		printf "img:%s\n" "${PICS[$i]}"
 	done
 
 }
@@ -31,10 +31,10 @@ main() {
 	if [[ -z $choice ]]; then return; fi
 
 	# random choice case
-	if [ "$choice" = "img:$DIR/random/random.jpg" ]; then
-		hyprctl hyprpaper preload "${DIR}/${RANDOM_PIC}"
-		hyprctl hyprpaper wallpaper "eDP-1,${DIR}/${RANDOM_PIC}"
-		hyprctl hyprpaper wallpaper "HDMI-A-1,${DIR}/${RANDOM_PIC}"
+	if [ "$choice" = "img:$DIR/.ignore/random/random.jpg" ]; then
+		hyprctl hyprpaper preload "${RANDOM_PIC}"
+		hyprctl hyprpaper wallpaper "eDP-1,${RANDOM_PIC}"
+		hyprctl hyprpaper wallpaper "HDMI-A-1,${RANDOM_PIC}"
 		hyprctl hyprpaper unload all
 		return
 	fi
