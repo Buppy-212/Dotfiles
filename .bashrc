@@ -1,7 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls="eza"
+alias ll="eza -alh "
+alias tree="eza --tree"
 alias grep='grep --color=auto'
 alias git='LANG=en_GB git'
 alias git='LC_ALL=en_GB git'
