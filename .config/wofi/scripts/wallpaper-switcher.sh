@@ -7,6 +7,8 @@ PICS=($(find ${DIR} -maxdepth 2 | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
 
 RANDOM_PIC=${PICS[$RANDOM % ${#PICS[@]}]}
 
+# Hyprpaper config file
+HYPRPAPER="$HOME/.config/hypr/hyprpaper.conf"
 # WOFI STYLES
 CONFIG="$HOME/.config/wofi/wallpaperconfig"
 STYLE="$HOME/.config/wofi/style.css"
@@ -30,24 +32,15 @@ main() {
 	# no choice case
 	if [[ -z $choice ]]; then return; fi
 
+	NEW_PIC=$(echo "$choice" | cut -d: -f 2)
 	# random choice case
 	if [ "$choice" = "img:$DIR/.ignore/random/random.jpg" ]; then
-		hyprctl hyprpaper preload "${RANDOM_PIC}"
-		hyprctl hyprpaper wallpaper "eDP-1,${RANDOM_PIC}"
-		hyprctl hyprpaper unload all
-		hyprctl hyprpaper preload "${RANDOM_PIC}"
-		hyprctl hyprpaper wallpaper "HDMI-A-1,${RANDOM_PIC}"
-		hyprctl hyprpaper unload all
-		return
+		NEW_PIC="$RANDOM_PIC"
 	fi
 
-	new_pic=$(echo "$choice" | cut -d: -f 2)
-	hyprctl hyprpaper preload "$new_pic"
-	hyprctl hyprpaper wallpaper "eDP-1,$new_pic"
-	hyprctl hyprpaper unload all
-	hyprctl hyprpaper preload "$new_pic"
-	hyprctl hyprpaper wallpaper "HDMI-A-1,$new_pic"
-	hyprctl hyprpaper unload all
+	killall hyprpaper
+	printf "preload = %s \nwallpaper = ,%s \nsplash = false \nipc = false" "${NEW_PIC}" "${NEW_PIC}" >"$HYPRPAPER"
+	hyprpaper
 }
 
 # Check if wofi is already running
