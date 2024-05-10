@@ -39,7 +39,7 @@ main() {
 	fi
 
 	killall hyprpaper
-	printf "preload = %s \nwallpaper = ,%s \nsplash = false \nipc = false" "${NEW_PIC}" "${NEW_PIC}" >"$HYPRPAPER"
+	printf "preload = %s \nwallpaper = ,%s \nsplash = false \nipc = false " "${NEW_PIC}" "${NEW_PIC}" >"$HYPRPAPER"
 	hyprpaper
 }
 
