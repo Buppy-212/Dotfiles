@@ -34,6 +34,7 @@ main() {
 	if [ "$choice" = "img:$DIR/.ignore/random/random.jpg" ]; then
 		hyprctl hyprpaper preload "${RANDOM_PIC}"
 		hyprctl hyprpaper wallpaper "eDP-1,${RANDOM_PIC}"
+		hyprctl hyprpaper unload all
 		hyprctl hyprpaper preload "${RANDOM_PIC}"
 		hyprctl hyprpaper wallpaper "HDMI-A-1,${RANDOM_PIC}"
 		hyprctl hyprpaper unload all
@@ -42,9 +43,10 @@ main() {
 
 	new_pic=$(echo "$choice" | cut -d: -f 2)
 	hyprctl hyprpaper preload "$new_pic"
-	hyprctl hyprpaper wallpaper "HDMI-A-1,$new_pic"
-	hyprctl hyprpaper preload "$new_pic"
 	hyprctl hyprpaper wallpaper "eDP-1,$new_pic"
+	hyprctl hyprpaper unload all
+	hyprctl hyprpaper preload "$new_pic"
+	hyprctl hyprpaper wallpaper "HDMI-A-1,$new_pic"
 	hyprctl hyprpaper unload all
 }
 
