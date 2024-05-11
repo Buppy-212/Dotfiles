@@ -1,6 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+PS1='[\u@\h]\$'
 # Replace ls with eza
 alias ls="eza --icons"
 alias ll="eza -alh --icons"
@@ -9,11 +10,6 @@ alias tree="eza -T --icons"
 # Grep colours
 alias grep='grep --color=auto'
 
-# Git language
-alias git='LANG=en_GB git'
-alias git='LC_ALL=en_GB git'
-
-PS1='[\u@\h]\$'
 # vi mode keybindings
 set -o vi
 
