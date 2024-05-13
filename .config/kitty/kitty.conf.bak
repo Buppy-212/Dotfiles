@@ -14,7 +14,7 @@ mouse_hide_wait  2.0
 
 # URLs
 url_style        dotted
-# url_color        #0087bd
+url_color        #0087bd
 detect_urls      yes
 open_url_with    default
 
@@ -66,6 +66,6 @@ map f12 launch --allow-remote-control kitty +kitten broadcast --match-tab state:
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night Moon
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
