@@ -1,25 +1,28 @@
 window {
-background-color: transparent;
+  background-color: transparent;
 }
 
 #input {
-    border: none;
-    color: transparent
-    font-weight: bold;
-    background-color: transparent;
-   	outline: none;
-    margin-bottom: -32px;
+  border: none;
+  border-radius: 0px;
+  color: #c0caf5;
+  background-color: rgba(26, 27, 38, 0.75);
+  outline: none;
+  margin-bottom: 0px;
+  color: #c0caf5;
+  font-weight: bold;
 }
 
-#input > image.left {
-  -gtk-icon-transform:scaleX(0);
+#text {
+  color: #c0caf5;
+  font-weight: bold;
 }
-#text{
-color:#cdd6f4;
-}
+
 #entry {
-  background-color: rgba(26,27,38,0.75);
+  background-color: rgba(26, 27, 38, 0.75);
+  border-radius: 0px;
 }
+
 #entry:selected {
-  outline: 2px solid #cdd6f4;
+  background-color: rgba(40, 52, 87, 0.75)
 }

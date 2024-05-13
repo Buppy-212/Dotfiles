@@ -2,7 +2,7 @@
 
 ## General
 show=dmenu
-prompt=Choose...
+prompt=Search
 normal_window=false
 layer=overlay
 term=kitty

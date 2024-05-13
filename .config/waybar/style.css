@@ -9,18 +9,18 @@
 
 window#waybar {
   background: rgba(26, 27, 38, 0.95);
-  color: #cdd6f4;
+  color: #c0caf5;
 }
 
 tooltip {
   background: #1a1b26;
   opacity: 0.8;
   border-radius: 10px;
-  border: 2px solid #cdd6f4;
+  border: 2px solid #c0caf5;
 }
 
 tooltip label {
-  color: #cdd6f4;
+  color: #c0caf5;
 }
 
 #custom-power_btn {
