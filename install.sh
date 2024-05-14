@@ -38,6 +38,7 @@ PACMAN_PKGS=(
 	"stow"
 	"github-cli"
 	"tmux"
+	"ufw"
 	# Fonts ---------------------------------------------------------------
 	"ttf-jetbrains-mono-nerd"
 	"noto-fonts"
@@ -57,6 +58,7 @@ PACMAN_PKGS=(
 	"swappy"
 	"grim"
 	"slurp"
+	"sddm"
 	# Applications --------------------------------------------------------
 	"zathura"
 	"mpv"
@@ -77,6 +79,12 @@ AUR_PKGS=(
 	"hyprshade"
 )
 
+SERVICES=(
+	"bluetooth"
+	"sddm"
+	"cups"
+)
+
 echo "Installing yay..."
 cd "$HOME" || exit
 git clone https://aur.archlinux.org/yay.git
@@ -93,6 +101,16 @@ for PKG in "${AUR_PKGS[@]}"; do
 	yay -S "$PKG"
 done
 
+echo "Set up xdg user directories"
+cd "$HOME" || exit
+xdg-user-dirs-update
+
 echo "Installing dotfiles..."
 cd "$HOME"/Dotfiles || exit
-stow .
+stow . -D install.sh
+
+echo "Enabling startup programs"
+for SERVICE in "${SERVICES[@]}"; do
+	echo "ENABLING: ${SERVICE}"
+	sudo systemctl enable "$SERVICE"
+done
