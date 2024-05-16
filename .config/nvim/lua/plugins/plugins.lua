@@ -62,7 +62,7 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       transparent = true,
-      style = "moon",
+      style = "storm",
       light_style = "day",
       terminal_colors = true,
       brightness = 1,
@@ -101,5 +101,13 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
 }
