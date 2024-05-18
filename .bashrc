@@ -14,6 +14,11 @@ bind 'set show-all-if-ambiguous on'
 # Interactive zoxide on Control-f
 bind '"\C-f":"cdi\n"'
 
+# F-keys to launch common programs 
+bind '"\eOP":"nvim\n"'
+bind '"\eOQ":"yazi\n"'
+bind '"\eOR":"btop\n"'
+
 # Shell integrations
 eval "$(starship init bash)"
 eval "$(zoxide init bash --cmd cd)"
