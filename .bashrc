@@ -6,6 +6,7 @@ PS1='[\u@\h]\$'
 alias ls="eza --icons"
 alias ll="eza -alh --icons"
 alias tree="eza -T --icons"
+alias e="yazi"
 
 # Grep colours
 alias grep='grep --color=auto'
