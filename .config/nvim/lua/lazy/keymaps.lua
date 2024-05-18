@@ -13,4 +13,4 @@ map("n", "<leader>wv", "<cmd>wincmd v<cr>", { desc = "Split vertically" })
 map("n", "<leader>wh", "<cmd>wincmd s<cr>", { desc = "Split Horizontally" })
 
 -- Terminal
-map("n", "<leader>t", "<cmd>term<cr>", { desc = "Terminal" })
+map("n", "<leader>t", "<cmd>split | terminal<cr>", { desc = "Terminal" })

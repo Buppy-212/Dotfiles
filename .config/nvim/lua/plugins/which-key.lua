@@ -11,6 +11,7 @@ return {
       mode = { "n", "v" },
       ["<leader>c"] = { name = "+code" },
       ["<leader>f"] = { name = "+file/find" },
+      ["<leader>h"] = { name = "+harpoon" },
       ["<leader>x"] = { name = "+diagnostics/quickfix" },
       ["<leader>w"] = { name = "+windows" },
     },

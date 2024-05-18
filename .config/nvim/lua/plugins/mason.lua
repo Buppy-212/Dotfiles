@@ -1,14 +1,20 @@
 return {
-	"williamboman/mason.nvim",
-	dependencies = {
-		"neovim/nvim-lspconfig",
-		"williamboman/mason-lspconfig",
-		"mfussenegger/nvim-dap",
-		"rcarriga/nvim-dap-ui",
-		"mfussenegger/nvim-lint",
-		"mhartington/formatter.nvim"
-	},
-	config = function()
-	require("mason").setup()
-	end,
+  "williamboman/mason.nvim",
+  dependencies = {
+    "neovim/nvim-lspconfig",
+    "williamboman/mason-lspconfig",
+    "mfussenegger/nvim-dap",
+    "rcarriga/nvim-dap-ui",
+    "mfussenegger/nvim-lint",
+    "mhartington/formatter.nvim",
+  },
+  config = function()
+    require("mason").setup()
+    require("mason-lspconfig").setup()
+    require("mason-lspconfig").setup_handlers({
+      function(server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup({})
+      end,
+    })
+  end,
 }
