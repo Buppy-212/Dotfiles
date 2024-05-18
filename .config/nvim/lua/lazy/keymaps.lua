@@ -15,3 +15,8 @@ map("n", "<leader>wh", "<cmd>wincmd s<cr>", { desc = "Split Horizontally" })
 -- Terminal
 map("n", "<leader>tt", "<cmd>split | terminal<cr>", { desc = "Terminal (bottom)" })
 map("n", "<leader>tv", "<cmd>vsplit | terminal<cr>", { desc = "Terminal (right)" })
+
+-- Buffers
+map("n", "<leader>bl", "<cmd>bnext<cr>", { desc = "Right buffer" })
+map("n", "<leader>bh", "<cmd>bprevious<cr>", { desc = "Left buffer" })
+map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })

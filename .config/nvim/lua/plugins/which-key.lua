@@ -9,6 +9,7 @@ return {
     plugins = { spelling = true },
     defaults = {
       mode = { "n", "v" },
+      ["<leader>b"] = { name = "+buffers" },
       ["<leader>c"] = { name = "+code" },
       ["<leader>f"] = { name = "+file/find" },
       ["<leader>h"] = { name = "+harpoon" },
