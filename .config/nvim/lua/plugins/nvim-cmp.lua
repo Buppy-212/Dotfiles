@@ -12,7 +12,7 @@ return {
       build = "make install_jsregexp",
     },
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
-    "rafamadriz/friendly-snippets", -- useful snippets
+    "hrsh7th/cmp-nvim-lsp", -- lsp completion
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   config = function()

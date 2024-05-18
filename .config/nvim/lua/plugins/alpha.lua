@@ -41,16 +41,23 @@ return {
     }
 
     -- Set menu
+    local buttonhl = function(shortcut, text, command, hl)
+      local button = dashboard.button(shortcut, text, command)
+      button.opts.hl_shortcut = hl
+      return button
+    end
     dashboard.section.buttons.val = {
-      dashboard.button("n", "   New File", "<cmd>ene<CR>"),
-      dashboard.button("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>"),
-      dashboard.button("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>"),
-      dashboard.button("h", "󰛢   Harpoon", function()
+      buttonhl("n", "   New File", "<cmd>ene<CR>", "Number"),
+      buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
+      buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
+      buttonhl("e", "   File Explorer", "<cmd>Oil<CR>", "Number"),
+      buttonhl("h", "󰛢   Harpoon", function()
         toggle_telescope(harpoon:list())
-      end),
-      dashboard.button("l", "󰒲   Lazy", "<cmd>Lazy<CR>"),
-      dashboard.button("x", "󰁯   Restore Session", "<cmd>lua require('persistence').load({ last = true })<CR>"),
-      dashboard.button("q", "   Quit", "<cmd>qa<CR>"),
+      end, "Number"),
+      buttonhl("l", "󰒲   Lazy", "<cmd>Lazy<CR>", "Number"),
+      buttonhl("g", "󰊢   Git", "<cmd>LazyGit<CR>", "Number"),
+      buttonhl("x", "󰁯   Restore Session", "<cmd>lua require('persistence').load({ last = true })<CR>", "Number"),
+      buttonhl("q", "   Quit", "<cmd>qa<CR>", "Number"),
     }
 
     -- Send config to alpha
@@ -58,5 +65,6 @@ return {
 
     -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+    vim.keymap.set("n", "<leader>a", "<cmd>Alpha<cr>", { desc = "Alpha" })
   end,
 }

@@ -15,6 +15,7 @@ return {
       function(server_name) -- default handler (optional)
         require("lspconfig")[server_name].setup({})
       end,
+      vim.keymap.set("n", "<leader>cm", "<cmd>Mason<cr>", { desc = "Mason" }),
     })
   end,
 }

@@ -1,15 +1,17 @@
 # My Dotfiles
 
-## Requirements 
+## Requirements
 
 Ensure you have the following installed on your system
 
-### Git 
-```
-sudo pacman -S git 
-``` 
+### Git
 
-## Installation 
+```
+sudo pacman -S git
+```
+
+## Installation
+
 ```
 $ https://github.com/Buppy-212/Dotfiles.git
 $ cd Dotfiles
