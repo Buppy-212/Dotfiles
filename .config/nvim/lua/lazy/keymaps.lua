@@ -9,8 +9,8 @@ map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>ww", "<cmd>wincmd w<cr>", { desc = "Other window" })
 map("n", "<leader>wd", "<cmd>wincmd o<cr>", { desc = "Delete other windows" })
 map("n", "<leader>wq", "<cmd>wincmd q<cr>", { desc = "Delete window" })
-map("n", "<leader>w|", "<cmd>wincmd v<cr>", { desc = "Split vertically" })
-map("n", "<leader>w-", "<cmd>wincmd s<cr>", { desc = "Split Horizontally" })
+map("n", "<leader>wv", "<cmd>wincmd v<cr>", { desc = "Split vertically" })
+map("n", "<leader>wh", "<cmd>wincmd s<cr>", { desc = "Split Horizontally" })
 
 -- Terminal
 map("n", "<leader>t", "<cmd>term<cr>", { desc = "Terminal" })
