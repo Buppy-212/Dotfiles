@@ -19,6 +19,9 @@ bind '"\eOP":"nvim\n"'
 bind '"\eOQ":"yazi\n"'
 bind '"\eOR":"btop\n"'
 
+# Fzf colorscheme
+. "$HOME"/.config/fzf/theme.sh
+
 # Shell integrations
 eval "$(starship init bash)"
 eval "$(zoxide init bash --cmd cd)"
