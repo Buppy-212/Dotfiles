@@ -26,3 +26,6 @@ map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Right buffer" })
 map("n", "<leader>bh", "<cmd>bprevious<cr>", { desc = "Left buffer" })
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Left buffer" })
 map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
+
+-- Clear Search
+map("n", "<C-l>", "<cmd>nohlsearch<cr>", { desc = "Clear search" })
