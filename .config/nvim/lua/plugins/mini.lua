@@ -1,6 +1,7 @@
 return {
   "echasnovski/mini.nvim",
   version = "*",
+  event = "BufReadPre",
   config = function()
     require("mini.ai").setup()
     require("mini.align").setup()
