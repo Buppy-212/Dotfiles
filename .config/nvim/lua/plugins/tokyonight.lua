@@ -14,8 +14,8 @@ return {
         variables = { italic = true },
         constants = { italic = true },
         modules = { italic = true },
-        sidebars = "transparent",
-        floats = "transparent",
+        sidebars = "dark",
+        floats = "dark",
       },
     })
     -- load the colorscheme

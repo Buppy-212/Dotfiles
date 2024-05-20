@@ -32,5 +32,4 @@ return {
     },
     "nvim-telescope/telescope-ui-select.nvim",
   },
-  ft = "mason", -- SOLUTION
 }
