@@ -18,6 +18,7 @@ bind '"\C-f":"cdi\n"'
 bind '"\eOP":"nvim\n"'
 bind '"\eOQ":"yazi\n"'
 bind '"\eOR":"btop\n"'
+bind '"\eOS":"tmux a || tmux\n"'
 
 # Fzf colorscheme
 . "$HOME"/.config/fzf/theme.sh
