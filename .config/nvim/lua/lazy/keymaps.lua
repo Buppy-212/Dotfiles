@@ -8,7 +8,7 @@ map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 -- Windows
 map("n", "<leader>ww", "<cmd>wincmd w<cr>", { desc = "Other window" })
 map({ "n", "t" }, "<C-h>", "<cmd>wincmd h<cr>", { desc = "Swap to left window" })
-map({ "n", "t" }, "<C-j>", "<cmd>wincmd j<cr>", { desc = "Swap to bellow window" })
+map({ "n", "t" }, "<C-j>", "<cmd>wincmd j<cr>", { desc = "Swap to below window" })
 map({ "n", "t" }, "<C-k>", "<cmd>wincmd k<cr>", { desc = "Swap to right window" })
 map({ "n", "t" }, "<C-l>", "<cmd>wincmd l<cr>", { desc = "Swap to above window" })
 map("n", "<leader>wd", "<cmd>wincmd o<cr>", { desc = "Delete other windows" })
