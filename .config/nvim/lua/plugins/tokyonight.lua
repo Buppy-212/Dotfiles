@@ -14,7 +14,7 @@ return {
         variables = { italic = true },
         constants = { italic = true },
         modules = { italic = true },
-        sidebars = "dark",
+        sidebars = "transparent",
         floats = "dark",
       },
     })

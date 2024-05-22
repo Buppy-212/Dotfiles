@@ -48,7 +48,7 @@ return {
     end
     dashboard.section.buttons.val = {
       buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
-      buttonhl("e", "   File Explorer", "<cmd>Oil<CR>", "Number"),
+      buttonhl("e", "   File Explorer", "<cmd>Neotree position=current<CR>", "Number"),
       buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
       buttonhl(
         "a",

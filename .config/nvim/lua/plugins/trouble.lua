@@ -10,4 +10,8 @@ return {
     { "<leader>xl", "<cmd>TroubleToggle loclist<CR>", desc = "Open trouble location list" },
     { "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Open todos in trouble" },
   },
+  config = function()
+    require("trouble").setup()
+    require("todo-comments").setup()
+  end,
 }
