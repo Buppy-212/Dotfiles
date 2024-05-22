@@ -47,10 +47,16 @@ return {
       return button
     end
     dashboard.section.buttons.val = {
-      buttonhl("n", "   New File", "<cmd>ene<CR>", "Number"),
-      buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
-      buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
+      buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
       buttonhl("e", "   File Explorer", "<cmd>Oil<CR>", "Number"),
+      buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
+      buttonhl(
+        "a",
+        "󰘓   Find Hidden File",
+        "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>",
+        "Number"
+      ),
+      buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
       buttonhl("h", "󰛢   Harpoon", function()
         toggle_telescope(harpoon:list())
       end, "Number"),
