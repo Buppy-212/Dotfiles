@@ -1,32 +1,10 @@
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
+  keys = { { "<leader>a", "<cmd>Alpha<cr>", desc = "Alpha" } },
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
-
-    local harpoon = require("harpoon")
-    harpoon:setup({})
-
-    -- basic telescope configuration
-    local conf = require("telescope.config").values
-    local function toggle_telescope(harpoon_files)
-      local file_paths = {}
-      for _, item in ipairs(harpoon_files.items) do
-        table.insert(file_paths, item.value)
-      end
-
-      require("telescope.pickers")
-        .new({}, {
-          prompt_title = "Harpoon",
-          finder = require("telescope.finders").new_table({
-            results = file_paths,
-          }),
-          previewer = conf.file_previewer({}),
-          sorter = conf.generic_sorter({}),
-        })
-        :find()
-    end
 
     -- Set header
     dashboard.section.header.val = {
@@ -57,9 +35,7 @@ return {
         "Number"
       ),
       buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
-      buttonhl("h", "󰛢   Harpoon", function()
-        toggle_telescope(harpoon:list())
-      end, "Number"),
+      buttonhl("t", "   To Do", "<cmd>TodoTelescope<cr>", "Number"),
       buttonhl("l", "󰒲   Lazy", "<cmd>Lazy<CR>", "Number"),
       buttonhl("g", "󰊢   Git", "<cmd>LazyGit<CR>", "Number"),
       buttonhl("x", "󰁯   Restore Session", "<cmd>lua require('persistence').load({ last = true })<CR>", "Number"),
@@ -71,6 +47,5 @@ return {
 
     -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
-    vim.keymap.set("n", "<leader>a", "<cmd>Alpha<cr>", { desc = "Alpha" })
   end,
 }

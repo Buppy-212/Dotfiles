@@ -1,6 +1,6 @@
 return {
   "gbprod/yanky.nvim",
-  event = "BufReadPre",
+  event = "VeryLazy",
   dependencies = {
     "nvim-telescope/telescope.nvim",
   },

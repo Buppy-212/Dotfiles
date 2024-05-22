@@ -16,7 +16,7 @@ return {
       ["<leader>n"] = { name = "+notifications" },
       ["<leader>t"] = { name = "+terminal" },
       ["<leader>w"] = { name = "+windows" },
-      ["<leader>x"] = { name = "+diagnostics/quickfix" },
+      ["<leader>x"] = { name = "+diagnostics/todo" },
     },
   },
   config = function(_, opts)
