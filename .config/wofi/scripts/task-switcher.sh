@@ -10,7 +10,7 @@ readarray -t TITLE < <(hyprctl clients | grep title: | sed "s/title: //g")
 
 # Wofi Command
 CONFIG="$HOME/.config/wofi/taskconfig"
-STYLE="$HOME/.config/wofi/taskstyle.css"
+STYLE="$HOME/.config/wofi/style.css"
 
 wofi_command="wofi  --conf $CONFIG --style $STYLE"
 
