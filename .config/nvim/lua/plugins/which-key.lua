@@ -14,7 +14,6 @@ return {
       ["<leader>f"] = { name = "+file/find" },
       ["<leader>h"] = { name = "+harpoon" },
       ["<leader>n"] = { name = "+notifications" },
-      ["<leader>t"] = { name = "+terminal" },
       ["<leader>w"] = { name = "+windows" },
       ["<leader>x"] = { name = "+diagnostics/todo" },
     },
