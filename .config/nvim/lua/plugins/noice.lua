@@ -31,5 +31,11 @@ return {
     vim.keymap.set("n", "<Leader>ne", "<cmd>Noice enable<cr>", { desc = "Enable" })
     vim.keymap.set("n", "<Leader>nd", "<cmd>Noice disable<cr>", { desc = "Disable" })
     vim.keymap.set("n", "<Leader>nn", "<cmd>Noice dismiss<cr>", { desc = "Dismiss" })
+
+    require("notify").setup({
+      timeout = 500,
+      top_down = false,
+      render = "compact",
+    })
   end,
 }
