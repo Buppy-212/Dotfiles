@@ -10,11 +10,6 @@ return {
   keys = { { "<leader>e", "<cmd>Neotree toggle reveal reveal_force_cwd<cr>", desc = "File Explorer" } },
   opts = {
     close_if_last_window = true,
-    filesystem = {
-      filtered_items = {
-        hide_dotfiles = false,
-      },
-    },
     window = {
       position = "right",
     },
