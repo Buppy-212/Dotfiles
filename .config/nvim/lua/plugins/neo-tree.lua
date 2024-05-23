@@ -16,7 +16,7 @@ return {
       },
     },
     window = {
-      position = "left",
+      position = "right",
     },
   },
 }
