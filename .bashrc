@@ -1,6 +1,6 @@
 # Replace ls with eza
-alias ls="eza --icons"
-alias ll="eza -alh --icons"
+alias ls="eza --icons --group-directories-first"
+alias ll="eza -alh --icons --group-directories-first"
 alias tree="eza -T --icons"
 
 # Grep colours
