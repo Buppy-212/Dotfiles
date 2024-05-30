@@ -17,7 +17,7 @@ STYLE="$HOME/.config/wofi/style.css"
 wofi_command="wofi  --conf $CONFIG --style $STYLE"
 
 menu() {
-	printf "img:%s/.ignore/random/random.jpg\n" "$DIR"
+	printf "img:%s/.random.jpg\n" "$DIR"
 	# Here we are looping in the PICS array that is composed of all images in the $DIR
 	# folder
 	for i in "${!PICS[@]}"; do
@@ -34,7 +34,7 @@ main() {
 
 	NEW_PIC=$(echo "$choice" | cut -d: -f 2)
 	# random choice case
-	if [ "$choice" = "img:$DIR/.ignore/random/random.jpg" ]; then
+	if [ "$choice" = "img:$DIR/.random.jpg" ]; then
 		NEW_PIC="$RANDOM_PIC"
 	fi
 
