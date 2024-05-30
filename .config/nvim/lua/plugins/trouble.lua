@@ -12,6 +12,5 @@ return {
   },
   config = function()
     require("trouble").setup()
-    require("todo-comments").setup()
   end,
 }
