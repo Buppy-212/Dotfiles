@@ -12,6 +12,15 @@ return {
     close_if_last_window = true,
     window = {
       position = "right",
+      mappings = {
+        ["<space>"] = false,
+        ["<tab>"] = function()
+          vim.cmd("wincmd h")
+        end,
+        ["<s-tab>"] = function()
+          vim.cmd("wincmd h")
+        end,
+      },
     },
   },
 }
