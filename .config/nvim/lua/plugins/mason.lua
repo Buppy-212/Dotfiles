@@ -17,5 +17,12 @@ return {
       end,
       vim.keymap.set("n", "<leader>cm", "<cmd>Mason<cr>", { desc = "Mason" }),
     })
+    require("lspconfig").lua_ls.setup({
+      settings = {
+        Lua = {
+          diagnostics = { globals = { "vim" } },
+        },
+      },
+    })
   end,
 }

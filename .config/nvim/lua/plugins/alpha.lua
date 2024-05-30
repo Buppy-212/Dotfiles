@@ -25,8 +25,8 @@ return {
       return button
     end
     dashboard.section.buttons.val = {
-      buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
       buttonhl("e", "   File Explorer", "<cmd>Neotree position=current<CR>", "Number"),
+      buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
       buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
       buttonhl(
         "a",
@@ -35,9 +35,7 @@ return {
         "Number"
       ),
       buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
-      buttonhl("t", "   To Do", "<cmd>TodoTelescope<cr>", "Number"),
       buttonhl("l", "󰒲   Lazy", "<cmd>Lazy<CR>", "Number"),
-      buttonhl("g", "󰊢   Git", "<cmd>LazyGit<CR>", "Number"),
       buttonhl("x", "󰁯   Restore Session", "<cmd>lua require('persistence').load({ last = true })<CR>", "Number"),
       buttonhl("q", "   Quit", "<cmd>qa<CR>", "Number"),
     }

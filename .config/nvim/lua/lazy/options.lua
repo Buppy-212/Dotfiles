@@ -8,3 +8,9 @@ vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.diagnostic.config({
+  virtual_text = true,
+  update_in_insert = false,
+  signs = false,
+  underline = true,
+})

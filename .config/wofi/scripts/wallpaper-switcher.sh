@@ -3,7 +3,7 @@
 # WALLPAPERS PATH
 DIR=$HOME/Pictures/wallpapers/
 
-PICS=($(find ${DIR} -maxdepth 2 | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
+PICS=($(find "${DIR}" -not -path "*/.*" | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
 
 RANDOM_PIC=${PICS[$RANDOM % ${#PICS[@]}]}
 
