@@ -24,5 +24,9 @@ return {
         },
       },
     })
+    vim.keymap.set("n", "<leader>cr", "<cmd> lua vim.lsp.buf.rename()<cr>", { desc = "Rename" })
+    vim.keymap.set("n", "<leader>cd", "<cmd> lua vim.lsp.buf.definition()<cr>", { desc = "Definition" })
+    vim.keymap.set("n", "<leader>ca", "<cmd> lua vim.lsp.buf.code_action()<cr>", { desc = "Action" })
+    vim.keymap.set("n", "<leader>ch", "<cmd> lua vim.lsp.buf.hover()<cr>", { desc = "Hover" })
   end,
 }
