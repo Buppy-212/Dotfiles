@@ -81,6 +81,15 @@ tooltip label {
   margin-right: 8px;
 }
 
+#idle_inhibitor {
+  padding: 0px 8px;
+  color: #cdd6f4;
+}
+
+#idle_inhibitor.activated {
+  color: #f7768e;
+}
+
 .modules-left {
   border-radius: 10px;
   background: rgba(26, 27, 38, 0.95);
