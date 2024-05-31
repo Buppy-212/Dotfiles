@@ -1,12 +1,5 @@
 return {
-  "NvChad/nvim-colorizer.lua",
+  "brenoprata10/nvim-highlight-colors",
   event = "VeryLazy",
-  opts = {
-    user_default_options = {
-      RRGGBBAA = true,
-      AARRGGBB = true,
-      rgb_fn = true,
-      hsl_fn = true,
-    },
-  },
+  opts = {},
 }

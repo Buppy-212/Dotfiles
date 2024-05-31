@@ -3,13 +3,13 @@
   border-radius: 0;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
-  font-size: 16px;
   min-height: 0px;
 }
 
 window#waybar {
   background: rgba(26, 27, 38, 0.95);
   color: #c0caf5;
+  font-size: 16px;
 }
 
 tooltip {
@@ -30,25 +30,18 @@ tooltip label {
 }
 
 #workspaces {
-  color: #f7768e;
   padding: 0px 5px;
   margin-left: 3px;
   margin-right: 0px;
 }
 
 #workspaces button {
-  padding: 0 1px;
+  padding: 0px 2px;
+  color: #c0caf5;
+}
+
+#workspaces button.active {
   color: #f7768e;
-  margin: 1px;
-}
-
-#taskbar button {
-  color: rgba(26, 27, 38, 0.8);
-  border-radius: 5px;
-}
-
-#taskbar button.active {
-  background-color: rgba(169, 177, 214, 0.5);
 }
 
 #custom-updates {
