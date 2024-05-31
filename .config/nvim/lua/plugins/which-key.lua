@@ -12,6 +12,7 @@ return {
       ["<leader>b"] = { name = "+buffers" },
       ["<leader>c"] = { name = "+code" },
       ["<leader>f"] = { name = "+file/find" },
+      ["<leader>g"] = { name = "+git" },
       ["<leader>h"] = { name = "+harpoon" },
       ["<leader>n"] = { name = "+notifications" },
       ["<leader>w"] = { name = "+windows" },
