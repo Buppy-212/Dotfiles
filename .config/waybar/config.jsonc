@@ -39,7 +39,9 @@
 		"format-icons": {
 			"activated": "",
 			"deactivated": ""
-		}
+		},
+		"start_activated": true,
+		"on-click": "pidof hypridle && killall hypridle || hypridle & disown"
 	},
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
