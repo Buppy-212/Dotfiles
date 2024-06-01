@@ -18,7 +18,6 @@
 		"tray",
 		"custom/updates",
 		"clock",
-		"idle_inhibitor",
 		"custom/power_btn"
 	],
 	"custom/power_btn": {
@@ -33,15 +32,6 @@
 			"default": ""
 		},
 		"on-click": "activate"
-	},
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "",
-			"deactivated": ""
-		},
-		"start_activated": true,
-		"on-click": "pidof hypridle && killall hypridle || hypridle & disown"
 	},
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
