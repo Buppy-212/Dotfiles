@@ -23,6 +23,6 @@ return {
       { "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", desc = "Preview Hunk" },
       { "<leader>gt", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Toggle Blame" },
     },
-    opts = {},
+    opts = { signcolumn = false, numhl = true },
   },
 }
