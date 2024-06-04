@@ -13,6 +13,7 @@ return {
     },
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "hrsh7th/cmp-nvim-lsp", -- lsp completion
+    "rafamadriz/friendly-snippets",
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   config = function()
