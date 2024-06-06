@@ -22,5 +22,6 @@ return {
         end,
       },
     },
+    filesystem = { hijack_netrw_behavior = "open_current" },
   },
 }
