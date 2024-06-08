@@ -30,28 +30,35 @@ tooltip label {
 }
 
 #workspaces {
-  padding: 0px 5px;
   margin-left: 3px;
   margin-right: 0px;
+  border-radius: 10px;
+  background-color: #16161e;
 }
 
 #workspaces button {
   padding: 0px 2px;
+  color: #7aa2f7;
+}
+
+#workspaces button.empty {
   color: #c0caf5;
 }
 
 #workspaces button.active {
-  color: #f7768e;
+  background-color: #e0af68;
+  color: #15161e;
+  border-radius: 10px;
 }
 
 #custom-updates {
-  color: #a9b1d6;
+  color: #c0caf5;
   margin-right: 3px;
   margin-left: 3px;
 }
 
 #clock {
-  color: #a9b1d6;
+  color: #c0caf5;
   margin-left: 3px;
 }
 

@@ -26,11 +26,7 @@
 		"tooltip": false
 	},
 	"hyprland/workspaces": {
-		"format": "{icon}",
-		"format-icons": {
-			"empty": "",
-			"default": ""
-		},
+		"format": "{id}",
 		"on-click": "activate"
 	},
 	"mpris": {
