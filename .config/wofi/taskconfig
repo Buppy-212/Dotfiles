@@ -3,7 +3,7 @@
 ## General
 show=dmenu
 prompt=Tasks
-normal_window=true
+normal_window=false
 layer=overlay
 term=kitty
 columns=1
