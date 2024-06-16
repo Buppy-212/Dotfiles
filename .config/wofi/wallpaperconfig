@@ -3,7 +3,7 @@
 ## General
 show=dmenu
 prompt=Search
-normal_window=false
+normal_window=true
 layer=overlay
 term=kitty
 columns=3
