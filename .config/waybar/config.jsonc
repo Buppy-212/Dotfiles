@@ -27,7 +27,9 @@
 	},
 	"hyprland/workspaces": {
 		"format": "{id}",
-		"on-click": "activate"
+		"on-click": "activate",
+		"all-outputs": true,
+		"move-to-monitor": true
 	},
 	"mpris": {
 		"format": "{player_icon} {dynamic}",
