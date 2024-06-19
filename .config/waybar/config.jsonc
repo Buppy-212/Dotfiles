@@ -16,8 +16,8 @@
 		"battery",
 		"pulseaudio",
 		"tray",
-		"clock",
 		"custom/updates",
+		"clock",
 		"custom/power_btn"
 	],
 	"custom/power_btn": {
@@ -95,14 +95,15 @@
 	},
 	"tray": {
 		"icon-size": 16,
-		"spacing": 7
+		"spacing": 8
 	},
 	"custom/updates": {
 		"format": "{}",
 		"exec": "~/.config/waybar/scripts/update-sys",
 		"on-click": "~/.config/waybar/scripts/update-sys update",
-		"interval": 300,
-		"tooltip": false
+		"interval": 3600,
+		"return-type": "json",
+		"tooltip": true
 	},
 	"clock": {
 		"interval": 60,
