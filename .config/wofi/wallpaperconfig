@@ -2,24 +2,24 @@
 
 ## General
 show=dmenu
-prompt=Search
+prompt=Wallpapers
 normal_window=false
 layer=overlay
 term=kitty
-columns=3
+columns=1
 
 ## Geometry
-width=90%
-height=75%
-location=center
+width=20%
+height=97%
+location=top_left
 orientation=vertical
-halign=fill
+halign=fit
 line_wrap=off
 dynamic_lines=false
 
 ## Images
 allow_images=true
-image_size=560
+image_size=370
 
 ## Search
 exec_search=false

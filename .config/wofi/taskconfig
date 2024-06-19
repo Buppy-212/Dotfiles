@@ -10,7 +10,7 @@ columns=1
 
 ## Geometry
 width=75%
-height=50%
+height=75%
 location=center
 orientation=vertical
 valign=start

@@ -9,9 +9,9 @@ term=kitty
 columns=1
 
 ## Geometry
-width=40%
-height=30%
-location=center
+width=20%
+height=97%
+location=top_left
 orientation=vertical
 halign=fill
 line_wrap=off
