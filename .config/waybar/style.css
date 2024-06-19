@@ -8,7 +8,7 @@
 
 window#waybar {
   background: rgba(26, 27, 38, 0.95);
-  color: #c0caf5;
+  color: #c8d3f5;
   font-size: 16px;
 }
 
@@ -16,11 +16,11 @@ tooltip {
   background: #1a1b26;
   opacity: 0.8;
   border-radius: 10px;
-  border: 2px solid #c0caf5;
+  border: 2px solid #c8d3f5;
 }
 
 tooltip label {
-  color: #c0caf5;
+  color: #c8d3f5;
 }
 
 #custom-power_btn {
@@ -42,7 +42,7 @@ tooltip label {
 }
 
 #workspaces button.empty {
-  color: #c0caf5;
+  color: #c8d3f5;
 }
 
 #workspaces button.active {
@@ -52,13 +52,13 @@ tooltip label {
 }
 
 #custom-updates {
-  color: #c0caf5;
+  color: #c8d3f5;
   margin-right: 3px;
   margin-left: 3px;
 }
 
 #clock {
-  color: #c0caf5;
+  color: #c8d3f5;
   margin-left: 3px;
 }
 

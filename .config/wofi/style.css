@@ -6,9 +6,9 @@ window {
 
 #input {
   border: none;
-  color: #c0caf5;
+  color: #c8d3f5;
   font-weight: bold;
-  background-color: #1a1b26;
+  background-color: transparent;
   outline: none;
   border-radius: 15px;
   margin-bottom: 5px;
@@ -16,10 +16,9 @@ window {
 
 #outer-box {
   padding: 10px;
-  border: 2px solid #c0caf5;
-  color: #1a1b26;
+  border: 2px solid #82aaff;
   border-radius: 5px;
-  background-color: #1a1b26;
+  background-color: rgba(34, 36, 54, 0.9);
 }
 
 #scroll {
@@ -29,10 +28,10 @@ window {
 
 #entry:selected {
   border-radius: 10px;
-  background-color: rgba(40, 52, 87, 0.75);
+  background-color: rgba(45, 63, 118, 0.9);
 }
 
 #text {
-  color: #c0caf5;
+  color: #c8d3f5;
   font-weight: bold;
 }
