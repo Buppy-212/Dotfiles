@@ -3,18 +3,16 @@
 # WALLPAPERS PATH
 DIR=$HOME/Pictures/wallpapers/
 
-PICS=($(find "${DIR}" -not -path "*/.*" | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
+readarray -t PICS < <(find "${DIR}" -not -path '*/.*' | grep -e ".jpg$" -e ."jpeg$" -e ".png$")
 
 RANDOM_PIC=${PICS[$RANDOM % ${#PICS[@]}]}
 
-# Hyprpaper config file
-HYPRPAPER="$HOME/.config/hypr/hyprpaper.conf"
 # WOFI STYLES
 CONFIG="$HOME/.config/wofi/wallpaperconfig"
 STYLE="$HOME/.config/wofi/style.css"
 
 ## Wofi Command
-wofi_command="wofi  --conf $CONFIG --style $STYLE"
+WOFI_COMMAND="wofi  --conf $CONFIG --style $STYLE"
 
 menu() {
 	printf "img:%s/.random.jpg\n" "$DIR"
@@ -27,19 +25,19 @@ menu() {
 }
 
 main() {
-	choice=$(menu | ${wofi_command})
+	CHOICE=$(menu | ${WOFI_COMMAND})
 
 	# no choice case
-	if [[ -z $choice ]]; then return; fi
+	if [[ -z $CHOICE ]]; then return; fi
 
-	NEW_PIC=$(echo "$choice" | cut -d: -f 2)
+	NEW_PIC=$(echo "$CHOICE" | cut -d: -f 2)
 	# random choice case
-	if [ "$choice" = "img:$DIR/.random.jpg" ]; then
+	if [ "$CHOICE" = "img:$DIR/.random.jpg" ]; then
 		NEW_PIC="$RANDOM_PIC"
 	fi
 
+	ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
 	killall hyprpaper
-	printf "preload = %s \nwallpaper = ,%s \nsplash = false \nipc = false " "${NEW_PIC}" "${NEW_PIC}" >"$HYPRPAPER"
 	hyprpaper
 }
 
