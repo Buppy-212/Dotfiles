@@ -48,8 +48,8 @@
 			"critical": 20
 		},
 		"format": "{icon}",
-		"format-charging": "|",
-		"format-plugged": "|",
+		"format-charging": "󰂄",
+		"format-plugged": "󰂄",
 		"format-alt-click": "click-right",
 		"format-alt": "{icon}",
 		"format-icons": [
