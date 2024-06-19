@@ -1,23 +1,23 @@
 {
 	"layer": "top",
-	"position": "top",
+	"position": "left",
 	"mod": "dock",
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
-	"height": 24,
+	"width": 30,
+	"spacing": 6,
 	"modules-left": [
 		"hyprland/workspaces"
 	],
-	"modules-center": [
-		"mpris"
-	],
+	"modules-center": [],
 	"modules-right": [
+		"mpris",
 		"battery",
 		"pulseaudio",
 		"tray",
-		"custom/updates",
 		"clock",
+		"custom/updates",
 		"custom/power_btn"
 	],
 	"custom/power_btn": {
@@ -32,13 +32,9 @@
 		"move-to-monitor": true
 	},
 	"mpris": {
-		"format": "{player_icon} {dynamic}",
-		"format-paused": "{status_icon} {dynamic}",
-		"dynamic-order": [
-			"title",
-			"artist"
-		],
-		"tooltip": false,
+		"format": "{player_icon}",
+		"format-paused": "{status_icon}",
+		"tooltip": true,
 		"player-icons": {
 			"default": "▶"
 		},
@@ -52,9 +48,9 @@
 			"warning": 30,
 			"critical": 20
 		},
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
+		"format": "{icon}",
+		"format-charging": "|",
+		"format-plugged": "|",
 		"format-alt-click": "click-right",
 		"format-alt": "{icon}",
 		"format-icons": [
@@ -75,7 +71,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}",
-		"format-muted": "",
+		"format-muted": " ",
 		"on-click": "~/.config/waybar/scripts/volume --toggle",
 		"on-click-right": "pavucontrol",
 		"on-scroll-up": "~/.config/waybar/scripts/volume --inc",
@@ -106,11 +102,11 @@
 		"exec": "~/.config/waybar/scripts/update-sys",
 		"on-click": "~/.config/waybar/scripts/update-sys update",
 		"interval": 300,
-		"tooltip": true
+		"tooltip": false
 	},
 	"clock": {
 		"interval": 60,
-		"format": "{:%H:%M}",
+		"format": "{:%H\n%M}",
 		"tooltip": true,
 		"tooltip-format": "{:%A %d %B %Y}"
 	}

@@ -3,18 +3,18 @@
   border-radius: 0;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
+  min-width: 0px;
   min-height: 0px;
 }
 
 window#waybar {
-  background: rgba(26, 27, 38, 0.95);
+  background: rgba(34, 36, 54, 0.95);
   color: #c8d3f5;
-  font-size: 16px;
+  font-size: 11pt;
 }
 
 tooltip {
-  background: #1a1b26;
-  opacity: 0.8;
+  background: rgba(34, 36, 54, 0.95);
   border-radius: 10px;
   border: 2px solid #c8d3f5;
 }
@@ -25,20 +25,15 @@ tooltip label {
 
 #custom-power_btn {
   color: #f7768e;
-  margin-right: 13px;
-  margin-left: 9px;
+  margin-right: 5px;
 }
-
 #workspaces {
-  margin-left: 3px;
-  margin-right: 0px;
-  border-radius: 10px;
-  background-color: #16161e;
+  margin: 3px;
 }
-
 #workspaces button {
-  padding: 0px 2px;
   color: #e0af68;
+  border-radius: 10px;
+  padding: 3px 0px;
 }
 
 #workspaces button.empty {
@@ -48,27 +43,19 @@ tooltip label {
 #workspaces button.active {
   background-color: #e0af68;
   color: #15161e;
-  border-radius: 10px;
 }
 
 #custom-updates {
   color: #c8d3f5;
-  margin-right: 3px;
-  margin-left: 3px;
 }
 
 #clock {
   color: #c8d3f5;
-  margin-left: 3px;
 }
 
 #pulseaudio {
   color: #7aa2f7;
-  margin-right: 15px;
-}
-
-#tray {
-  margin-right: 3px;
+  margin-right: 5px;
 }
 
 #temperature.critical {
@@ -77,21 +64,14 @@ tooltip label {
 
 #battery {
   color: #a6e3a1;
-  border-left: 0px;
-  margin-right: 10px;
 }
 
 #mpris {
-  color: #cdd6f4;
-  background: rgba(26, 27, 38, 0.95);
-  padding: 0px 8px;
-  border-radius: 10px;
-  margin-right: 8px;
+  color: #c8d3f5;
 }
 
 .modules-left {
-  border-radius: 10px;
-  background: rgba(26, 27, 38, 0.95);
+  margin-top: 2px;
 }
 
 .modules-center {
@@ -99,6 +79,5 @@ tooltip label {
 }
 
 .modules-right {
-  border-radius: 10px;
-  background: rgba(26, 27, 38, 0.95);
+  margin-bottom: 2px;
 }
