@@ -11,25 +11,25 @@ set scroll-step 100
 
 # Attempt to recreate Tokyo Night in Zathura
 
-set default-bg                  "rgba(26, 27, 38, 0.85)"
-set default-fg                  "#c0caf5"
+set default-bg                  "#222436"
+set default-fg                  "#c8d3f5"
 
 set statusbar-fg                "#a9b1d6"
 set statusbar-bg                "#24283b"
 
-set inputbar-bg                 "#1a1b26"
+set inputbar-bg                 "#222436"
 set inputbar-fg                 "#73daca"
 
-set notification-bg             "#1a1b26"
+set notification-bg             "#222436"
 set notification-fg             "#73daca"
 
-set notification-error-bg       "#1a1b26"
-set notification-error-fg       "#f7768e"
+set notification-error-bg       "#222436"
+set notification-error-fg       "#ff757f"
 
-set notification-warning-bg     "#1a1b26"
+set notification-warning-bg     "#222436"
 set notification-warning-fg     "#f7768e"
 
-set highlight-color             "#e0af68"
+set highlight-color             "#ffc777"
 set highlight-active-color      "#9aa5ce"
 
 set completion-bg               "#24283b"
@@ -38,7 +38,7 @@ set completion-fg               "#a9b1d6"
 set completion-highlight-fg     "#9aa5ce"
 set completion-highlight-bg     "24283b"
 
-set recolor-lightcolor          "rgba(26, 27, 38, 0.8)"
+set recolor-lightcolor          "#222436"
 set recolor-darkcolor           "#a9b1d6"
 
 set recolor                     "false"
@@ -46,8 +46,7 @@ set recolor-keephue             "false"
 
 map i recolor
 
-set font "JetBrains Mono Regular 12"
+set font "JetBrains Mono Regular 11"
 set guioptions none
 set selection-clipboard clipboard
 map D set "first-page-column 1:1"
-map <C-d> set "first-page-column 1:2"
