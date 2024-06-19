@@ -24,8 +24,9 @@ tooltip label {
 }
 
 #custom-power_btn {
-  color: #f7768e;
+  color: #ff757f;
   margin-right: 5px;
+  padding-bottom: 2px;
 }
 #workspaces {
   margin: 3px;
@@ -42,7 +43,7 @@ tooltip label {
 
 #workspaces button.active {
   background-color: #e0af68;
-  color: #15161e;
+  color: #1b1d2b;
 }
 
 #custom-updates {
@@ -55,16 +56,12 @@ tooltip label {
 }
 
 #pulseaudio {
-  color: #7aa2f7;
+  color: #82aaff;
   margin-right: 6px;
 }
 
-#temperature.critical {
-  color: #e92d4d;
-}
-
 #battery {
-  color: #a6e3a1;
+  color: #c3e88d;
   font-size: 14pt;
 }
 
@@ -73,7 +70,8 @@ tooltip label {
 }
 
 .modules-left {
-  margin-top: 2px;
+  background-color: #2f334d;
+  border-radius: 8px;
 }
 
 .modules-center {
@@ -81,5 +79,7 @@ tooltip label {
 }
 
 .modules-right {
-  margin-bottom: 2px;
+  background-color: #2f334d;
+  padding-top: 4px;
+  border-radius: 8px;
 }
