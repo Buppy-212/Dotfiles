@@ -90,7 +90,7 @@
 			]
 		},
 		"tooltip": true,
-		"tooltip-format": "{icon} at {volume}%"
+		"tooltip-format": "{icon} : {volume}%"
 	},
 	"tray": {
 		"icon-size": 16,
