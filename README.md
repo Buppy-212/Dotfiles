@@ -9,9 +9,9 @@
 - Hyprshade
 - Hypridle
 - Hyprlock
-- Hyprpaper (AUR package)
+- Hyprpaper (AUR)
 - Wofi
-- Wlogout
+- Wlogout (AUR)
 - Waybar
 - Zathura
 - Kitty
