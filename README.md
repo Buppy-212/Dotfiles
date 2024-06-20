@@ -1,6 +1,6 @@
 # My Dotfiles
 
-![My desktop with waybar and neovim running](~/Pictures/Screenshots/20240620-225247.png)
+![My desktop with waybar and neovim running](Screenshots/20240620-225247.png)
 
 ## List of programs
 
