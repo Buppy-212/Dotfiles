@@ -6,20 +6,20 @@ prompt=Wallpapers
 normal_window=false
 layer=overlay
 term=kitty
-columns=1
+columns=3
 
 ## Geometry
-width=20%
-height=97%
-location=top_left
+width=60%
+height=75%
+location=center
 orientation=vertical
-halign=fit
+halign=fill
 line_wrap=off
 dynamic_lines=false
 
 ## Images
 allow_images=true
-image_size=370
+image_size=377
 
 ## Search
 exec_search=false

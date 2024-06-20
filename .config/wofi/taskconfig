@@ -9,7 +9,7 @@ term=kitty
 columns=1
 
 ## Geometry
-width=75%
+width=60%
 height=75%
 location=center
 orientation=vertical

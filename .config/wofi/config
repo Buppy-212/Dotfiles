@@ -6,12 +6,12 @@ prompt=Apps
 normal_window=false
 layer=overlay
 term=kitty
-columns=1
+columns=3
 
 ## Geometry
-width=20%
-height=97%
-location=top_left
+width=60%
+height=75%
+location=center
 orientation=vertical
 halign=fill
 line_wrap=off
