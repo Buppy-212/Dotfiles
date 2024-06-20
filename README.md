@@ -1,5 +1,7 @@
 # My Dotfiles
 
+![My desktop with waybar and neovim running](~/Pictures/Screenshots/20240620-225247.png)
+
 ## List of programs
 
 - Hyprland
@@ -28,7 +30,7 @@
 - Grim (for printscreen)
 - Slurp (for printscreen)
 
-## Requirements
+## Installation
 
 Ensure you have the following installed on your system
 
@@ -44,7 +46,7 @@ sudo pacman -S git
 sudo pacman -S stow
 ```
 
-## Installation
+Then run the following commands from the home directory
 
 ```
 $ https://github.com/Buppy-212/Dotfiles.git
