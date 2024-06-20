@@ -7,7 +7,6 @@ on-button-left=invoke-default-action
 on-button-middle=dismiss-all
 on-button-right=dismiss-all
 on-touch=dismiss
-on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
 font=Noto Sans 14
