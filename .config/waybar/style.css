@@ -74,7 +74,7 @@ tooltip label {
   border-radius: 5px;
   border: 2px solid #82aaff;
   margin-top: 4px;
-  margin-left: 2px;
+  margin-left: 4px;
 }
 
 .modules-center {
@@ -87,5 +87,5 @@ tooltip label {
   border-radius: 5px;
   border: 2px solid #82aaff;
   margin-bottom: 4px;
-  margin-left: 2px;
+  margin-left: 4px;
 }
