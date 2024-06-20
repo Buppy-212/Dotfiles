@@ -33,7 +33,7 @@ tooltip label {
 }
 #workspaces button {
   color: #e0af68;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 3px 0px;
 }
 
@@ -71,9 +71,10 @@ tooltip label {
 
 .modules-left {
   background-color: #2f334d;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 2px solid #82aaff;
   margin-top: 4px;
+  margin-left: 2px;
 }
 
 .modules-center {
@@ -83,7 +84,8 @@ tooltip label {
 .modules-right {
   background-color: #2f334d;
   padding-top: 4px;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 2px solid #82aaff;
   margin-bottom: 4px;
+  margin-left: 2px;
 }
