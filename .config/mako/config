@@ -3,17 +3,17 @@ max-history=5
 sort=-time
 
 # BINDING OPTIONS
-on-button-left=dismiss
+on-button-left=invoke-default-action
 on-button-middle=dismiss-all
 on-button-right=dismiss-all
 on-touch=dismiss
-#on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-font=Fantasque Sans Mono 14
+font=Jetbrains Mono Bold 14
 width=300
 height=100
-margin=10
+margin=4
 padding=15
 border-size=2
 border-radius=10
@@ -30,25 +30,25 @@ max-visible=5
 layer=overlay
 anchor=top-right
 
-background-color=#1e1e2e
-text-color=#d9e0ee
-border-color=#313244
-progress-color=over #89b4fa
+background-color=#222436
+text-color=#c8d3f5
+border-color=#2f334d
+progress-color=over #82aaff
 
 [urgency=low]
-border-color=#313244
+border-color=#82aaff
 default-timeout=2000
 
 [urgency=normal]
-border-color=#313244
+border-color=#82aaff
 default-timeout=5000
 
 [urgency=high]
-border-color=#f38ba8
-text-color=#f38ba8
+border-color=#ff757f
+text-color=#ff757f
 default-timeout=0
 
 [category=mpd]
-border-color=#f9e2af
+border-color=#ffc777
 default-timeout=2000
 group-by=category
