@@ -13,7 +13,7 @@ width=60%
 height=75%
 location=center
 orientation=vertical
-halign=fill
+halign=fit
 line_wrap=off
 dynamic_lines=false
 
