@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-  background: rgba(34, 36, 54, 0.95);
+  background: transparent;
   color: #c8d3f5;
   font-size: 11pt;
 }
@@ -72,6 +72,8 @@ tooltip label {
 .modules-left {
   background-color: #2f334d;
   border-radius: 8px;
+  border: 2px solid #82aaff;
+  margin-top: 4px;
 }
 
 .modules-center {
@@ -82,4 +84,6 @@ tooltip label {
   background-color: #2f334d;
   padding-top: 4px;
   border-radius: 8px;
+  border: 2px solid #82aaff;
+  margin-bottom: 4px;
 }
