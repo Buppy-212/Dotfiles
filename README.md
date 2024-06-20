@@ -18,7 +18,7 @@
 - Btop
 - Yazi
 - Fastfetch
-- cli-visualizer "vis"
+- Cli-visualizer "vis"
 - Fzf
 - Tmux
 - Neovim "nvim"
