@@ -19,7 +19,7 @@ tasks(){
 # Image and text for wofi
 menu() {
 	for i in "${!ADDR[@]}"; do
-		printf "img:%s%s.svg:text:\t%s\t%s\t%s\n" "$ICONDIR" "${CLASS[$i],,}" "${TITLE[$i]}" "${WORKSPACE[$i]}" "${ADDR[$i]}"
+		printf "img:%s%s.svg:text:\t%s\t%s\t%s\n" "$ICONDIR" "${CLASS[$i]}" "${TITLE[$i]}" "${WORKSPACE[$i]}" "${ADDR[$i]}"
 	done
 }
 
