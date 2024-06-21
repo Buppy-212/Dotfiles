@@ -1,5 +1,5 @@
 format = """
-[󰝤](bg:#3B4252 fg:#3B4252)\
+[](fg:#3B4252)\
 $python\
 $username\
 [](bg:#434C5E fg:#3B4252)\
@@ -21,7 +21,7 @@ $rust\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
-[ ](fg:#33658A)\
+[ ](fg:#33658A)\
 """
 command_timeout = 5000
 add_newline = true
