@@ -31,8 +31,8 @@ anchor=top-right
 
 background-color=#222436
 text-color=#c8d3f5
-border-color=#2f334d
-progress-color=over #82aaff
+border-color=#82aaff
+progress-color=over #86e1fc
 
 [urgency=low]
 border-color=#82aaff
