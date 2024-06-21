@@ -4,7 +4,10 @@
 	"passthrough": false,
 	"exclusive": true,
 	"gtk-layer-shell": true,
-	"width": 30,
+	"width": 26,
+	"margin-top": 4,
+	"margin-left": 4,
+	"margin-bottom": 4,
 	"spacing": 6,
 	"modules-left": [
 		"hyprland/workspaces"

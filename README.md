@@ -1,7 +1,7 @@
 # My Dotfiles
 
-![My desktop with waybar and neovim running](Screenshots/20240620-225247.png)
-![Wofi Wallpaper Script](Screenshots/20240620-225903.png)
+![My desktop with waybar and neovim running](Screenshots/neovim.png)
+![Wofi Wallpaper Script](Screenshots/wallpaper-wofi.png)
 
 ## List of programs
 

@@ -1,6 +1,9 @@
 * {
   border: none;
-  border-radius: 0;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
   min-width: 0px;
@@ -8,9 +11,10 @@
 }
 
 window#waybar {
-  background: transparent;
+  background: rgba(34, 36, 54, 0.9);
   color: #c8d3f5;
   font-size: 11pt;
+  border-radius: 5px;
 }
 
 tooltip {
@@ -70,22 +74,9 @@ tooltip label {
 }
 
 .modules-left {
-  background-color: #2f334d;
-  border-radius: 5px;
-  border: 2px solid #82aaff;
-  margin-top: 4px;
-  margin-left: 4px;
-}
-
-.modules-center {
-  background: transparent;
+  margin-top: 2px;
 }
 
 .modules-right {
-  background-color: #2f334d;
-  padding-top: 4px;
-  border-radius: 5px;
-  border: 2px solid #82aaff;
-  margin-bottom: 4px;
-  margin-left: 4px;
+  margin-bottom: 2px;
 }
