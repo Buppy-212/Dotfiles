@@ -73,6 +73,13 @@ tooltip label {
   color: #c8d3f5;
 }
 
+#tray menu {
+  background-color: rgba(34, 36, 54, 0.95);
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid #c8d3f5;
+}
+
 .modules-left {
   margin-top: 2px;
 }
