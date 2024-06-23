@@ -51,6 +51,8 @@
 			"critical": 20
 		},
 		"format": "{icon}",
+		"format-alt": "{capacity}",
+		"format-alt-click": "click-left",
 		"format-charging": "󰂄",
 		"format-plugged": "󰂄",
 		"format-icons": [
@@ -67,7 +69,8 @@
 			"󰁹"
 		],
 		"tooltip": true,
-		"tooltip-format": "{capacity}%: {time} left",
+		"tooltip-format": "{timeTo}\nPower: {power}W",
+		"format-time": "{H}h{m}m",
 		"interval": 90,
 		"on-click-right": "kitty -e btop"
 	},
