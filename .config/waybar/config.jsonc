@@ -53,8 +53,6 @@
 		"format": "{icon}",
 		"format-charging": "󰂄",
 		"format-plugged": "󰂄",
-		"format-alt-click": "click-right",
-		"format-alt": "{icon}",
 		"format-icons": [
 			"󰂎",
 			"󰁺",
@@ -68,8 +66,10 @@
 			"󰂂",
 			"󰁹"
 		],
+		"tooltip": true,
+		"tooltip-format": "{capacity}%: {time} left",
 		"interval": 90,
-		"on-click": "kitty -e btop"
+		"on-click-right": "kitty -e btop"
 	},
 	"pulseaudio": {
 		"format": "{icon}",
