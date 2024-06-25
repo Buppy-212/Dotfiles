@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # WALLPAPERS PATH
-DIR=$HOME/Pictures/wallpapers/
+DIR=$HOME/Pictures/Wallpapers/
 
 readarray -t PICS < <(find "${DIR}" -not -path '*/.*' | grep -e ".jpg$" -e ."jpeg$" -e ".png$")
 
