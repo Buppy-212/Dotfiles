@@ -37,6 +37,7 @@
 		"format": "{player_icon}",
 		"format-paused": "{status_icon}",
 		"tooltip": true,
+		"tooltip-format": "{title} - {artist}",
 		"player-icons": {
 			"default": "▶"
 		},
