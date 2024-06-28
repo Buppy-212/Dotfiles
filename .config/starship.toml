@@ -1,6 +1,5 @@
 format = """
 [](fg:#3B4252)\
-$python\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
@@ -9,6 +8,7 @@ $git_branch\
 $git_status\
 [](fg:#4C566A bg:#86BBD8)\
 $c\
+$python\
 $elixir\
 $elm\
 $golang\
