@@ -10,10 +10,10 @@ WOFI_COMMAND="wofi  --conf $CONFIG --style $STYLE"
 
 # Get Task Info
 tasks(){
-  readarray -t CLASS < <(hyprctl clients | awk 'NR%23==9  {print $2}')
-  readarray -t WORKSPACE < <(hyprctl clients | awk 'NR%23==6  {print $2}')
-  readarray -t ADDR < <(hyprctl clients | awk 'NR%23==1  {print $2}')
-  readarray -t TITLE < <(hyprctl clients | awk 'NR%23==10 {s = ""; for (i = 2; i <= NF; i++) s = s $i " "; print s}')
+  readarray -t CLASS < <(hyprctl clients | awk 'NR%24==10  {print $2}')
+  readarray -t WORKSPACE < <(hyprctl clients | awk 'NR%24==6  {print $2}')
+  readarray -t ADDR < <(hyprctl clients | awk 'NR%24==1  {print $2}')
+  readarray -t TITLE < <(hyprctl clients | awk 'NR%24==11 {s = ""; for (i = 2; i <= NF; i++) s = s $i " "; print s}')
 }
 
 # Image and text for wofi
