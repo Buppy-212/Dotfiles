@@ -1,40 +1,18 @@
 format = """
-[](fg:#3B4252)\
-$username\
-[](bg:#434C5E fg:#3B4252)\
+[](fg:#2f334d)\
 $directory\
-[](fg:#434C5E bg:#4C566A)\
+[](bg:#545c7e fg:#2f334d)\
 $git_branch\
 $git_status\
-[](fg:#4C566A bg:#86BBD8)\
-$c\
-$python\
-$elixir\
-$elm\
-$golang\
-$haskell\
-$java\
-$julia\
-$nodejs\
-$nim\
-$rust\
-[](fg:#86BBD8 bg:#06969A)\
-$docker_context\
-[](fg:#06969A bg:#33658A)\
-[ ](fg:#33658A)\
+[](bg:#82aaff fg:#545c7e)\
+[ ](fg:#82aaff)\
 """
 command_timeout = 5000
 add_newline = true
 
-[username]
-style_user = "bg:#3B4252"
-style_root = "bg:#3B4252"
-show_always = true
-format = '[$user ]($style)'
-
 [directory]
-style = "bg:#434C5E"
-format = "[ $path ]($style)"
+style = "bg:#2f334d"
+format = "[$path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
 
@@ -46,70 +24,11 @@ truncation_symbol = "…/"
 "Videos" = "󰕧"
 ".config" = ""
 
-[c]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[docker_context]
-symbol = " "
-style = "bg:#06969A"
-format = '[ $symbol $context ]($style) $path'
-
-[elixir]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
 [git_branch]
 symbol = ""
-style = "bg:#4C566A"
+style = "bg:#545c7e"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#4C566A"
+style = "bg:#545c7e"
 format = '[$all_status$ahead_behind ]($style)'
-
-[golang]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[haskell]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[java]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[julia]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nim]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[python]
-style = "bg:#3B4252"
-format = '[(\($virtualenv\) )]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
