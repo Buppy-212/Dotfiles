@@ -43,9 +43,9 @@ syntect_theme = "~/.config/yazi/Catppuccin-mocha.tmTheme"
 # : Status {{{
 
 [status]
-separator_open = ""
-separator_close = ""
-separator_style = { fg = "#545c7e", bg = "#2f334d" }
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#2f334d", bg = "#2f334d" }
 
 # Mode
 mode_normal = { fg = "#1e2030", bg = "#82aaff", bold = true }
