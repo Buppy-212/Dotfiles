@@ -28,5 +28,6 @@ map("t", "<C-Space>", "<cmd>wincmd k<cr>", { silent = true })
 -- Ctrl-C works like Escape
 map("i", "<C-C>", "<ESC>", { silent = true })
 
--- Change pwd to parent of file
-map("n", "<leader>e<Space>", "<cmd>cd %:p:h<cr>", { desc = "Change CWD" })
+-- Changing directory
+map("n", "<leader>e.", "<cmd>cd %:p:h<cr>", { desc = "Change CWD" })
+map("n", "<leader>e,", "<cmd>cd ..<cr>", { desc = "Up directory" })
