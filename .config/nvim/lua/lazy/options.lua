@@ -1,13 +1,13 @@
 vim.opt.conceallevel = 2
-vim.cmd("syntax off")
+vim.opt.syntax = "off"
+vim.opt.formatoptions = "t"
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.clipboard = "unnamedplus"
 vim.cmd("set nowrap")
-vim.cmd("set formatoptions-=t")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
-vim.cmd("let g:loaded_netrw = 1")
-vim.cmd("let g:loaded_netrwPlugin = 1")
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.diagnostic.config({

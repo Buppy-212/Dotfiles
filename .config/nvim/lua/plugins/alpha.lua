@@ -25,7 +25,7 @@ return {
       return button
     end
     dashboard.section.buttons.val = {
-      buttonhl("e", "   File Explorer", "<cmd>Neotree position=current<CR>", "Number"),
+      buttonhl("e", "   File Explorer", '<cmd> lua require("yazi").yazi(nil, vim.fn.getcwd())<CR>', "Number"),
       buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
       buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
       buttonhl(
