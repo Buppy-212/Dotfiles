@@ -3,18 +3,11 @@ return {
   event = "VeryLazy",
   keys = {
     {
-      "<leader>fY",
-      function()
-        require("yazi").yazi()
-      end,
-      desc = "Open Yazi",
-    },
-    {
-      "<leader>fy",
+      "<leader>ee",
       function()
         require("yazi").yazi(nil, vim.fn.getcwd())
       end,
-      desc = "Open Yazi (CWD)",
+      desc = "Yazi",
     },
   },
   opts = {
