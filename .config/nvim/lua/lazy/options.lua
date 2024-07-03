@@ -5,9 +5,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.clipboard = "unnamedplus"
-vim.cmd("set nowrap")
-vim.cmd("set splitright")
-vim.cmd("set splitbelow")
+vim.opt.wrap = false
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.diagnostic.config({
@@ -16,3 +16,5 @@ vim.diagnostic.config({
   signs = false,
   underline = true,
 })
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
