@@ -1,6 +1,6 @@
 return {
   "echasnovski/mini.nvim",
-  version = "*",
+  version = false,
   event = "VeryLazy",
   config = function()
     require("mini.ai").setup()
@@ -9,5 +9,6 @@ return {
     require("mini.comment").setup()
     require("mini.surround").setup()
     require("mini.indentscope").setup()
+    require("mini.icons").setup()
   end,
 }

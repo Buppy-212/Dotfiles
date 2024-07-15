@@ -7,22 +7,22 @@ return {
   end,
   opts = {
     plugins = { spelling = true },
+    mode = { "n", "v" },
     defaults = {
-      mode = { "n", "v" },
-      ["<leader>b"] = { name = "+buffers" },
-      ["<leader>c"] = { name = "+code" },
-      ["<leader>e"] = { name = "+explorer" },
-      ["<leader>f"] = { name = "+find" },
-      ["<leader>g"] = { name = "+git" },
-      ["<leader>h"] = { name = "+harpoon" },
-      ["<leader>n"] = { name = "+notifications" },
-      ["<leader>w"] = { name = "+windows" },
-      ["<leader>x"] = { name = "+diagnostics/todo" },
+      { "<leader>b", group = "buffers" },
+      { "<leader>c", group = "code" },
+      { "<leader>e", group = "files" },
+      { "<leader>f", group = "find" },
+      { "<leader>g", group = "git" },
+      { "<leader>h", group = "sessions" },
+      { "<leader>n", group = "notifications" },
+      { "<leader>w", group = "windows" },
+      { "<leader>x", group = "diagnostics/todo" },
     },
   },
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
-    wk.register(opts.defaults)
+    wk.add(opts.defaults)
   end,
 }
