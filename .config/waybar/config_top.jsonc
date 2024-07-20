@@ -49,11 +49,9 @@
       "warning": 30,
       "critical": 20
     },
-    "format": "{icon}",
-    "format-alt": "{capacity}",
-    "format-alt-click": "click-left",
-    "format-charging": "󰂄",
-    "format-plugged": "󰂄",
+    "format": "{capacity}%",
+    "format-charging": "󱐋{capacity}%",
+    "format-plugged": "󱐋{capacity}%",
     "format-icons": [
       "󰂎",
       "󰁺",
