@@ -72,7 +72,7 @@ tooltip label {
 
 #tray menu {
   background-color: rgba(34, 36, 54, 0.95);
-  padding: 8px 0px 8px 0px;
+  padding: 8px;
   border-radius: 10px;
   border: 2px solid #c8d3f5;
 }
