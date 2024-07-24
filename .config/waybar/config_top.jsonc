@@ -22,8 +22,7 @@
   "custom/power_btn": {
     "format": "",
     "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-    "tooltip": false,
-    "on-click-right": "killall waybar;   waybar --config \"$HOME\"/.config/waybar/config.jsonc --style \"$HOME\"/.config/waybar/style.css"
+    "tooltip": false
   },
   "hyprland/workspaces": {
     "format": "{id}",
