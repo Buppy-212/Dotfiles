@@ -39,12 +39,14 @@ play = [
 ]
 view = [{ run = 'swappy -f "$@"' }]
 mscore = [{ run = '/home/will/.local/bin/mscore4portable "$@"' }]
+krita = [{ run = 'flatpak run org.kde.krita "$@"' }]
 exec = [{ run = '"$@"' }]
 
 
 [open]
 rules = [
   { name = "*.mscz", use = "mscore" },
+  { name = "*.kra", use = "krita" },
   { name = "*.Appimage", use = "exec" },
   { name = "*/", use = [
     "edit",
