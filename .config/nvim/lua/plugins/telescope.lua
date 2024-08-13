@@ -5,6 +5,13 @@ return {
     require("telescope").setup({
       extensions = {
         fzf = { fuzzy = true, override_generic_sorter = true, override_file_sorter = true, case_mode = "smart_case" },
+        undo = {
+          side_by_side = true,
+          layout_strategy = "vertical",
+          layout_config = {
+            preview_height = 0.8,
+          },
+        },
       },
       pickers = {
         find_files = {
