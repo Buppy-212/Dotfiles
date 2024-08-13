@@ -28,6 +28,8 @@ return {
       "<cmd> lua require('telescope.builtin').find_files({hidden = true})<cr>",
       { desc = "Hidden files" }
     )
+    require("telescope").load_extension("undo")
+    vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>")
   end,
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -35,5 +37,6 @@ return {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
     },
+    "debugloop/telescope-undo.nvim",
   },
 }
