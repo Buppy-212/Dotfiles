@@ -6,10 +6,9 @@
 ## List of programs
 
 - Hyprland
-- Hyprshade
 - Hypridle
 - Hyprlock
-- Hyprpaper (AUR)
+- Hyprpaper
 - Wofi
 - Wlogout (AUR)
 - Waybar
@@ -21,7 +20,7 @@
 - Btop
 - Yazi
 - Fastfetch
-- Cli-visualizer "vis"
+- Cli-visualizer "vis" (AUR)
 - Fzf
 - Tmux
 - Neovim "nvim"
