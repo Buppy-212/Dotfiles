@@ -30,8 +30,7 @@
   "hyprland/workspaces": {
     "format": "{id}",
     "on-click": "activate",
-    "all-outputs": true,
-    "move-to-monitor": true
+    "all-outputs": true
   },
   "mpris": {
     "format": "{player_icon}",
