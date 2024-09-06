@@ -31,7 +31,7 @@ main(){
 
   # Wofi output
   CHOICE=$(menu | ${WOFI_COMMAND})
-  SPACE=$( echo "$CHOICE" | cut -f 3 )
+  # SPACE=$( echo "$CHOICE" | cut -f 3 )
   WINDOW=$( echo "$CHOICE" | cut -f 4)
 
   # Break condition
@@ -41,7 +41,7 @@ main(){
 
   # Make choice the active task
   if [ "$1" = "switch" ]; then
-    hyprctl dispatch focusworkspaceoncurrentmonitor "$SPACE"
+    # hyprctl dispatch focusworkspaceoncurrentmonitor "$SPACE"
     hyprctl dispatch focuswindow address:0x"$WINDOW"
     hyprctl dispatch bringactivetotop address:0x"$WINDOW"
   fi
