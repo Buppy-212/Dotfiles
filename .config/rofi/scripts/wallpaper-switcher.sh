@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # WALLPAPERS PATH
-cd "$HOME"/Pictures/Wallpapers/ || exit
+DIR=$HOME/Pictures/Wallpapers/
+cd "$DIR" || exit
+
 readarray -t PICS < <(find . | grep -e ".png$")
 
 main() {
@@ -10,7 +12,7 @@ main() {
 	# no choice case
 	if [[ -z $CHOICE ]]; then return; fi
 
-	NEW_PIC=$(echo "$CHOICE" | cut -d: -f 2)
+	NEW_PIC=${CHOICE/\.\//"$DIR"}
 
 	ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
 	killall hyprpaper
