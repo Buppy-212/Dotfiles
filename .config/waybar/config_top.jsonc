@@ -21,7 +21,7 @@
   ],
   "custom/power_btn": {
     "format": "",
-    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+    "on-click": "rofi -show power -config ~/.config/rofi/power.rasi",
     "tooltip": false
   },
   "hyprland/workspaces": {
