@@ -7,6 +7,7 @@ configuration {
   display-format: "{icon}";
   show-icons: true;
   font: "JetBrainsMono Nerd Font 11";
+  hover-select: true;
 } 
 
 @theme "/dev/null"
@@ -32,7 +33,6 @@ window {
   border:		2px 2px 2px 2px;
   border-radius:	3px;
   border-color: @bdr;
-  height:		75%;
 }
 
 mainbox { children: [ inputbar, listview ]; }
@@ -61,6 +61,7 @@ listview {
   dynamic:		true;
   layout:		vertical;
   scrollbar:		false;
+  lines: 4;
 }
 
 element-icon {

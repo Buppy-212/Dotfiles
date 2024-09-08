@@ -1,5 +1,5 @@
 configuration {
-  modi: "drun,window,filebrowser,run";
+  modi: "drun,window,filebrowser";
   sort:	true;
   sorting-method:	"fzf";
   disable-history:	true;
@@ -13,6 +13,7 @@ configuration {
   font: "JetBrainsMono Nerd Font 11";
   show-icons: true;
   icon-theme: "BeautyLine";
+  hover-select: true;
   filebrowser {
   directories-first:	true;
   sorting-method:	"name";
@@ -42,7 +43,6 @@ window {
   border:		2px 2px 2px 2px;
   border-radius:	3px;
   border-color: @bdr;
-  height:		75%;
 }
 
 mainbox { children: [ mode-switcher, inputbar, listview ]; }
@@ -77,18 +77,20 @@ prompt {
 
 entry {
   background-color:	@bg-alt;
-  placeholder:		"Search";
-  expand:		true;
-  padding:		10px;
-  border-radius:	15px;
+  placeholder: "Search";
+  expand: true;
+  padding: 7px;
+  border-radius:	10px;
 }
 
 listview {
-  columns:		2;
-  cycle:		true;
-  dynamic:		true;
-  layout:		vertical;
-  scrollbar:		false;
+  columns: 2;
+  cycle: true;
+  dynamic: true;
+  layout:	vertical;
+  scrollbar: false;
+  lines: 16;
+  padding: 2px 0px 4px 0px;
 }
 
 element {
