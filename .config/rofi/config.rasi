@@ -10,7 +10,7 @@ configuration {
   display-run: "$";
   display-filebrowser: "Files";
   display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font 11";
+  font: "JetBrainsMono Nerd Font 12";
   show-icons: true;
   icon-theme: "BeautyLine";
   hover-select: true;

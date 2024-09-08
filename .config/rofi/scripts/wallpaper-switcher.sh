@@ -7,7 +7,7 @@ cd "$DIR" || exit
 readarray -t PICS < <(find . | grep -e ".png$")
 
 main() {
-  CHOICE=$(for a in "${PICS[@]}"; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -config ~/.config/rofi/wallpaper.rasi -dmenu )
+  CHOICE=$(for a in "${PICS[@]}"; do echo -en "$a\0icon\x1f$a\n" ; done | rofi -i -config ~/.config/rofi/wallpaper.rasi -dmenu )
 
 	# no choice case
 	if [[ -z $CHOICE ]]; then return; fi
