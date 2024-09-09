@@ -36,7 +36,7 @@ return {
       { desc = "Hidden files" }
     )
     require("telescope").load_extension("undo")
-    vim.keymap.set("n", "<leader>fu", "<cmd>Undo<cr>")
+    vim.keymap.set("n", "<leader>fu", "<cmd>Telescope undo<cr>", { desc = "Undo" })
   end,
   dependencies = {
     "nvim-lua/plenary.nvim",
