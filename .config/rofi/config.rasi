@@ -14,6 +14,7 @@ configuration {
   show-icons: true;
   icon-theme: "BeautyLine";
   hover-select: true;
+  me-accept-entry: "!MousePrimary";
   filebrowser {
   directories-first:	true;
   sorting-method:	"name";
@@ -87,6 +88,7 @@ listview {
   columns: 2;
   cycle: true;
   dynamic: true;
+  flow: horizontal;
   layout:	vertical;
   scrollbar: false;
   lines: 16;

@@ -2,6 +2,7 @@ configuration {
   modi: "power:~/.config/rofi/scripts/power.sh";
   font: "JetBrainsMono Nerd Font 24";
   hover-select: true;
+  me-accept-entry: "!MousePrimary";
 }
 
 @theme "/dev/null"
@@ -23,9 +24,9 @@ configuration {
 }
 
 window {
-  width:		60%;
-  border:		2px 2px 2px 2px;
-  border-radius:	3px;
+  width: 60%;
+  border: 2px 2px 2px 2px;
+  border-radius: 3px;
   border-color: @bdr;
 }
 
@@ -33,9 +34,9 @@ mainbox { children: [ inputbar, listview ]; }
 
 
 inputbar {
-  children:		[ entry ];
-  expand:		false;
-  padding:		4px 4px 2px 4px;
+  children:	[ entry ];
+  expand:	false;
+  padding: 4px 4px 2px 4px;
 }
 
 prompt { 
@@ -53,7 +54,7 @@ entry {
 listview {
   columns: 3;
   cycle: true;
-  dynamic: true;
+  flow: horizontal;
   layout:	vertical;
   scrollbar: false;
   lines: 2;
@@ -78,7 +79,7 @@ element-text {
 
 element-icon {
   background-color:	inherit;
-  text-color:		inherit;
+  text-color: inherit;
   size: 40px;
   margin: 0px 0px 0px 4px;
 }
@@ -86,5 +87,5 @@ element-icon {
 element selected {
   background-color:	@bg-selected;
   text-color: @fg;
-  border-radius:	10px;
+  border-radius: 10px;
 }

@@ -8,6 +8,7 @@ configuration {
   show-icons: true;
   font: "JetBrainsMono Nerd Font 12";
   hover-select: true;
+  me-accept-entry: "!MousePrimary";
 } 
 
 @theme "/dev/null"
@@ -58,14 +59,14 @@ entry {
 listview {
   columns: 3;
   cycle: true;
-  dynamic: true;
   layout: vertical;
+  flow: horizontal;
   scrollbar: false;
   lines: 4;
 }
 
 element-text {
-  color: rgba(34,36,54,0.0);
+  enabled:false;
 }
 
 element-icon {
