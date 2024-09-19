@@ -1,3 +1,7 @@
+# Add local bin to path
+
+export PATH="$HOME/.local/bin/:$PATH"
+
 # Replace ls with eza
 alias ls="eza --icons --group-directories-first"
 alias ll="eza -alh --icons --group-directories-first"
