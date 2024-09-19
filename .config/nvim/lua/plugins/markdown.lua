@@ -2,7 +2,6 @@ return {
   "MeanderingProgrammer/render-markdown.nvim",
   ft = { "markdown", "vimwiki" },
   dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
-  keys = { "<leader>m", "<cmd>RenderMarkdown toggle<CR>", desc = "Toggle" },
   opts = {
     heading = {
       enabled = true,
