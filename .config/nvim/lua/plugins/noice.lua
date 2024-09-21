@@ -5,6 +5,12 @@ return {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
   },
+  keys = {
+    { "n", "<Leader>nh", "<cmd>Noice telescope<cr>", desc = "History" },
+    { "n", "<Leader>ne", "<cmd>Noice enable<cr>", desc = "Enable" },
+    { "n", "<Leader>nd", "<cmd>Noice disable<cr>", desc = "Disable" },
+    { "n", "<Leader>nn", "<cmd>Noice dismiss<cr>", desc = "Dismiss" },
+  },
   config = function()
     require("noice").setup({
       lsp = {
@@ -27,11 +33,6 @@ return {
         lsp_doc_border = false, -- add a border to hover docs and signature help
       },
     })
-    vim.keymap.set("n", "<Leader>nh", "<cmd>Noice telescope<cr>", { desc = "History" })
-    vim.keymap.set("n", "<Leader>ne", "<cmd>Noice enable<cr>", { desc = "Enable" })
-    vim.keymap.set("n", "<Leader>nd", "<cmd>Noice disable<cr>", { desc = "Disable" })
-    vim.keymap.set("n", "<Leader>nn", "<cmd>Noice dismiss<cr>", { desc = "Dismiss" })
-
     require("notify").setup({
       timeout = 500,
       top_down = false,

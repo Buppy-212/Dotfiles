@@ -169,18 +169,37 @@ return {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
-    build = "npm install",
-    keys = { { "<leader>cp", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview" } },
+    build = function()
+      require("lazy").load({ plugins = { "markdown-preview.nvim" } })
+      vim.fn["mkdp#util#install"]()
+    end,
+    keys = { { "<leader>mm", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview" } },
     config = function()
       vim.cmd(
         'let g:mkdp_browser = "/var/lib/flatpak/app/io.github.zen_browser.zen/current/active/export/bin/io.github.zen_browser.zen"'
       )
       vim.cmd([[do FileType]])
+      vim.cmd("let g:mkdp_combine_preview = 1")
+      vim.cmd("let g:mkdp_auto_close = 0")
     end,
   },
   {
     "jakewvincent/mkdnflow.nvim",
     ft = { "markdown" },
-    opts = {},
+    opts = {
+      mappings = {
+        MkdnFoldSection = { "n", "<leader>mf" },
+        MkdnUnfoldSection = { "n", "<leader>mF" },
+        MkdnTableNewRowBelow = { "n", "<leader>mr" },
+        MkdnTableNewRowAbove = { "n", "<leader>mR" },
+        MkdnTableNewColAfter = { "n", "<leader>mc" },
+        MkdnTableNewColBefore = { "n", "<leader>mC" },
+        MkdnUpdateNumbering = { "n", "<leader>mn" },
+        MkdnCreateLinkFromClipboard = { { "n", "v" }, "<leader>mp" },
+      },
+      links = {
+        transform_explicit = false,
+      },
+    },
   },
 }
