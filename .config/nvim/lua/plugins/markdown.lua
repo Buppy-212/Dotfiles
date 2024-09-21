@@ -1,7 +1,7 @@
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    ft = { "markdown", "vimwiki", "org", "norg", "rmd" },
+    ft = { "markdown" },
     dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
     opts = {
       heading = {
@@ -180,6 +180,7 @@ return {
   },
   {
     "jakewvincent/mkdnflow.nvim",
+    ft = { "markdown" },
     opts = {},
   },
 }
