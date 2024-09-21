@@ -1,7 +1,7 @@
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    ft = { "markdown", "vimwiki" },
+    ft = { "markdown", "vimwiki", "org", "norg", "rmd" },
     dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
     opts = {
       heading = {
@@ -170,11 +170,16 @@ return {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = "npm install",
-    keys = { { "<leader>m", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview" } },
+    keys = { { "<leader>cp", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview" } },
     config = function()
       vim.cmd(
         'let g:mkdp_browser = "/var/lib/flatpak/app/io.github.zen_browser.zen/current/active/export/bin/io.github.zen_browser.zen"'
       )
+      vim.cmd([[do FileType]])
     end,
+  },
+  {
+    "jakewvincent/mkdnflow.nvim",
+    opts = {},
   },
 }

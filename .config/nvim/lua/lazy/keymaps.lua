@@ -7,9 +7,7 @@ map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- Buffers
 map("n", "<leader>bl", "<cmd>bnext<cr>", { desc = "Next buffer" })
-map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<leader>bh", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
-map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 
 -- Clear Search
