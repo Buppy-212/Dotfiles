@@ -87,7 +87,7 @@ return {
       pipe_table = {
         enabled = true,
         preset = "round",
-        style = "full",
+        style = "normal",
         cell = "padded",
         min_width = 0,
         border = {
@@ -175,7 +175,6 @@ return {
       vim.cmd(
         'let g:mkdp_browser = "/var/lib/flatpak/app/io.github.zen_browser.zen/current/active/export/bin/io.github.zen_browser.zen"'
       )
-      vim.cmd('let g:mkdp_images_path = "/home/will/"')
     end,
   },
 }
