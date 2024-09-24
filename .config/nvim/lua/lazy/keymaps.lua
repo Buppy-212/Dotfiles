@@ -16,7 +16,8 @@ map("n", "<C-l>", "<cmd>noh<cr>", { desc = "Clear search" })
 -- Terminal
 map("t", "<C-Space>", "<cmd>wincmd k<cr>", { silent = true })
 
--- Ctrl-C works like Escape
+-- Ctrl-; and C work like Escape
+map("i", "<C-;>", "<ESC>", { silent = true })
 map("i", "<C-C>", "<ESC>", { silent = true })
 
 -- Changing directory

@@ -13,7 +13,6 @@ return {
     },
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "hrsh7th/cmp-nvim-lsp", -- lsp completion
-    "rafamadriz/friendly-snippets",
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   config = function()
@@ -25,6 +24,8 @@ return {
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
+    luasnip.config.setup({ enable_autosnippets = true })
+    require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets" })
 
     cmp.setup({
       completion = {
@@ -60,5 +61,25 @@ return {
         }),
       },
     })
+    vim.keymap.set({ "i", "s" }, "<C-L>", function()
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      end
+    end, { silent = true })
+    vim.keymap.set({ "i", "s" }, "<C-H>", function()
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      end
+    end, { silent = true })
+    vim.keymap.set({ "i", "s" }, "<C-J>", function()
+      if luasnip.choice_active() then
+        luasnip.change_choice(1)
+      end
+    end)
+    vim.keymap.set({ "i", "s" }, "<C-K>", function()
+      if luasnip.choice_active() then
+        luasnip.change_choice(-1)
+      end
+    end)
   end,
 }

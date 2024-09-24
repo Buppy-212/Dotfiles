@@ -87,7 +87,7 @@ return {
       pipe_table = {
         enabled = true,
         preset = "round",
-        style = "normal",
+        style = "full",
         cell = "padded",
         min_width = 0,
         border = {
@@ -164,24 +164,6 @@ return {
         enabled = false,
       },
     },
-  },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function()
-      require("lazy").load({ plugins = { "markdown-preview.nvim" } })
-      vim.fn["mkdp#util#install"]()
-    end,
-    keys = { { "<leader>mm", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview" } },
-    config = function()
-      vim.cmd(
-        'let g:mkdp_browser = "/var/lib/flatpak/app/io.github.zen_browser.zen/current/active/export/bin/io.github.zen_browser.zen"'
-      )
-      vim.cmd([[do FileType]])
-      vim.cmd("let g:mkdp_combine_preview = 1")
-      vim.cmd("let g:mkdp_auto_close = 0")
-    end,
   },
   {
     "jakewvincent/mkdnflow.nvim",

@@ -17,6 +17,7 @@ return {
       { "<leader>h", group = "sessions" },
       { "<leader>m", group = "markdown", icon = "󰍔 " },
       { "<leader>n", group = "notifications" },
+      { "<leader>v", proxy = "\\l", group = "vimtex" },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
       { "<leader>x", group = "diagnostics/todo" },
     },

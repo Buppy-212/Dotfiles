@@ -6,10 +6,10 @@ return {
     "rcarriga/nvim-notify",
   },
   keys = {
-    { "n", "<Leader>nh", "<cmd>Noice telescope<cr>", desc = "History" },
-    { "n", "<Leader>ne", "<cmd>Noice enable<cr>", desc = "Enable" },
-    { "n", "<Leader>nd", "<cmd>Noice disable<cr>", desc = "Disable" },
-    { "n", "<Leader>nn", "<cmd>Noice dismiss<cr>", desc = "Dismiss" },
+    { "<Leader>nh", "<cmd>Noice telescope<cr>", desc = "History" },
+    { "<Leader>ne", "<cmd>Noice enable<cr>", desc = "Enable" },
+    { "<Leader>nd", "<cmd>Noice disable<cr>", desc = "Disable" },
+    { "<Leader>nn", "<cmd>Noice dismiss<cr>", desc = "Dismiss" },
   },
   config = function()
     require("noice").setup({
