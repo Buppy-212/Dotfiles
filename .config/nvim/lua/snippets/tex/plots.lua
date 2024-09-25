@@ -12,7 +12,7 @@ return {
       [[
       \addplot3[{}]{{{}}};
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -25,7 +25,7 @@ return {
       color = {},
       ]{{{}}};
       ]],
-      { i(1), i(2), i(3), i(4) }
+      { i(1), i(2), i(3), i(0) }
     )
   ),
   s(
@@ -34,7 +34,7 @@ return {
       [[
       \draw [{}] ({}) {} ({}){};
       ]],
-      { i(1), i(2), i(3), i(4), i(5) }
+      { i(1), i(2), i(3), i(4), i(0) }
     )
   ),
   s(
@@ -43,7 +43,7 @@ return {
       [[
       \filldraw [{}] ({}) {} ({}){};
       ]],
-      { i(1), i(2), i(3), i(4), i(5) }
+      { i(1), i(2), i(3), i(4), i(0) }
     )
   ),
   s(
@@ -58,7 +58,7 @@ return {
         {}
       \end{{axis}}
       ]],
-      { c(1, { t("middle"), t("left") }), i(2), i(3), i(4) }
+      { c(1, { t("middle"), t("left") }), i(2), i(3), i(0) }
     )
   ),
   s(
@@ -69,16 +69,16 @@ return {
         {}
       \end{{tikzpicture}}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
     { trig = ";nod", snippetType = "autosnippet" },
     fmt(
       [[
-        node[anchor={}]{{{}}}
+        node[anchor={},pos={}]{{{}}}
       ]],
-      { c(1, { t("north"), t("south"), t("west"), t("east") }), i(2) }
+      { c(1, { t("north"), t("south"), t("west"), t("east") }), i(2), i(0) }
     )
   ),
   s(
@@ -93,7 +93,7 @@ return {
             \hline
         \end{{tabular}}
       ]],
-      { i(1), i(2), i(3), i(4), i(5), i(6) }
+      { i(1), i(2), i(3), i(4), i(5), i(0) }
     )
   ),
 }

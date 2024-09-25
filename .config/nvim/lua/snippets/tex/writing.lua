@@ -17,7 +17,7 @@ return {
       {
         c(1, { t(""), t("sub"), t("subsub") }),
         i(2),
-        i(3),
+        i(0),
       }
     )
   ),
@@ -57,24 +57,24 @@ return {
 
       \end{{document}}
       ]],
-      { i(1), c(2, { t(""), t("\\today") }), i(3) }
+      { i(1), c(2, { t(""), t("\\today") }), i(0) }
     )
   ),
   s(
     { trig = ";spr", snippetType = "autosnippet" },
     fmt(
       [[
-      \documentclass[{}]{{subfiles}}
+      \documentclass[../main.tex]{{subfiles}}
 
       \begin{{document}}
         {}
       \end{{document}}
       ]],
-      { i(1), i(2) }
+      { i(0) }
     )
   ),
   s(
-    { trig = ";enu", snippetType = "autosnippet" },
+    { trig = ";enum", snippetType = "autosnippet" },
     fmt(
       [[
       \begin{{enumerate}}[start={},label={{\bfseries (\{}*)}},leftmargin={}in]
@@ -82,17 +82,17 @@ return {
               {}
       \end{{enumerate}}
       ]],
-      { i(1), c(2, { t("arabic"), t("alph"), t("roman"), t("Alph"), t("Roman") }), c(3, { t("0"), t("0.3") }), i(4) }
+      { i(1), c(2, { t("arabic"), t("alph"), t("roman"), t("Alph"), t("Roman") }), c(3, { t("0"), t("0.3") }), i(0) }
     )
   ),
   s(
-    { trig = ";item", snippetType = "autosnippet" },
+    { trig = ";ite", snippetType = "autosnippet" },
     fmt(
       [[
       \item{{}}
             {}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -103,7 +103,7 @@ return {
         {}
       \end{{definition}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -114,7 +114,7 @@ return {
         {}
       \end{{remark}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -125,7 +125,7 @@ return {
         {}
       \end{{proposition}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -136,7 +136,7 @@ return {
         {}
       \end{{lemma}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -147,7 +147,7 @@ return {
         {}
       \end{{theorem}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -158,7 +158,7 @@ return {
         {}
       \end{{corollary}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -169,7 +169,7 @@ return {
         {}
       \end{{example}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -180,7 +180,7 @@ return {
         {}
       \end{{proof}}
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -189,7 +189,7 @@ return {
       [[
       \mathbb{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -198,7 +198,7 @@ return {
       [[
       \mathrm{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -207,7 +207,7 @@ return {
       [[
       \mathcal{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -216,7 +216,7 @@ return {
       [[
       \( {} \) {}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
 }

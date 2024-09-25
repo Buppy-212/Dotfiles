@@ -28,7 +28,7 @@ return {
       [[
       \label{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -37,7 +37,7 @@ return {
       [[
       \tag{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -59,18 +59,18 @@ return {
     { trig = ";fr", snippetType = "autosnippet" },
     fmt(
       [[
-      \frac{{{}}}{{{}}} {}
+      \frac{{{}}}{{{}}}{}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
     { trig = ";sq", snippetType = "autosnippet" },
     fmt(
       [[
-      \sqrt[{}]{{{}}} {}
+      \sqrt[{}]{{{}}}{}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
@@ -79,7 +79,7 @@ return {
       [[
       \lim_{{{} \to {}}} {}
       ]],
-      { i(1), c(2, { t("\\infty"), t("-\\infty"), t("0^+"), t("0^-") }), i(3) }
+      { i(1), c(2, { t("0"), t("\\infty"), t("-\\infty"), t("0^+"), t("0^-") }), i(0) }
     )
   ),
   s(
@@ -88,7 +88,7 @@ return {
       [[
       \sum_{{{}}}^{{{}}} {}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
@@ -97,7 +97,7 @@ return {
       [[
       \int_{{{}}}^{{{}}} {} \, \mathrm{{d}}{} {}
       ]],
-      { i(1), i(2), i(4), i(3), i(5) }
+      { i(1), i(2), i(4), i(3), i(0) }
     )
   ),
   s(
@@ -106,7 +106,7 @@ return {
       [[
       \left[ {} \right]_{{{}}}^{{{}}} {}
       ]],
-      { i(3), i(1), i(2), i(4) }
+      { i(3), i(1), i(2), i(0) }
     )
   ),
   s(
@@ -115,7 +115,7 @@ return {
       [[
       \frac{{\mathrm{{d}}{}}}{{\mathrm{{d}}{}}} {}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
@@ -124,7 +124,7 @@ return {
       [[
       \frac{{\partial{}}}{{\partial{}}} {}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
@@ -132,7 +132,7 @@ return {
     fmt(
       [[
       \begin{{{}}}
-      {}
+        {}
       \end{{{}}}
       ]],
       {
@@ -157,7 +157,7 @@ return {
     { trig = ";vec", snippetType = "autosnippet" },
     fmt(
       [[
-      \mathbf{{{}}} {}
+      \mathbf{{{}}}{}
       ]],
       { i(1), i(2) }
     )
@@ -166,54 +166,54 @@ return {
     { trig = ";vep", snippetType = "autosnippet" },
     fmt(
       [[
-      \mathbf{{{}}} {} \mathbf{{{}}} {}
+      \mathbf{{{}}}{} {} \mathbf{{{}}}{} {}
       ]],
-      { i(1), c(2, { t("\\cdot"), t("\\times"), t("\\circ") }), i(3), i(4) }
+      { i(1), i(2), c(3, { t("\\cdot"), t("\\times"), t("\\circ") }), i(4), i(5), i(0) }
     )
   ),
   s(
-    { trig = ";ved", snippetType = "autosnippet" },
+    { trig = ";ded", snippetType = "autosnippet" },
     fmt(
       [[
-      \overset{{.}}\mathbf{{{}}}{}
+      \overset{{.{}}}{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
     { trig = ";mod", snippetType = "autosnippet" },
     fmt(
       [[
-      |{}| {}
+      |{}|{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
     { trig = ";sub", snippetType = "autosnippet" },
     fmt(
       [[
-      {}_{{{}}} {}
+      {}_{{{}}}{}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
     { trig = ";sup", snippetType = "autosnippet" },
     fmt(
       [[
-      {}^{{{}}} {}
+      {}^{{{}}}{}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
     { trig = ";ise", snippetType = "autosnippet" },
     fmt(
       [[
-      \{{ {} \}}
+      \{{ {} \}} {}
       ]],
-      { i(1) }
+      { i(1), i(0) }
     )
   ),
   s(
@@ -224,7 +224,7 @@ return {
         {}
        \end{{matrix}} \right.
       ]],
-      { i(1) }
+      { i(0) }
     )
   ),
   s(
@@ -233,7 +233,25 @@ return {
       [[
         {} : {} \rightarrow {}
       ]],
-      { i(1), i(2), i(3) }
+      { i(1), i(2), i(0) }
+    )
+  ),
+  s(
+    { trig = ";bri", snippetType = "autosnippet" },
+    fmt(
+      [[
+        ( {} ){}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = ";brb", snippetType = "autosnippet" },
+    fmt(
+      [[
+        \left( {} \right){}
+      ]],
+      { i(1), i(0) }
     )
   ),
 }
