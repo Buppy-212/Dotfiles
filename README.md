@@ -27,7 +27,6 @@
 - Btop
 - Yazi
 - Fastfetch
-- Cli-visualizer (AUR)
 - Fzf
 - Tmux
 - Neovim
@@ -56,7 +55,7 @@ sudo pacman -S stow
 Then run the following commands from the home directory
 
 ```Bash
-$ git clone https://github.com/Buppy-212/Dotfiles.git
-$ cd Dotfiles
-$ stow .
+git clone https://github.com/Buppy-212/Dotfiles.git
+cd Dotfiles
+stow .
 ```
