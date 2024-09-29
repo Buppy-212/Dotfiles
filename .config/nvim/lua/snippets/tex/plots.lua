@@ -76,9 +76,9 @@ return {
     { trig = ";nod", snippetType = "autosnippet" },
     fmt(
       [[
-        node[anchor={},pos={}]{{{}}}
+        node[anchor={}]{{{}}}
       ]],
-      { c(1, { t("north"), t("south"), t("west"), t("east") }), i(2), i(0) }
+      { c(1, { t("north"), t("south"), t("west"), t("east") }), i(0) }
     )
   ),
   s(

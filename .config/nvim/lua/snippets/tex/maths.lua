@@ -237,7 +237,7 @@ return {
     )
   ),
   s(
-    { trig = ";bri", snippetType = "autosnippet" },
+    { trig = ";bra", snippetType = "autosnippet" },
     fmt(
       [[
         ( {} ){}
@@ -246,10 +246,19 @@ return {
     )
   ),
   s(
-    { trig = ";brb", snippetType = "autosnippet" },
+    { trig = ";coo", snippetType = "autosnippet" },
     fmt(
       [[
         \left( {} \right){}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = ";over", snippetType = "autosnippet" },
+    fmt(
+      [[
+        \overline{{{}}}{}
       ]],
       { i(1), i(0) }
     )

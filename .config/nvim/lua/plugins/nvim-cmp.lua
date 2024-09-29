@@ -13,6 +13,7 @@ return {
     },
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "hrsh7th/cmp-nvim-lsp", -- lsp completion
+    "rafamadriz/friendly-snippets", -- snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   config = function()
@@ -23,7 +24,9 @@ return {
     local lspkind = require("lspkind")
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-    require("luasnip.loaders.from_vscode").lazy_load()
+    require("luasnip.loaders.from_vscode").lazy_load({
+      exclude = { "tex" },
+    })
     luasnip.config.setup({ enable_autosnippets = true })
     require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets" })
 
@@ -49,7 +52,6 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
-        { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
 
