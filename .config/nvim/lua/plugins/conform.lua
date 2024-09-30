@@ -4,6 +4,7 @@ return {
   keys = {
     {
       "<leader>cf",
+      mode = { "v" },
       function()
         require("conform").format({
           lsp_fallback = true,
