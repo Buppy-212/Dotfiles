@@ -68,6 +68,15 @@ return {
     { trig = ";sq", snippetType = "autosnippet" },
     fmt(
       [[
+      \sqrt{{{}}}{}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = ";roo", snippetType = "autosnippet" },
+    fmt(
+      [[
       \sqrt[{}]{{{}}}{}
       ]],
       { i(1), i(2), i(0) }
@@ -184,7 +193,16 @@ return {
     { trig = ";mod", snippetType = "autosnippet" },
     fmt(
       [[
-      |{}|{}
+      \left\vert {} \right\vert{}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = ";nor", snippetType = "autosnippet" },
+    fmt(
+      [[
+      \left\Vert {} \right\Vert{}
       ]],
       { i(1), i(0) }
     )

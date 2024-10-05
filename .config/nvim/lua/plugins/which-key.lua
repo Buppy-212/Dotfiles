@@ -15,7 +15,6 @@ return {
       { "<leader>e", group = "files" },
       { "<leader>f", group = "find" },
       { "<leader>g", group = "git" },
-      { "<leader>h", group = "sessions" },
       { "<leader>m", group = "markdown", icon = "󰍔 " },
       { "<leader>n", group = "notifications" },
       { "<leader>v", proxy = "\\l", group = "vimtex", icon = " " },

@@ -43,6 +43,7 @@ return {
       \newtheorem*{{remark}}{{Remark}}
       \theoremstyle{{definition}}
       \newtheorem{{definition}}[theorem]{{Definition}}
+      \newtheorem{{notation}}[theorem]{{Notation}}
       \newtheorem{{example}}[theorem]{{Example}}
 
       \title{{{}}}
@@ -102,6 +103,17 @@ return {
       \begin{{definition}}
         {}
       \end{{definition}}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = ";not", snippetType = "autosnippet" },
+    fmt(
+      [[
+      \begin{{notation}}
+        {}
+      \end{{notation}}
       ]],
       { i(0) }
     )
