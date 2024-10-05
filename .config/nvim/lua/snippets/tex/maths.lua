@@ -8,7 +8,7 @@ local rep = require("luasnip.extras").rep
 
 return {
   s(
-    { trig = ";eq", snippetType = "autosnippet" },
+    { trig = "eq" },
     fmt(
       [[
       \begin{{equation{}}}
@@ -23,7 +23,7 @@ return {
     )
   ),
   s(
-    { trig = ";lab", snippetType = "autosnippet" },
+    { trig = "lab" },
     fmt(
       [[
       \label{{{}}}{}
@@ -32,7 +32,7 @@ return {
     )
   ),
   s(
-    { trig = ";tag", snippetType = "autosnippet" },
+    { trig = "tag" },
     fmt(
       [[
       \tag{{{}}}{}
@@ -41,22 +41,20 @@ return {
     )
   ),
   s(
-    { trig = ";al", snippetType = "autosnippet" },
+    { trig = "al" },
     fmt(
       [[
-      \begin{{align{}}}
+      \begin{{align}}
         {}
-      \end{{align{}}}
+      \end{{align}}
       ]],
       {
-        c(1, { t("*"), t("") }),
         i(0),
-        rep(1),
       }
     )
   ),
   s(
-    { trig = ";fr", snippetType = "autosnippet" },
+    { trig = "fr" },
     fmt(
       [[
       \frac{{{}}}{{{}}}{}
@@ -65,7 +63,7 @@ return {
     )
   ),
   s(
-    { trig = ";sq", snippetType = "autosnippet" },
+    { trig = "sq" },
     fmt(
       [[
       \sqrt{{{}}}{}
@@ -74,7 +72,7 @@ return {
     )
   ),
   s(
-    { trig = ";roo", snippetType = "autosnippet" },
+    { trig = "root" },
     fmt(
       [[
       \sqrt[{}]{{{}}}{}
@@ -83,7 +81,7 @@ return {
     )
   ),
   s(
-    { trig = ";lim", snippetType = "autosnippet" },
+    { trig = "lim" },
     fmt(
       [[
       \lim_{{{} \to {}}} {}
@@ -92,7 +90,7 @@ return {
     )
   ),
   s(
-    { trig = ";sum", snippetType = "autosnippet" },
+    { trig = "sum" },
     fmt(
       [[
       \sum_{{{}}}^{{{}}} {}
@@ -101,7 +99,7 @@ return {
     )
   ),
   s(
-    { trig = ";int", snippetType = "autosnippet" },
+    { trig = "int" },
     fmt(
       [[
       \int_{{{}}}^{{{}}} {} \, \mathrm{{d}}{} {}
@@ -110,7 +108,25 @@ return {
     )
   ),
   s(
-    { trig = ";din", snippetType = "autosnippet" },
+    { trig = "oint" },
+    fmt(
+      [[
+      \oint_{{{}}} {} \, \mathrm{{d}}{} {}
+      ]],
+      { i(1), i(3), i(2), i(0) }
+    )
+  ),
+  s(
+    { trig = "iint" },
+    fmt(
+      [[
+      \iint_{{{}}} {} \, \mathrm{{d}}{} {}
+      ]],
+      { i(1), i(3), i(2), i(0) }
+    )
+  ),
+  s(
+    { trig = "dint" },
     fmt(
       [[
       \left[ {} \right]_{{{}}}^{{{}}} {}
@@ -119,7 +135,7 @@ return {
     )
   ),
   s(
-    { trig = ";der", snippetType = "autosnippet" },
+    { trig = "der" },
     fmt(
       [[
       \frac{{\mathrm{{d}}{}}}{{\mathrm{{d}}{}}} {}
@@ -128,7 +144,7 @@ return {
     )
   ),
   s(
-    { trig = ";par", snippetType = "autosnippet" },
+    { trig = "par" },
     fmt(
       [[
       \frac{{\partial{}}}{{\partial{}}} {}
@@ -137,7 +153,7 @@ return {
     )
   ),
   s(
-    { trig = ";beg", snippetType = "autosnippet" },
+    { trig = "beg" },
     fmt(
       [[
       \begin{{{}}}
@@ -152,7 +168,7 @@ return {
     )
   ),
   s(
-    { trig = ";mat", snippetType = "autosnippet" },
+    { trig = "mat" },
     fmt(
       [[
       \begin{{{}matrix}}
@@ -163,25 +179,25 @@ return {
     )
   ),
   s(
-    { trig = ";vec", snippetType = "autosnippet" },
+    { trig = "vec" },
     fmt(
       [[
       \mathbf{{{}}}{}
       ]],
-      { i(1), i(2) }
+      { i(1), i(0) }
     )
   ),
   s(
-    { trig = ";vep", snippetType = "autosnippet" },
+    { trig = "vecf" },
     fmt(
       [[
-      \mathbf{{{}}}{} {} \mathbf{{{}}}{} {}
+      \mathbf{{{}}}(\mathbf{{{}}}){}
       ]],
-      { i(1), i(2), c(3, { t("\\cdot"), t("\\times"), t("\\circ") }), i(4), i(5), i(0) }
+      { i(1), i(2), i(0) }
     )
   ),
   s(
-    { trig = ";ded", snippetType = "autosnippet" },
+    { trig = "dder" },
     fmt(
       [[
       \overset{{.{}}}{{{}}}{}
@@ -190,7 +206,7 @@ return {
     )
   ),
   s(
-    { trig = ";mod", snippetType = "autosnippet" },
+    { trig = "mod" },
     fmt(
       [[
       \left\vert {} \right\vert{}
@@ -199,7 +215,7 @@ return {
     )
   ),
   s(
-    { trig = ";nor", snippetType = "autosnippet" },
+    { trig = "norm" },
     fmt(
       [[
       \left\Vert {} \right\Vert{}
@@ -208,7 +224,7 @@ return {
     )
   ),
   s(
-    { trig = ";sub", snippetType = "autosnippet" },
+    { trig = "sub" },
     fmt(
       [[
       {}_{{{}}}{}
@@ -217,7 +233,7 @@ return {
     )
   ),
   s(
-    { trig = ";sup", snippetType = "autosnippet" },
+    { trig = "sup" },
     fmt(
       [[
       {}^{{{}}}{}
@@ -226,7 +242,7 @@ return {
     )
   ),
   s(
-    { trig = ";ise", snippetType = "autosnippet" },
+    { trig = "iset" },
     fmt(
       [[
       \{{ {} \}} {}
@@ -235,7 +251,7 @@ return {
     )
   ),
   s(
-    { trig = ";set", snippetType = "autosnippet" },
+    { trig = "set" },
     fmt(
       [[
        \left\{{ \begin{{matrix}}
@@ -246,7 +262,7 @@ return {
     )
   ),
   s(
-    { trig = ";map", snippetType = "autosnippet" },
+    { trig = "map" },
     fmt(
       [[
         {} : {} \rightarrow {}
@@ -255,7 +271,7 @@ return {
     )
   ),
   s(
-    { trig = ";bra", snippetType = "autosnippet" },
+    { trig = "bra" },
     fmt(
       [[
         ( {} ){}
@@ -264,7 +280,7 @@ return {
     )
   ),
   s(
-    { trig = ";coo", snippetType = "autosnippet" },
+    { trig = "coor" },
     fmt(
       [[
         \left( {} \right){}
@@ -273,7 +289,7 @@ return {
     )
   ),
   s(
-    { trig = ";over", snippetType = "autosnippet" },
+    { trig = "over" },
     fmt(
       [[
         \overline{{{}}}{}

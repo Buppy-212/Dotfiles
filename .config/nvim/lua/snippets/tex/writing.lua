@@ -8,7 +8,7 @@ local rep = require("luasnip.extras").rep
 
 return {
   s(
-    { trig = ";sec", snippetType = "autosnippet" },
+    { trig = "sect" },
     fmt(
       [[
       \{}section{{{}}}
@@ -22,7 +22,7 @@ return {
     )
   ),
   s(
-    { trig = ";pre", snippetType = "autosnippet" },
+    { trig = "pre" },
     fmt(
       [[
       \documentclass[12pt]{{article}}
@@ -62,7 +62,7 @@ return {
     )
   ),
   s(
-    { trig = ";spr", snippetType = "autosnippet" },
+    { trig = "subpre" },
     fmt(
       [[
       \documentclass[../main.tex]{{subfiles}}
@@ -75,7 +75,7 @@ return {
     )
   ),
   s(
-    { trig = ";enum", snippetType = "autosnippet" },
+    { trig = "enum" },
     fmt(
       [[
       \begin{{enumerate}}[start={},label={{\bfseries (\{}*)}},leftmargin={}in]
@@ -87,7 +87,7 @@ return {
     )
   ),
   s(
-    { trig = ";ite", snippetType = "autosnippet" },
+    { trig = "item" },
     fmt(
       [[
       \item{{}}
@@ -97,7 +97,7 @@ return {
     )
   ),
   s(
-    { trig = ";def", snippetType = "autosnippet" },
+    { trig = "def" },
     fmt(
       [[
       \begin{{definition}}
@@ -108,7 +108,7 @@ return {
     )
   ),
   s(
-    { trig = ";not", snippetType = "autosnippet" },
+    { trig = "not" },
     fmt(
       [[
       \begin{{notation}}
@@ -119,7 +119,7 @@ return {
     )
   ),
   s(
-    { trig = ";rem", snippetType = "autosnippet" },
+    { trig = "rem" },
     fmt(
       [[
       \begin{{remark}}
@@ -130,7 +130,7 @@ return {
     )
   ),
   s(
-    { trig = ";pro", snippetType = "autosnippet" },
+    { trig = "prop" },
     fmt(
       [[
       \begin{{proposition}}
@@ -141,7 +141,7 @@ return {
     )
   ),
   s(
-    { trig = ";lem", snippetType = "autosnippet" },
+    { trig = "lem" },
     fmt(
       [[
       \begin{{lemma}}
@@ -152,7 +152,7 @@ return {
     )
   ),
   s(
-    { trig = ";the", snippetType = "autosnippet" },
+    { trig = "the" },
     fmt(
       [[
       \begin{{theorem}}
@@ -163,7 +163,7 @@ return {
     )
   ),
   s(
-    { trig = ";cor", snippetType = "autosnippet" },
+    { trig = "cor" },
     fmt(
       [[
       \begin{{corollary}}
@@ -174,7 +174,7 @@ return {
     )
   ),
   s(
-    { trig = ";ex", snippetType = "autosnippet" },
+    { trig = "ex" },
     fmt(
       [[
       \begin{{example}}
@@ -185,7 +185,7 @@ return {
     )
   ),
   s(
-    { trig = ";prf", snippetType = "autosnippet" },
+    { trig = "prf" },
     fmt(
       [[
       \begin{{proof}}
@@ -196,7 +196,7 @@ return {
     )
   ),
   s(
-    { trig = ";mbb", snippetType = "autosnippet" },
+    { trig = "bb" },
     fmt(
       [[
       \mathbb{{{}}}{}
@@ -205,7 +205,43 @@ return {
     )
   ),
   s(
-    { trig = ";mrm", snippetType = "autosnippet" },
+    { trig = "expect" },
+    fmt(
+      [[
+      \mathbb{{E}}({}) {}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = "prob" },
+    fmt(
+      [[
+      \mathbb{{P}}({}) {}
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = "r2" },
+    fmt(
+      [[
+      \mathbb{{R}}^2 {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "r3" },
+    fmt(
+      [[
+      \mathbb{{R}}^3 {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "rm" },
     fmt(
       [[
       \mathrm{{{}}}{}
@@ -214,7 +250,34 @@ return {
     )
   ),
   s(
-    { trig = ";mca", snippetType = "autosnippet" },
+    { trig = "rmd" },
+    fmt(
+      [[
+      \mathrm{{d}}{} 
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "var" },
+    fmt(
+      [[
+      \mathrm{{Var}}({}) {} 
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = "cov" },
+    fmt(
+      [[
+      \mathrm{{Cov}}({}) {} 
+      ]],
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = "ca" },
     fmt(
       [[
       \mathcal{{{}}}{}
@@ -223,7 +286,16 @@ return {
     )
   ),
   s(
-    { trig = ";mai", snippetType = "autosnippet" },
+    { trig = "c1" },
+    fmt(
+      [[
+      \mathcal{{C}}^1 {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "ma" },
     fmt(
       [[
       \( {} \) {}

@@ -27,7 +27,7 @@ return {
     require("luasnip.loaders.from_vscode").lazy_load({
       exclude = { "tex" },
     })
-    luasnip.config.setup({ enable_autosnippets = true })
+    luasnip.config.setup()
     require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets" })
 
     cmp.setup({

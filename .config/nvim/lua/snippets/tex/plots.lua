@@ -7,7 +7,7 @@ local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 return {
   s(
-    { trig = ";3pl", snippetType = "autosnippet" },
+    { trig = "3plt" },
     fmt(
       [[
       \addplot3[{}]{{{}}};
@@ -16,7 +16,7 @@ return {
     )
   ),
   s(
-    { trig = ";plt", snippetType = "autosnippet" },
+    { trig = "plt" },
     fmt(
       [[
       \addplot[
@@ -29,7 +29,7 @@ return {
     )
   ),
   s(
-    { trig = ";dra", snippetType = "autosnippet" },
+    { trig = "draw" },
     fmt(
       [[
       \draw [{}] ({}) {} ({}){};{}
@@ -38,7 +38,7 @@ return {
     )
   ),
   s(
-    { trig = ";cur", snippetType = "autosnippet" },
+    { trig = "curve" },
     fmt(
       [[
       \draw [{}] ({}) to[out={},in={}]{} ({});{}
@@ -47,7 +47,7 @@ return {
     )
   ),
   s(
-    { trig = ";fil", snippetType = "autosnippet" },
+    { trig = "fill" },
     fmt(
       [[
       \filldraw [{}] ({}) {} ({}){};{}
@@ -56,7 +56,7 @@ return {
     )
   ),
   s(
-    { trig = ";ax", snippetType = "autosnippet" },
+    { trig = "ax" },
     fmt(
       [[
       \begin{{axis}}[
@@ -71,7 +71,7 @@ return {
     )
   ),
   s(
-    { trig = ";tikz", snippetType = "autosnippet" },
+    { trig = "tikz" },
     fmt(
       [[
       \begin{{tikzpicture}}[thick,scale={}, every node/.style={{scale={}}}]
@@ -82,7 +82,7 @@ return {
     )
   ),
   s(
-    { trig = ";nod", snippetType = "autosnippet" },
+    { trig = "node" },
     fmt(
       [[
         node[anchor={}]{{{}}}
@@ -91,7 +91,7 @@ return {
     )
   ),
   s(
-    { trig = ";tab", snippetType = "autosnippet" },
+    { trig = "table" },
     fmt(
       [[
         \begin{{tabular}}{{|{}|}}
