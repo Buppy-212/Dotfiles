@@ -262,7 +262,7 @@ return {
     { trig = "var" },
     fmt(
       [[
-      \mathrm{{Var}}({}) {} 
+      \mathrm{{var}}({}) {} 
       ]],
       { i(1), i(0) }
     )
@@ -271,7 +271,7 @@ return {
     { trig = "cov" },
     fmt(
       [[
-      \mathrm{{Cov}}({}) {} 
+      \mathrm{{cov}}({}) {} 
       ]],
       { i(1), i(0) }
     )

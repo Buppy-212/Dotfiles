@@ -44,9 +44,9 @@ return {
     { trig = "al" },
     fmt(
       [[
-      \begin{{align}}
+      \begin{{align*}}
         {}
-      \end{{align}}
+      \end{{align*}}
       ]],
       {
         i(0),
