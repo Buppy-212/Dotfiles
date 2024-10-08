@@ -12,7 +12,7 @@ configuration {
   display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font 12";
   show-icons: true;
-  icon-theme: "BeautyLine";
+  icon-theme: "Buppy";
   hover-select: true;
   me-accept-entry: "!MousePrimary";
   filebrowser {
