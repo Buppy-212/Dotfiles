@@ -12,6 +12,7 @@
 - Hyprlock
 - Hyprpaper
 - Rofi-wayland
+- Rofi-emoji-git (AUR)
 - Waybar
 - Mako
 - Swappy
