@@ -223,6 +223,24 @@ return {
     )
   ),
   s(
+    { trig = "re" },
+    fmt(
+      [[
+      \mathbb{{R}} {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "rn" },
+    fmt(
+      [[
+      \mathbb{{R}}^n {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
     { trig = "r2" },
     fmt(
       [[
@@ -290,6 +308,24 @@ return {
     fmt(
       [[
       \mathcal{{C}}^1 {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "c2" },
+    fmt(
+      [[
+      \mathcal{{C}}^2 {}
+      ]],
+      { i(0) }
+    )
+  ),
+  s(
+    { trig = "cn" },
+    fmt(
+      [[
+      \mathcal{{C}}^n {}
       ]],
       { i(0) }
     )
