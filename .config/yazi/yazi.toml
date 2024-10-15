@@ -33,11 +33,6 @@ reveal = [
   { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [{ run = 'unar "$1"', desc = "Extract here", for = "unix" }]
-play = [
-  { run = 'mpv --audio-display=no "$@"', orphan = false, for = "unix" },
-  { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
-]
-view = [{ run = 'swappy -f "$@"' }]
 mscore = [{ run = '/home/will/.local/bin/mscore4portable "$@"' }]
 krita = [{ run = 'flatpak run org.kde.krita "$@"' }]
 exec = [{ run = '"$@"' }]
@@ -45,7 +40,6 @@ exec = [{ run = '"$@"' }]
 
 [open]
 rules = [
-  { name = "*.mscz", use = "mscore" },
   { name = "*.kra", use = "krita" },
   { name = "*.Appimage", use = "exec" },
   { name = "*/", use = [
@@ -58,15 +52,15 @@ rules = [
     "reveal",
   ] },
   { mime = "image/*", use = [
-    "view",
+    "open",
     "reveal",
   ] },
   { mime = "video/*", use = [
-    "play",
+    "open",
     "reveal",
   ] },
   { mime = "audio/*", use = [
-    "play",
+    "open",
     "reveal",
   ] },
   { mime = "inode/x-empty", use = [
