@@ -120,9 +120,18 @@ return {
     { trig = "iint" },
     fmt(
       [[
-      \iint_{{{}}} {} \, \mathrm{{d}}{} {}
+      \iint_R {} \, \mathrm{{d}}A {}
       ]],
-      { i(1), i(3), i(2), i(0) }
+      { i(1), i(0) }
+    )
+  ),
+  s(
+    { trig = "iiint" },
+    fmt(
+      [[
+      \iiint_E {} \, \mathrm{{d}}V {}
+      ]],
+      { i(1), i(0) }
     )
   ),
   s(
