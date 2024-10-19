@@ -101,8 +101,8 @@ return {
     fmt(
       [[
       \begin{{definition}}
-        {}
-      \end{{definition}}
+      {}
+    \end{{definition}}
       ]],
       { i(0) }
     )
