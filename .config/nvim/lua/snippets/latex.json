@@ -363,7 +363,7 @@
   },
   "curl": {
     "prefix": "curl",
-    "body": "\\mathrm{curl}$0"
+    "body": "\\mathrm{curl}"
   },
   "or": {
     "prefix": "or",
