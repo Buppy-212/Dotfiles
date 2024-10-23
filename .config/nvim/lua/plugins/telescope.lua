@@ -29,6 +29,7 @@ return {
     vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep" })
     vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
     vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Find buffers" })
+    vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope keywords=TODO,FIX<CR>", { desc = "Find Todos" })
     vim.keymap.set(
       "n",
       "<leader>fa",
