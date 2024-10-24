@@ -3,7 +3,7 @@
 BARS=("Top" "Left" "Left Float" "Bottom" "No Bar")
 GAPS=("Gaps" "No Gaps")
 
-GAPCHOICE=$(for a in "${GAPS[@]}"; do echo "$a" ; done | rofi -dmenu -theme-str ' entry {placeholder: "Window Gaps";}')
+GAPCHOICE=$(for a in "${GAPS[@]}"; do echo "$a" ; done | rofi -dmenu -config ~/.config/rofi/power.rasi -theme-str ' entry {placeholder: "Window Gaps";} listview {lines: 1; columns: 2;}')
 case "$GAPCHOICE" in
   "No Gaps")
   hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0"
@@ -18,7 +18,7 @@ case "$GAPCHOICE" in
     ;;
 esac
 
-BARCHOICE=$(for a in "${BARS[@]}"; do echo "$a" ; done | rofi -dmenu -theme-str ' entry {placeholder: "Waybar Position";}')
+BARCHOICE=$(for a in "${BARS[@]}"; do echo "$a" ; done | rofi -dmenu -config ~/.config/rofi/power.rasi -theme-str ' entry {placeholder: "Waybar Position";} listview {lines: 2; columns: 2;}')
 case "$BARCHOICE" in
   "Top")
   killall waybar
