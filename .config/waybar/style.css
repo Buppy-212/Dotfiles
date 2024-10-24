@@ -69,7 +69,8 @@ tooltip label {
   font-size: 14pt;
 }
 
-#mpris {
+#custom-notification {
+  margin: 0px 2px 0px 0px;
   color: #c8d3f5;
 }
 

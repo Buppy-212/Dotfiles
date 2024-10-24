@@ -64,9 +64,9 @@ tooltip label {
   padding-right: 3px;
 }
 
-#mpris {
+#custom-notification {
+  margin: 0px 2px 0px 0px;
   color: #c8d3f5;
-  padding-right: 3px;
 }
 
 #tray menu {

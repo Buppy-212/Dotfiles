@@ -14,9 +14,9 @@
   ],
   "modules-center": [],
   "modules-right": [
-    "mpris",
     "battery",
     "pulseaudio",
+    "custom/notification",
     "tray",
     "custom/updates",
     "clock",
@@ -31,18 +31,6 @@
     "format": "{id}",
     "on-click": "activate",
     "all-outputs": true
-  },
-  "mpris": {
-    "format": "{player_icon}",
-    "format-paused": "{status_icon}",
-    "tooltip": true,
-    "tooltip-format": "{title} - {artist}",
-    "player-icons": {
-      "default": "▶"
-    },
-    "status-icons": {
-      "paused": ""
-    }
   },
   "battery": {
     "states": {
@@ -115,5 +103,25 @@
     "format": "{:%H\n%M}",
     "tooltip": true,
     "tooltip-format": "{:%A %d %B %Y}"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂛",
+      "dnd-inhibited-notification": "󱅫",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   }
 }
