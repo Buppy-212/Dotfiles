@@ -29,7 +29,7 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "widgets": ["title", "dnd", "notifications", "mpris", "volume"],
+  "widgets": ["title", "dnd", "notifications", "mpris", "volume", "backlight"],
   "widget-config": {
     "title": {
       "text": "Notifications",
@@ -49,7 +49,12 @@
       "image-radius": 12
     },
     "volume": {
-      "label": ""
+      "label": "󰕾"
+    },
+    "backlight": {
+      "label": "󰃠",
+      "device": "amdgpu_bl0",
+      "subsystem": "backlight"
     }
   }
 }
