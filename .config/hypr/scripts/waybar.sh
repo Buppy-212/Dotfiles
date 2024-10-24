@@ -1,22 +1,42 @@
 #!/usr/bin/env bash
 
-case "$1" in
-  "top")
+BARS=("Top" "Left" "Left Float" "Bottom" "No Bar")
+GAPS=("Gaps" "No Gaps")
+
+GAPCHOICE=$(for a in "${GAPS[@]}"; do echo "$a" ; done | rofi -dmenu -theme-str ' entry {placeholder: "Window Gaps";}')
+case "$GAPCHOICE" in
+  "No Gaps")
   hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0"
+  BARS=("Top" "Left" "Bottom" "No Bar")
+    ;;
+  "Gaps")
+  hyprctl --batch "keyword general:gaps_in 2 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3"
+  BARS=("Top" "Left Float" "Bottom" "No Bar")
+    ;;
+  *)
+  echo "Invalid option"
+    ;;
+esac
+
+BARCHOICE=$(for a in "${BARS[@]}"; do echo "$a" ; done | rofi -dmenu -theme-str ' entry {placeholder: "Waybar Position";}')
+case "$BARCHOICE" in
+  "Top")
   killall waybar
   waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css
     ;;
-  "flat")
-  hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0"
+  "Left Float")
+  killall waybar
+  waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
+    ;;
+  "Left")
   killall waybar
   waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css
     ;;
-  "normal")
+  "Bottom")
   killall waybar
-  hyprctl --batch "keyword general:gaps_in 2 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3"
-  waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
+  waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css
     ;;
-  "none")
+  "No Bar")
   killall waybar
     ;;
   *)
