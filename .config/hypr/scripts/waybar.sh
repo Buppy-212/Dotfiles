@@ -14,7 +14,7 @@ case "$GAPCHOICE" in
   BARS=("Top" "Left Float" "Bottom" "No Bar")
     ;;
   *)
-  echo "Invalid option"
+    exit 0
     ;;
 esac
 
@@ -40,6 +40,6 @@ case "$BARCHOICE" in
   killall waybar
     ;;
   *)
-  echo "Invalid option"
+    exit 0
     ;;
 esac
