@@ -49,7 +49,7 @@ prompt {
 }
 
 entry {
-  background-color:	@bg-alt;
+  background-color:	@bg;
   placeholder: "Search";
   expand:	true;
   padding: 5px;

@@ -44,10 +44,10 @@ prompt {
 }
 
 entry {
-  background-color:	@bg-alt;
+  background-color:	@bg;
   placeholder: "Power menu:";
   expand: true;
-  padding: 7px;
+  padding: 7px 7px 0px 7px;
   border-radius:	10px;
 }
 

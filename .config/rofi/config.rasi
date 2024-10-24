@@ -57,9 +57,10 @@ mode-switcher {
 
 button {
   padding: 6px;
-  background-color:	@bg-alt;
+  background-color:	@bg;
   vertical-align:	0.5; 
   horizontal-align:	0.5;
+  border-radius: 10px;
 }
 
 button selected {
@@ -77,7 +78,7 @@ prompt {
 }
 
 entry {
-  background-color:	@bg-alt;
+  background-color:	@bg;
   placeholder: "Search";
   expand: true;
   padding: 7px;
