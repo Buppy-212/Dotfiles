@@ -1,0 +1,388 @@
+{
+  "Preamble": {
+    "prefix": "preamble",
+    "body": [
+      "\\input{$HOME/Documents/Maths/Latex Templates/preamble.tex}",
+      "\\input{$HOME/Documents/Maths/Latex Templates/commands.tex}",
+      "\\title{${1:Title}}",
+      "\\date{${2:\\today}}",
+      "\\begin{document}",
+      "\\maketitle",
+      "$0",
+      "\\end{document}"
+    ],
+    "description": "Document Preamble"
+  },
+  "Section": {
+    "prefix": "sect",
+    "body": ["\\\\${1|,sub,subsub|}section${2|,*|}{$3}", "$0"]
+  },
+  "Equation": {
+    "prefix": "eq",
+    "body": ["\\begin{equation${1|*,|}}", "\t$0", "\\end{equation${1|*,|}}"],
+    "description": "Equation Environment"
+  },
+  "Align": {
+    "prefix": "al",
+    "body": ["\\begin{align${1|*,|}}", "\t$0", "\\end{align${1|*,|}}"],
+    "description": "Align Environment"
+  },
+  "Begin": {
+    "prefix": "beg",
+    "body": ["\\begin{${1:environment}}", "\t$0", "\\end{${1:environment}}"],
+    "description": "Begin Environment"
+  },
+  "Enumerate": {
+    "prefix": "enum",
+    "body": [
+      "\\begin{enumerate}[start=${1:number},label={\\bfseries(\\\\${2|arabic,alph,roman,Alph,Roman|}*)},leftmargin=${3|0,0.3|}in]",
+      "\t\\item",
+      "\t\t$0",
+      "\\end{enumerate}"
+    ],
+    "description": "Enumerate Environment"
+  },
+  "Item": {
+    "prefix": "item",
+    "body": ["\\item", "\t$0"]
+  },
+  "Theorem": {
+    "prefix": "the",
+    "body": ["\\begin{theorem}{${1:title}}{}", "\t$0", "\\end{theorem}"],
+    "description": "Theorem Box"
+  },
+  "Lemma": {
+    "prefix": "lem",
+    "body": ["\\begin{lemma}{$1}{}", "\t$0", "\\end{lemma}"],
+    "description": "Lemma Box"
+  },
+  "Proof": {
+    "prefix": "prf",
+    "body": ["\\begin{proof}", "\t$0", "\\end{proof}"],
+    "description": "Proof"
+  },
+  "Corollary": {
+    "prefix": "cor",
+    "body": ["\\begin{corollary}{$1}{}", "\t$0", "\\end{corollary}"],
+    "description": "Corollary Box"
+  },
+  "Proposition": {
+    "prefix": "pro",
+    "body": ["\\begin{proposition}{$1}{}", "\t$0", "\\end{proposition}"],
+    "description": "Proposition Box"
+  },
+  "Remark": {
+    "prefix": "rem",
+    "body": ["\\begin{remark*}{}{}", "\t$0", "\\end{remark*}"],
+    "description": "Remark"
+  },
+  "Note": {
+    "prefix": "note",
+    "body": ["\\begin{note*}{}{}", "\t$0", "\\end{note*}"],
+    "description": "Note"
+  },
+  "Definition": {
+    "prefix": "def",
+    "body": ["\\begin{definition}{$1}{}", "\t$0", "\\end{definition}"],
+    "description": "Definition Box"
+  },
+  "Notation": {
+    "prefix": "nota",
+    "body": ["\\begin{notation}{$1}{}", "\t$0", "\\end{notation}"],
+    "description": "Notation Box"
+  },
+  "Example": {
+    "prefix": "ex",
+    "body": ["\\begin{example}{$1}{}", "\t$0", "\\end{example}"],
+    "description": "Example Box"
+  },
+  "Question": {
+    "prefix": "qu",
+    "body": ["\\begin{question*}{${1:number}}{}", "\t$0", "\\end{question*}"],
+    "description": "Example Box"
+  },
+  "Blackboard": {
+    "prefix": "bb",
+    "body": "\\mathbb{$1}$0"
+  },
+  "Caligraphic": {
+    "prefix": "ca",
+    "body": "\\mathcal{$1}$0"
+  },
+  "Normal": {
+    "prefix": "rm",
+    "body": "\\mathrm{$1}$0"
+  },
+  "Vector": {
+    "prefix": "vec",
+    "body": "\\mathbf{$1}$0"
+  },
+  "C1": {
+    "prefix": "c1",
+    "body": "\\mathcal{C}^1 $0"
+  },
+  "C2": {
+    "prefix": "c2",
+    "body": "\\mathcal{C}^2 $0"
+  },
+  "CN": {
+    "prefix": "cn",
+    "body": "\\mathcal{C}^n $0"
+  },
+  "Re": {
+    "prefix": "re",
+    "body": "\\mathbb{R} $0"
+  },
+  "R2": {
+    "prefix": "r2",
+    "body": "\\mathbb{R}^2 $0"
+  },
+  "R3": {
+    "prefix": "r3",
+    "body": "\\mathbb{R}^3 $0"
+  },
+  "RN": {
+    "prefix": "rn",
+    "body": "\\mathbb{R}^n $0"
+  },
+  "Expectation": {
+    "prefix": "expect",
+    "body": "\\mathbb{E}($1) $0"
+  },
+  "Probability": {
+    "prefix": "prob",
+    "body": "\\mathbb{P}($1) $0"
+  },
+  "Variance": {
+    "prefix": "var",
+    "body": "\\mathrm{Var}($1) $0"
+  },
+  "Covariance": {
+    "prefix": "cov",
+    "body": "\\mathrm{Cov}($1) $0"
+  },
+  "Maths": {
+    "prefix": "ma",
+    "body": "\\( $1 \\) $0"
+  },
+  "Label": {
+    "prefix": "lab",
+    "body": "\\label{$1}$0"
+  },
+  "Tag": {
+    "prefix": "tag",
+    "body": "\\tag{$1}$0"
+  },
+  "Fraction": {
+    "prefix": "fr",
+    "body": "\\frac{$1}{$2}$0"
+  },
+  "SquareRoot": {
+    "prefix": "sq",
+    "body": "\\sqrt{$1}$0"
+  },
+  "Root": {
+    "prefix": "root",
+    "body": "\\sqrt[$1]{$2}$0"
+  },
+  "Subscript": {
+    "prefix": "sub",
+    "body": "_{$1}$0"
+  },
+  "Superscript": {
+    "prefix": "sup",
+    "body": "^{$1}$0"
+  },
+  "BigBrackets": {
+    "prefix": "bra",
+    "body": "\\left( $1 \\right)$0"
+  },
+  "Brackets": {
+    "prefix": "br",
+    "body": "( $1 )$0"
+  },
+  "Overline": {
+    "prefix": "over",
+    "body": "\\overline{$1}$0"
+  },
+  "Underline": {
+    "prefix": "under",
+    "body": "\\underline{$1}$0"
+  },
+  "Modulus": {
+    "prefix": "mod",
+    "body": "\\left\\vert $1 \\right\\vert$0"
+  },
+  "Norm": {
+    "prefix": "norm",
+    "body": "\\left\\Vert $1 \\right\\Vert$0"
+  },
+  "Set": {
+    "prefix": "set",
+    "body": ["\\left\\{ \\begin{matrix}", "\t$0", "\\end{matrix} \\right."]
+  },
+  "InlineSet": {
+    "prefix": "iset",
+    "body": "\\{ $1 \\} $0"
+  },
+  "Map": {
+    "prefix": "map",
+    "body": ": $1 \\rightarrow $0"
+  },
+  "Limit": {
+    "prefix": "lim",
+    "body": "\\lim_{$1 \\to ${2|0,\\infty,\\-infty,0^+,0^-|}} $0"
+  },
+  "Summation": {
+    "prefix": "sum",
+    "body": "\\sum_{$1}^{$2} $0"
+  },
+  "Integral": {
+    "prefix": "int",
+    "body": "\\int_{$1}^{$2} $4 \\, \\mathrm{d}$3 $0"
+  },
+  "DoubleIntegral": {
+    "prefix": "iint",
+    "body": "\\iint_{R} $1 \\, \\mathrm{d}A $0"
+  },
+  "TripleIntegral": {
+    "prefix": "iiint",
+    "body": "\\iiint_{E} $1 \\, \\mathrm{d}V $0"
+  },
+  "ClosedIntegral": {
+    "prefix": "oint",
+    "body": "\\oint_{C} $2 \\, \\mathrm{d}$1 $0"
+  },
+  "DefiniteIntegral": {
+    "prefix": "dint",
+    "body": "\\left[ $3 \\right]_{$1}^{$2} $0"
+  },
+  "Derivative": {
+    "prefix": "der",
+    "body": "\\frac{\\mathrm{d}$1}{\\mathrm{d}$2} $0"
+  },
+  "ParitalDerivative": {
+    "prefix": "part",
+    "body": "\\frac{\\partial $1}{\\partial $2} $0"
+  },
+  "DotDerivative": {
+    "prefix": "dot",
+    "body": "\\dot{$1}$0"
+  },
+  "DoubleDotDerivative": {
+    "prefix": "ddot",
+    "body": "\\ddot{$1}$0"
+  },
+  "TripleDotDerivative": {
+    "prefix": "dddot",
+    "body": "\\dddot{$1}$0"
+  },
+  "VectorFunction": {
+    "prefix": "vecf",
+    "body": "\\mathbf{$1}(\\mathbf{$2})$0"
+  },
+  "Matrix": {
+    "prefix": "mat",
+    "body": [
+      "\\begin{${1|p,b,v,V,B|}matrix}",
+      "\t$0",
+      "\\end{${1|p,b,v,V,B|}matrix}"
+    ]
+  },
+  "Tikz": {
+    "prefix": "tikz",
+    "body": [
+      "\\begin{tikzpicture}[thick,scale=${1:1},every node/.style={scale=${2:1}}]",
+      "\t$0",
+      "\\end{tikzpicture}"
+    ]
+  },
+  "Node": {
+    "prefix": "node",
+    "body": "node[anchor=${1|north,south,west,east,north west,north east,south west,south east|}]{$0}"
+  },
+  "Draw": {
+    "prefix": "draw",
+    "body": "\\draw [$1] ($2) ${3:--}$4 ($5);$0"
+  },
+  "Curve": {
+    "prefix": "curve",
+    "body": "\\draw [$1] ($2) to[out=$4,in=$5]$6 ($3);$0"
+  },
+  "Fill": {
+    "prefix": "fill",
+    "body": "\\filldraw [$1] ($2) $3 ($4)$5;$6"
+  },
+  "Axis": {
+    "prefix": "ax",
+    "body": [
+      "\\begin{axis}[axis lines=${1|middle,left,box|},xlabel=${2:x},ylabel=${3:y}]",
+      "\t$0",
+      "\\end{axis}"
+    ]
+  },
+  "Plot": {
+    "prefix": "plt",
+    "body": "\\addplot[domain=${1:-5:5},samples=${2:20},color=${3:black}]{$0};"
+  },
+  "3DPlot": {
+    "prefix": "3plt",
+    "body": "\\addplot3[$1]{$0};"
+  },
+  "Table": {
+    "prefix": "table",
+    "body": [
+      "\\begin{tabular}{|$1|}",
+      "\\hline",
+      "\t& \\multicolumn{$2}{|c|}{$3}\\\\",
+      "\\hline",
+      "\\multirow{$4}{12pt}{$5} & $0",
+      "\\hline",
+      "\\end{tabular}"
+    ]
+  },
+  "Kronecker": {
+    "prefix": "kro",
+    "body": "\\delta_{$1}$0"
+  },
+  "Levi-Civita": {
+    "prefix": "levi",
+    "body": "\\epsilon_{$1}$0"
+  },
+  "Grad": {
+    "prefix": "grad",
+    "body": "\\nabla"
+  },
+  "Divergence": {
+    "prefix": "div",
+    "body": "\\nabla \\cdot "
+  },
+  "Curl": {
+    "prefix": "Curl",
+    "body": "\\nabla \\times "
+  },
+  "curl": {
+    "prefix": "curl",
+    "body": "\\mathrm{curl}"
+  },
+  "or": {
+    "prefix": "or",
+    "body": "\\cup"
+  },
+  "Or": {
+    "prefix": "Or",
+    "body": "\\bigcup"
+  },
+  "and": {
+    "prefix": "and",
+    "body": "\\cap"
+  },
+  "And": {
+    "prefix": "And",
+    "body": "\\bigcap"
+  },
+  "Setminus": {
+    "prefix": "min",
+    "body": "\\setminus"
+  }
+}

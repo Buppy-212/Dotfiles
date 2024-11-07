@@ -1,0 +1,123 @@
+configuration {
+  modi: "drun,window,filebrowser,emoji";
+  sort:	true;
+  sorting-method:	"fzf";
+  disable-history:	true;
+  scroll-method:	0;
+  matching:	"fuzzy";
+  display-drun: "Applications";
+  display-window: "Windows";
+  display-emoji: "Emoji";
+  display-filebrowser: "Files";
+  display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font 12";
+  show-icons: true;
+  icon-theme: "Buppy";
+  hover-select: true;
+  me-accept-entry: "!MousePrimary";
+  kb-delete-entry: "Delete";
+  kb-remove-char-forward: "Control+d";
+  filebrowser {
+  directories-first:	true;
+  sorting-method:	"name";
+  }
+}
+
+@theme "/dev/null"
+
+* {
+  bg: rgba(34,36,54,0.95);
+  fg: #C8D3F5;
+  bg-alt: #FFC777;
+  bg-selected: #2F334D;
+  fg-alt: #1E2030;
+  bdr: #82AAFF;
+
+  background-color: transparent;
+  text-color: @fg;
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width:		60%;
+  border:		2px 2px 2px 2px;
+  border-radius:	3px;
+  border-color: @bdr;
+  background-color:	@bg;
+}
+
+mainbox { children: [ mode-switcher, inputbar, listview ]; }
+
+mode-switcher {
+  border-radius:	10px;
+  text-color:		inherit;
+  margin:		4px 4px 4px 4px;
+}
+
+button {
+  padding: 6px;
+  vertical-align:	0.5; 
+  horizontal-align:	0.5;
+  border-radius: 10px;
+}
+
+button selected {
+  background-color:	@bg-alt;
+  text-color: @fg-alt;
+}
+
+inputbar {
+  children:		[ entry ];
+  expand:		false;
+  padding:		2px 4px 2px 4px;
+}
+
+prompt { 
+  enabled: true; 
+}
+
+entry {
+  placeholder: "Search";
+  expand: true;
+  padding: 7px;
+  border-radius:	10px;
+  cursor:  text;
+}
+
+listview {
+  columns: 2;
+  cycle: true;
+  dynamic: true;
+  flow: horizontal;
+  layout:	vertical;
+  scrollbar: false;
+  lines: 15;
+  padding: 2px 0px 4px 0px;
+}
+
+element {
+  orientation: horizontal;
+  margin: 4px;
+  padding: 4px;
+  border-radius:	10px;
+}
+
+element-text {
+  vertical-align:	0.5; 
+  margin: 0px 0px 0px 2px;
+}
+
+element-icon {
+  size: 40px;
+  margin: 0px 0px 0px 4px;
+}
+
+element selected {
+  background-color:	@bg-selected;
+  border: 2px;
+  border-color: #C099FF;
+}

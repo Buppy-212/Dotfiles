@@ -1,0 +1,89 @@
+configuration {
+  modi: "power:~/.config/rofi/scripts/power.sh";
+  font: "JetBrainsMono Nerd Font 24";
+  hover-select: true;
+  me-accept-entry: "!MousePrimary";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: rgba(34,36,54,0.95);
+  fg: #C8D3F5;
+  bg-selected: #2F334D;
+  bg-alt: #2F334D;
+  bdr: #82AAFF;
+
+  background-color: transparent;
+  text-color: @fg;
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 60%;
+  border: 2px 2px 2px 2px;
+  border-radius: 3px;
+  border-color: @bdr;
+  background-color: @bg;
+}
+
+mainbox { children: [ inputbar, listview ]; }
+
+
+inputbar {
+  children:	[ entry ];
+  expand:	false;
+  padding: 4px 4px 2px 4px;
+}
+
+prompt { 
+  enabled: true; 
+}
+
+entry {
+  placeholder: "Power menu:";
+  expand: true;
+  padding: 7px 7px 0px 7px;
+  border-radius:	10px;
+  cursor:  text;
+}
+
+listview {
+  columns: 3;
+  cycle: true;
+  flow: horizontal;
+  layout:	vertical;
+  scrollbar: false;
+  lines: 2;
+  padding: 2px 0px 4px 0px;
+}
+
+element {
+  orientation: horizontal;
+  margin:		4px 4px 4px 4px;
+  border-radius:	10px;
+}
+
+element-text {
+  vertical-align:	0.5; 
+  horizontal-align: 0.5;
+  margin: 0px 0px 0px 2px;
+  padding: 150px 70px 150px 70px;
+}
+
+element-icon {
+  size: 40px;
+  margin: 0px 0px 0px 4px;
+}
+
+element selected {
+  background-color:	@bg-selected;
+  text-color: @fg;
+  border-radius: 10px;
+  border: 2px;
+  border-color: #C099FF;
+}
