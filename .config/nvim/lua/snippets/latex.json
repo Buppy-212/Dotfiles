@@ -2,8 +2,8 @@
   "Preamble": {
     "prefix": "preamble",
     "body": [
-      "\\input{$HOME/Documents/Maths/Latex Templates/preamble.tex}",
-      "\\input{$HOME/Documents/Maths/Latex Templates/commands.tex}",
+      "\\input{\\$HOME/Documents/Maths/Latex Templates/preamble.tex}",
+      "\\input{\\$HOME/Documents/Maths/Latex Templates/commands.tex}",
       "\\title{${1:Title}}",
       "\\date{${2:\\today}}",
       "\\begin{document}",
@@ -223,7 +223,7 @@
   },
   "InlineSet": {
     "prefix": "iset",
-    "body": "\\{ $1 \\} $0"
+    "body": "\\\\{ $1 \\\\} $0"
   },
   "Map": {
     "prefix": "map",
