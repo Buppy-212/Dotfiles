@@ -7,17 +7,17 @@ get() {
   done 
 }
 change() {
-	NEW_PIC=${CHOICE/\.\//"$DIR"}
+	NEW_PIC=${1/\.\//"$DIR"}
 	ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
 	killall hyprpaper
-	hyprpaper
+	coproc hyprpaper
 }
 case "$1" in
   "")
     get
     ;;
   *)
-    change
+    change "$@" 
     ;;
 esac
 
