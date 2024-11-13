@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-OPTS=("Gaps" "No Gaps")
+OPTS=("Gaps" "Big Gaps" "No Gaps")
 case "$1" in
   "No Gaps")
   hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0" > /dev/null
@@ -7,6 +7,10 @@ case "$1" in
     ;;
   "Gaps")
   hyprctl --batch "keyword general:gaps_in 2 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
+  OPTS=("Top" "Left Float" "Bottom" "No Bar")
+    ;;
+  "Big Gaps")
+  hyprctl --batch "keyword general:gaps_in 4 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
   OPTS=("Top" "Left Float" "Bottom" "No Bar")
     ;; 
   "Top")
