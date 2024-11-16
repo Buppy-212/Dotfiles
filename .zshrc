@@ -69,7 +69,14 @@ alias ls="eza --icons --group-directories-first"
 alias ll="eza -alh --icons --group-directories-first"
 alias tree="eza -T --icons"
 alias grep='grep --color=auto'
-alias y="yazi"
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Fzf colorscheme
 . "$HOME"/.config/fzf/theme.sh
