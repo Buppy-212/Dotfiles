@@ -22,5 +22,15 @@ vim.treesitter.language.register("markdown", "vimwiki")
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+vim.filetype.add({
+  extension = {
+    zsh = "sh",
+    sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
+  },
+  filename = {
+    [".zshrc"] = "sh",
+    [".zshenv"] = "sh",
+  },
+})
 vim.opt.spelllang = "en_gb"
 vim.opt.spelloptions = "camel,noplainbuffer"
