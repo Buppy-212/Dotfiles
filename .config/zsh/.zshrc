@@ -32,7 +32,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
 # Keybindings
 bindkey -e
@@ -42,7 +42,7 @@ bindkey '^ ' autosuggest-accept
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -69,6 +69,7 @@ alias ls="eza --icons --group-directories-first"
 alias ll="eza -alh --icons --group-directories-first"
 alias tree="eza -T --icons"
 alias grep='grep --color=auto'
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"

@@ -30,6 +30,20 @@ return {
         },
       },
     })
+    require("lspconfig").pylsp.setup({
+      settings = {
+        pylsp = {
+          plugins = {
+            pycodestyle = {
+              enabled = false,
+            },
+            autopep8 = {
+              enabled = false,
+            },
+          },
+        },
+      },
+    })
 
     vim.keymap.set("n", "<leader>cr", "<cmd> lua vim.lsp.buf.rename()<cr>", { desc = "Rename" })
     vim.keymap.set("n", "<leader>cd", "<cmd> lua vim.lsp.buf.definition()<cr>", { desc = "Definition" })
