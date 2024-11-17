@@ -42,11 +42,11 @@ return {
       mapping = cmp.mapping.preset.insert({
         ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-        ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<C-B>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-F>"] = cmp.mapping.scroll_docs(4),
+        ["<C-G>"] = cmp.mapping.complete(), -- show completion suggestions
+        ["<C-E>"] = cmp.mapping.abort(), -- close completion window
+        ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
@@ -61,6 +61,9 @@ return {
           maxwidth = 50,
           ellipsis_char = "...",
         }),
+      },
+      experimental = {
+        ghost_text = true,
       },
     })
     vim.keymap.set({ "i", "s" }, "<C-L>", function()
