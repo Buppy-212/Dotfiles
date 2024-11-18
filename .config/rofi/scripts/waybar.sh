@@ -10,8 +10,8 @@ case "$1" in
   OPTS=("Top" "Left Float" "Bottom" "No Bar")
     ;;
   "Big Gaps")
-  hyprctl --batch "keyword general:gaps_in 4 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
-  OPTS=("Top" "Left Float" "Bottom" "No Bar")
+  hyprctl --batch "keyword general:gaps_in 4 ; keyword general:gaps_out 8 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
+  OPTS=("Top" "Left Alt" "Bottom" "No Bar")
     ;; 
   "Top")
   killall waybar
@@ -21,6 +21,11 @@ case "$1" in
   "Left Float")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
+  OPTS=()
+    ;;
+  "Left Alt")
+  killall waybar
+  coproc waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css
   OPTS=()
     ;;
   "Left")

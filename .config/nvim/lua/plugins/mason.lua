@@ -40,6 +40,16 @@ return {
             autopep8 = {
               enabled = false,
             },
+            flake8 = {
+              ignore = { "F401", "F403", "F405", "W391" },
+              enabled = true,
+            },
+            pyflakes = {
+              enabled = false,
+            },
+            mccabe = {
+              enabled = false,
+            },
           },
         },
       },

@@ -14,7 +14,7 @@ map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 map("n", "<C-l>", "<cmd>noh<cr>", { desc = "Clear search" })
 
 -- Terminal
-map("t", "<C-Space>", "<cmd>wincmd k<cr>", { silent = true })
+map("t", "<C-K>", "<cmd>wincmd k<cr>", { silent = true })
 
 -- Ctrl-; and C work like Escape
 map("i", "<C-;>", "<ESC>", { silent = true })
