@@ -1,50 +1,48 @@
 #!/usr/bin/env bash
 OPTS=("Gaps" "Big Gaps" "No Gaps")
 case "$1" in
-  "No Gaps")
-  hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0" > /dev/null
+"No Gaps")
+  hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 0 ; keyword decoration:rounding 0" >/dev/null
   OPTS=("Top" "Left" "Bottom" "No Bar")
-    ;;
-  "Gaps")
-  hyprctl --batch "keyword general:gaps_in 2 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
+  ;;
+"Gaps")
+  hyprctl --batch "keyword general:gaps_in 2 ; keyword general:gaps_out 4 ; keyword general:border_size 2 ; keyword decoration:rounding 3" >/dev/null
   OPTS=("Top" "Left Float" "Bottom" "No Bar")
-    ;;
-  "Big Gaps")
-  hyprctl --batch "keyword general:gaps_in 4 ; keyword general:gaps_out 8 ; keyword general:border_size 2 ; keyword decoration:rounding 3" > /dev/null
+  ;;
+"Big Gaps")
+  hyprctl --batch "keyword general:gaps_in 4 ; keyword general:gaps_out 8 ; keyword general:border_size 2 ; keyword decoration:rounding 3" >/dev/null
   OPTS=("Top" "Left Alt" "Bottom" "No Bar")
-    ;; 
-  "Top")
+  ;;
+"Top")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css
   OPTS=()
-    ;;
-  "Left Float")
+  ;;
+"Left Float")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
   OPTS=()
-    ;;
-  "Left Alt")
+  ;;
+"Left Alt")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css
   OPTS=()
-    ;;
-  "Left")
+  ;;
+"Left")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css
   OPTS=()
-    ;;
-  "Bottom")
+  ;;
+"Bottom")
   killall waybar
   coproc waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css
   OPTS=()
-    ;;
-  "No Bar")
+  ;;
+"No Bar")
   killall waybar
   OPTS=()
-    ;;
+  ;;
 esac
-for i in "${OPTS[@]}"; do 
+for i in "${OPTS[@]}"; do
   echo -en "$i\n"
 done
-
-

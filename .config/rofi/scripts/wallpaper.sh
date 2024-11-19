@@ -4,20 +4,19 @@ get() {
   readarray -t PICS < <(find "$HOME"/Pictures/Wallpapers/ | grep -e ".png$")
   for a in "${PICS[@]}"; do
     echo -en "$a\0icon\x1f$a\n"
-  done 
+  done
 }
 change() {
-	NEW_PIC=${1/\.\//"$DIR"}
-	ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
-	killall hyprpaper
-	coproc hyprpaper
+  NEW_PIC=${1/\.\//"$DIR"}
+  ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
+  killall hyprpaper
+  coproc hyprpaper
 }
 case "$1" in
-  "")
-    get
-    ;;
-  *)
-    change "$@" 
-    ;;
+"")
+  get
+  ;;
+*)
+  change "$@"
+  ;;
 esac
-
