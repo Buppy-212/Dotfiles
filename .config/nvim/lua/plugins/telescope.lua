@@ -18,7 +18,14 @@ return {
           hidden = false,
         },
       },
-
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-;>"] = "close",
+            ["<ESC>"] = "close",
+          },
+        },
+      },
       vimgrep_argument = { "rg", "--smart-case" },
     })
 
