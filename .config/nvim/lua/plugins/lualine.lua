@@ -1,4 +1,5 @@
 return {
+
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   event = "VimEnter",
@@ -12,11 +13,13 @@ return {
         statusline = {},
         winbar = {},
       },
+      always_show_tabline = false,
+      always_show_winbar = false,
       ignore_focus = {},
       always_divide_middle = true,
       globalstatus = true,
       refresh = {
-        statusline = 1000,
+        statusline = 100,
         tabline = 1000,
         winbar = 1000,
       },
@@ -28,7 +31,7 @@ return {
         "diff",
         "diagnostics",
       },
-      lualine_c = { "buffers" },
+      lualine_c = { { "buffers", symbols = { alternate_file = "" }, filetype_names = { lazy = "Lazy" } } },
       lualine_x = {},
       lualine_y = { "filetype" },
       lualine_z = { "location" },
@@ -36,8 +39,8 @@ return {
     inactive_sections = {
       lualine_a = {},
       lualine_b = {},
-      lualine_c = { "filename" },
-      lualine_x = { "location" },
+      lualine_c = {},
+      lualine_x = {},
       lualine_y = {},
       lualine_z = {},
     },
