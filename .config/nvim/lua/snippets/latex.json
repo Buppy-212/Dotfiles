@@ -145,6 +145,10 @@
     "prefix": "rn",
     "body": "\\mathbb{R}^n $0"
   },
+  "C": {
+    "prefix": "c",
+    "body": "\\mathbb{C} $0"
+  },
   "Expectation": {
     "prefix": "expect",
     "body": "\\mathbb{E}($1) $0"
