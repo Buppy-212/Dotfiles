@@ -26,7 +26,7 @@ map("n", "<C-l>", "<cmd>noh<cr>", { desc = "Clear search" })
 map("t", "<C-K>", "<cmd>wincmd k<cr>", { silent = true })
 
 -- Ctrl-; and C work like Escape
-map("i", "<C-;>", "<ESC>", { silent = true })
+map({ "i", "v" }, "<C-;>", "<ESC>", { silent = true })
 map("i", "<C-C>", "<ESC>", { silent = true })
 
 -- Changing directory
