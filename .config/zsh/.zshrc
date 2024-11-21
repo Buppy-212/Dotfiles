@@ -69,7 +69,6 @@ alias ls="eza --icons --group-directories-first"
 alias ll="eza -alh --icons --group-directories-first"
 alias tree="eza -T --icons"
 alias grep='grep --color=auto'
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
