@@ -22,20 +22,19 @@
 
 ### Terminal Programs
 
-- Starship
+- Zsh
 - Eza
 - Zoxide
 - Btop
 - Yazi
 - Fastfetch
 - Fzf
-- Tmux
 - Neovim
+- Mpv
 
 ### Other Programs
 
 - Zathura
-- Mpv
 
 ## Installation
 
