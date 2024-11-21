@@ -14,7 +14,11 @@ return {
         sidebars = "transparent",
         floats = "dark",
       },
+      on_highlights = function(hl)
+        hl["@keyword.import"] = { fg = "#7dcfff", italic = true }
+      end,
     })
+
     -- load the colorscheme
     vim.cmd([[colorscheme tokyonight]])
     vim.cmd([[se cul]])
