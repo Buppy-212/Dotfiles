@@ -21,7 +21,6 @@ return {
       defaults = {
         mappings = {
           i = {
-            ["<C-;>"] = "close",
             ["<ESC>"] = "close",
           },
         },
