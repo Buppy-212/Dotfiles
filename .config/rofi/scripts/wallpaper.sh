@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 DIR="$HOME"/Pictures/Wallpapers/
 get() {
-  readarray -t PICS < <(find "$HOME"/Pictures/Wallpapers/ | grep -e ".png$" ".jpg$" ".jpeg$" ".webp$")
+  readarray -t PICS < <(find "$HOME"/Pictures/Wallpapers/ | grep -e ".png$" -e ".jpg$" -e ".jpeg$" -e ".webp$")
   for a in "${PICS[@]}"; do
     echo -en "$a\0icon\x1f$a\n"
   done
