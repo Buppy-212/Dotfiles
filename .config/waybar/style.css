@@ -11,14 +11,14 @@
 }
 
 window#waybar {
-  background: rgba(34, 36, 54, 0.9);
+  background: rgba(34, 36, 54, 1);
   color: #c8d3f5;
   font-size: 11pt;
   border-radius: 5px;
 }
 
 tooltip {
-  background: rgba(34, 36, 54, 0.95);
+  background: rgba(34, 36, 54, 1);
   border-radius: 10px;
   border: 2px solid #c8d3f5;
 }
@@ -75,7 +75,7 @@ tooltip label {
 }
 
 #tray menu {
-  background-color: rgba(34, 36, 54, 0.95);
+  background-color: transparent;
   padding: 8px;
   border-radius: 10px;
   border: 2px solid #c8d3f5;
