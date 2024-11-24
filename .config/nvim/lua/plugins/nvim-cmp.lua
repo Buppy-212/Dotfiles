@@ -62,9 +62,6 @@ return {
           ellipsis_char = "...",
         }),
       },
-      experimental = {
-        ghost_text = true,
-      },
     })
     vim.keymap.set({ "i", "s" }, "<C-L>", function()
       if luasnip.expand_or_jumpable() then
