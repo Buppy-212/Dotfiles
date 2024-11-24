@@ -4,7 +4,7 @@ return {
     "neovim/nvim-lspconfig",
     "williamboman/mason-lspconfig",
     "mfussenegger/nvim-lint",
-    "mhartington/formatter.nvim",
+    "stevearc/conform.nvim",
   },
   config = function()
     require("mason").setup()
