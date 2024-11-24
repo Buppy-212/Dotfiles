@@ -45,6 +45,10 @@ tooltip label {
   color: #1b1d2b;
 }
 
+#window {
+  margin: -10px 0px -10px 0px;
+}
+
 #custom-updates {
   color: #c8d3f5;
   padding-right: 5px;

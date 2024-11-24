@@ -31,6 +31,9 @@
     "on-click": "activate",
     "all-outputs": true
   },
+  "hyprland/window": {
+    "max-length": 100
+  },
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",

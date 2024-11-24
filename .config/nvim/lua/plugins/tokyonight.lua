@@ -12,7 +12,7 @@ return {
         functions = { bold = true },
         constructors = { bold = true },
         sidebars = "transparent",
-        floats = "dark",
+        floats = "normal",
       },
       on_highlights = function(hl)
         hl["@keyword.import"] = { fg = "#7dcfff", italic = true }
