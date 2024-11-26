@@ -22,9 +22,6 @@ end, { desc = "Delete other buffers" })
 -- Clear Search
 map("n", "<C-l>", "<cmd>noh<cr>", { desc = "Clear search" })
 
--- Terminal
-map("t", "<C-K>", "<cmd>wincmd k<cr>", { silent = true })
-
 -- Ctrl-C works like Escape
 map("i", "<C-C>", "<ESC>", { silent = true })
 
