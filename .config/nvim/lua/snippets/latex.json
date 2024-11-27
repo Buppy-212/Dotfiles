@@ -281,6 +281,14 @@
     "prefix": "dddot",
     "body": "\\dddot{$1}$0"
   },
+  "Bar": {
+    "prefix": "bar",
+    "body": "\\bar{$1}$0"
+  },
+  "Hat": {
+    "prefix": "hat",
+    "body": "\\hat{$1}$0"
+  },
   "VectorFunction": {
     "prefix": "vecf",
     "body": "\\mathbf{$1}(\\mathbf{$2})$0"
