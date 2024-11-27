@@ -1,4 +1,5 @@
 vim.opt.conceallevel = 2
+vim.opt.smartindent = false
 vim.opt.formatoptions = "t"
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

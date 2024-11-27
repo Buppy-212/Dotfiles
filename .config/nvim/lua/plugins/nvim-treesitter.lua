@@ -6,7 +6,7 @@ return {
     require("nvim-treesitter.configs").setup({
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false,
+        additional_vim_regex_highlighting = true,
       },
       incremental_selection = {
         enable = true,
@@ -18,7 +18,7 @@ return {
         },
       },
       indent = {
-        enable = false,
+        enable = true,
       },
     })
   end,
