@@ -7,7 +7,6 @@ return {
     require("mini.pairs").setup({
       mappings = {
         ["'"] = false,
-        ['"'] = false,
         ["`"] = false,
       },
     })
