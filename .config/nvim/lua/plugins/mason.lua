@@ -39,7 +39,7 @@ return {
               enabled = false,
             },
             flake8 = {
-              ignore = { "E401", "F401", "F403", "F405", "W391" },
+              ignore = { "E401", "E501", "F401", "F403", "F405", "W391" },
               enabled = true,
             },
             pyflakes = {
