@@ -36,7 +36,7 @@ return {
               enabled = false,
             },
             autopep8 = {
-              enabled = false,
+              enabled = true,
             },
             flake8 = {
               ignore = { "E401", "E501", "F401", "F403", "F405", "W391" },
@@ -46,6 +46,9 @@ return {
               enabled = false,
             },
             mccabe = {
+              enabled = false,
+            },
+            yapf = {
               enabled = false,
             },
           },

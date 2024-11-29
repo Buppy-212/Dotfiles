@@ -22,7 +22,7 @@ return {
         bib = { "bibtex-tidy" },
         markdown = { "markdownlint" },
         sh = { "shfmt" },
-        python = { "yapf", "isort" },
+        python = { "autopep8", "isort" },
         lua = { "stylua" },
         css = { "prettier" },
         json = { "jq", "prettier" },
