@@ -42,6 +42,7 @@ return {
             flake8 = {
               ignore = { "E123", "E401", "E501", "F401", "F403", "F405", "W391" },
               enabled = true,
+              indentSize = 2,
             },
             pyflakes = {
               enabled = false,

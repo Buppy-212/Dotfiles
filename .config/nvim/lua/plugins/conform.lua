@@ -4,7 +4,7 @@ return {
   keys = {
     {
       "<leader>cf",
-      mode = { "v" },
+      mode = { "n", "v" },
       function()
         require("conform").format({
           lsp_fallback = true,
@@ -12,23 +12,34 @@ return {
           timeout_ms = 1000,
         })
       end,
-      desc = "Format file or range (in visual mode)",
+      desc = "Format",
     },
   },
   config = function()
     require("conform").setup({
       formatters_by_ft = {
-        tex = { "latexindent" },
         bib = { "bibtex-tidy" },
-        markdown = { "markdownlint" },
-        sh = { "shfmt" },
-        python = { "yapf", "isort" },
-        lua = { "stylua" },
         css = { "prettier" },
-        json = { "jq", "prettier" },
         html = { "prettier" },
         javascript = { "prettier" },
+        json = { "jq", "prettier" },
+        lua = { "stylua" },
+        markdown = { "markdownlint" },
+        python = { "yapf", "isort" },
+        sh = { "shfmt" },
+        tex = { "latexindent" },
         yaml = { "prettier" },
+      },
+      formatters = {
+        yapf = {
+          args = {
+            "--style",
+            "{based_on_style: yapf, indent_width: 2, continuation_indent_width=2, continuation_align_style=fixed}",
+          },
+        },
+        latexindent = {
+          args = { "-g", "/dev/null" },
+        },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -36,13 +47,5 @@ return {
         timeout_ms = 1000,
       },
     })
-    require("conform").formatters.yapf = {
-      command = "yapf",
-      args = "--style='{based_on_style: yapf}'",
-    }
-    require("conform").formatters.latexindent = {
-      command = "latexindent",
-      args = "-g /dev/null",
-    }
   end,
 }
