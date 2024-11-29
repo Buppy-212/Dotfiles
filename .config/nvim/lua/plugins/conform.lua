@@ -18,7 +18,7 @@ return {
   config = function()
     require("conform").setup({
       formatters_by_ft = {
-        tex = { "latexindent -c /dev/null" },
+        tex = { "latexindent" },
         bib = { "bibtex-tidy" },
         markdown = { "markdownlint" },
         sh = { "shfmt" },
@@ -36,5 +36,13 @@ return {
         timeout_ms = 1000,
       },
     })
+    require("conform").formatters.yapf = {
+      command = "yapf",
+      args = "--style='{based_on_style: yapf}'",
+    }
+    require("conform").formatters.latexindent = {
+      command = "latexindent",
+      args = "-g /dev/null",
+    }
   end,
 }

@@ -30,6 +30,7 @@ return {
     })
     require("lspconfig").pylsp.setup({
       settings = {
+        configurationSources = "flake8",
         pylsp = {
           plugins = {
             pycodestyle = {
