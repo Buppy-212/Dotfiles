@@ -36,19 +36,16 @@ return {
               enabled = false,
             },
             autopep8 = {
-              enabled = true,
+              enabled = false,
             },
             flake8 = {
-              ignore = { "E401", "E501", "F401", "F403", "F405", "W391" },
+              ignore = { "E123", "E401", "E501", "F401", "F403", "F405", "W391" },
               enabled = true,
             },
             pyflakes = {
               enabled = false,
             },
             mccabe = {
-              enabled = false,
-            },
-            yapf = {
               enabled = false,
             },
           },
