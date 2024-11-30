@@ -5,6 +5,7 @@ case "$1" in
   find "$MUSIC" -mindepth 1 | cut -d / -f 1-5 --complement
   ;;
 *)
-  coproc mpv "$MUSIC""$1"
+  pkill mpv
+  coproc mpv "$MUSIC""$1" --shuffle
   ;;
 esac
