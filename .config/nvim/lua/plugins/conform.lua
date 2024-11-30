@@ -34,7 +34,7 @@ return {
         yapf = {
           args = {
             "--style",
-            "{based_on_style: yapf, indent_width: 2, continuation_indent_width: 2, continuation_align_style: fixed, column_limit: 160}",
+            "{based_on_style: yapf, indent_width: 2, continuation_indent_width: 2, continuation_align_style: fixed, column_limit: 100}",
           },
         },
         latexindent = {

@@ -40,7 +40,7 @@ return {
               enabled = false,
             },
             flake8 = {
-              ignore = { "E123", "E401", "E501", "F401", "F403", "F405", "W391" },
+              ignore = { "E123", "E128", "E401", "E501", "F401", "F403", "F405", "W391", "W504" },
               enabled = true,
               indentSize = 2,
             },
