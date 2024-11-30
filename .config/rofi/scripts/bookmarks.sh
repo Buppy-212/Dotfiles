@@ -6,7 +6,7 @@ case "$1" in
   ;;
 *)
   if grep -q -e "^$1$" "$BOOKMARKS"; then
-    xdg-open "$1"
+    coproc xdg-open "$1"
   else
     echo "$1" >>"$BOOKMARKS"
   fi
