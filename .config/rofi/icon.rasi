@@ -1,20 +1,26 @@
 configuration {
-  modi: "";
+  modi: "drun,window,filebrowser,emoji";
   sort:	true;
   sorting-method:	"fzf";
   disable-history:	true;
   scroll-method:	0;
   matching:	"fuzzy";
-  display-bookmarks: "Bookmarks";
-  display-music: "Music";
+  display-drun: "Applications";
+  display-window: "Windows";
+  display-emoji: "Emoji";
+  display-filebrowser: "Files";
   display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font 12";
-  show-icons: false;
+  show-icons: true;
   icon-theme: "Buppy";
   hover-select: true;
   me-accept-entry: "!MousePrimary";
   kb-delete-entry: "Delete";
   kb-remove-char-forward: "Control+d";
+  filebrowser {
+  directories-first:	true;
+  sorting-method:	"name";
+  }
   kb-cancel: "Control+[47],Escape,Control+C";
 }
 
@@ -86,26 +92,31 @@ entry {
 }
 
 listview {
-  columns: 1;
+  columns: 2;
   cycle: true;
   dynamic: true;
   flow: horizontal;
   layout:	vertical;
   scrollbar: false;
-  lines: 20;
+  lines: 15;
   padding: 2px 0px 4px 0px;
 }
 
 element {
   orientation: horizontal;
-  margin: 2px 4px 2px 4px;
-  padding: 6px;
-  border-radius: 10px;
+  margin: 4px;
+  padding: 4px;
+  border-radius:	10px;
 }
 
 element-text {
   vertical-align:	0.5; 
-  margin: 0px;
+  margin: 0px 0px 0px 2px;
+}
+
+element-icon {
+  size: 40px;
+  margin: 0px 0px 0px 4px;
 }
 
 element selected {

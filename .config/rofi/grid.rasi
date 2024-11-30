@@ -6,6 +6,7 @@ configuration {
   display-power: "Power";
   display-toggles: "Toggles";
   display-waybar: "Waybar";
+  kb-cancel: "Control+[47],Escape,Control+C";
 }
 
 @theme "/dev/null"
@@ -14,12 +15,14 @@ configuration {
   bg: rgba(34,36,54,0.95);
   fg: #C8D3F5;
   bg-selected: #2F334D;
-  bg-alt: #FFC777;
   fg-alt: #1E2030;
-  bdr: #82AAFF;
+  orange: #FFC777;
+  blue: #82AAFF;
+  purple: #C099FF;
 
   background-color: transparent;
   text-color: @fg;
+  highlight: bold #FF9E64;
 
   margin: 0;
   border: 0;
@@ -31,7 +34,7 @@ window {
   width: 60%;
   border: 2px 2px 2px 2px;
   border-radius: 3px;
-  border-color: @bdr;
+  border-color: @blue;
   background-color: @bg;
 }
 
@@ -51,7 +54,7 @@ button {
 }
 
 button selected {
-  background-color:	@bg-alt;
+  background-color:	@orange;
   text-color: @fg-alt;
 }
 
@@ -105,5 +108,5 @@ element selected {
   text-color: @fg;
   border-radius: 10px;
   border: 2px;
-  border-color: #C099FF;
+  border-color: @purple;
 }

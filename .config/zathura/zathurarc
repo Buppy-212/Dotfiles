@@ -49,3 +49,4 @@ set font "JetBrains Mono Regular 11"
 set guioptions none
 set selection-clipboard clipboard
 map D set "first-page-column 1:1"
+set database "sqlite"

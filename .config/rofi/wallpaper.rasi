@@ -9,6 +9,7 @@ configuration {
   font: "JetBrainsMono Nerd Font 12";
   hover-select: true;
   me-accept-entry: "!MousePrimary";
+  kb-cancel: "Control+[47],Escape,Control+C";
 } 
 
 @theme "/dev/null"
@@ -16,9 +17,9 @@ configuration {
 * {
   bg: rgba(34,36,54,0.95);
   fg: #C8D3F5;
-  bg-selected: #C099FF;
-  bg-alt: #2F334D;
-  bdr: #82AAFF;
+  orange: #2F334D;
+  blue: #82AAFF;
+  purple: #C099FF;
 
   background-color: transparent;
   text-color: @fg;
@@ -33,7 +34,7 @@ window {
   width: 60%;
   border: 2px 2px 2px 2px;
   border-radius: 3px;
-  border-color: @bdr;
+  border-color: @blue;
   background-color: @bg;
 }
 
@@ -81,7 +82,7 @@ element-icon {
 }
 
 element selected {
-  background-color:	@bg-selected;
-  border-color: @bg-selected;
+  background-color:	@purple;
+  border-color: @purple;
   border: 2px;
 }
