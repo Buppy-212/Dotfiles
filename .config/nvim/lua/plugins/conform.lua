@@ -25,7 +25,7 @@ return {
         json = { "jq", "prettier" },
         lua = { "stylua" },
         markdown = { "markdownlint" },
-        python = { "yapf", "isort" },
+        python = { "yapf", "isort", "docformatter" },
         sh = { "shfmt" },
         tex = { "latexindent" },
         yaml = { "prettier" },
@@ -34,11 +34,14 @@ return {
         yapf = {
           args = {
             "--style",
-            "{based_on_style: yapf, indent_width: 2, continuation_indent_width=2, continuation_align_style=fixed}",
+            "{based_on_style: yapf, indent_width: 2, continuation_indent_width: 2, continuation_align_style: fixed, column_limit: 160}",
           },
         },
         latexindent = {
           args = { "-g", "/dev/null" },
+        },
+        docformatter = {
+          args = { "--in-place", "$FILENAME" },
         },
       },
       format_on_save = {
