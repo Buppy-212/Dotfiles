@@ -1,6 +1,6 @@
 return {
   "gbprod/yanky.nvim",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = {
     "nvim-telescope/telescope.nvim",
   },

@@ -24,18 +24,23 @@ return {
       return button
     end
     dashboard.section.buttons.val = {
-      buttonhl("e", "   File Explorer", '<cmd> lua require("yazi").yazi(nil, vim.fn.getcwd())<CR>', "Number"),
+      buttonhl("e", "   File Explorer", function()
+        require("yazi").yazi(nil, vim.fn.getcwd())
+      end, "Number"),
       buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
-      buttonhl("f", "󰱼   Find File", "<cmd>Telescope find_files<CR>", "Number"),
-      buttonhl(
-        "a",
-        "󰘓   Find Hidden File",
-        "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>",
-        "Number"
-      ),
-      buttonhl("r", "   Recent Files", "<cmd>Telescope oldfiles<CR>", "Number"),
+      buttonhl("f", "󰱼   Find File", function()
+        require("telescope.builtin").find_files()
+      end, "Number"),
+      buttonhl("a", "󰘓   Find Hidden File", function()
+        require("telescope.builtin").find_files({ hidden = true })
+      end, "Number"),
+      buttonhl("r", "   Recent Files", function()
+        require("telescope.builtin").oldfiles()
+      end, "Number"),
       buttonhl("l", "󰒲   Lazy", "<cmd>Lazy<CR>", "Number"),
-      buttonhl("x", "󰁯   Restore Session", "<cmd>lua require('persistence').load({ last = true })<CR>", "Number"),
+      buttonhl("x", "󰁯   Restore Session", function()
+        require("persistence").load({ last = true })
+      end, "Number"),
       buttonhl("q", "   Quit", "<cmd>qa<CR>", "Number"),
     }
 

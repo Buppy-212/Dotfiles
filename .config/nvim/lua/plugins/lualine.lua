@@ -1,8 +1,8 @@
 return {
 
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  event = "VimEnter",
+  dependencies = { "nvim-tree/nvim-web-devicons", "yavorski/lualine-macro-recording.nvim" },
+  event = "VeryLazy",
   opts = {
     options = {
       icons_enabled = true,
@@ -32,7 +32,7 @@ return {
         "diagnostics",
       },
       lualine_c = { { "buffers", symbols = { alternate_file = "" }, filetype_names = { lazy = "Lazy" } } },
-      lualine_x = {},
+      lualine_x = { "macro_recording" },
       lualine_y = { "filetype" },
       lualine_z = { "location" },
     },

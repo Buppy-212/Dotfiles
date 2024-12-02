@@ -1,6 +1,57 @@
 return {
   "nvim-telescope/telescope.nvim",
-  event = "VeryLazy",
+  lazy = true,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+    },
+  },
+  keys = {
+    {
+      "<leader>ff",
+      function()
+        require("telescope.builtin").find_files()
+      end,
+      desc = "Files",
+    },
+    {
+      "<leader>fr",
+      function()
+        require("telescope.builtin").oldfiles()
+      end,
+      desc = "Recent files",
+    },
+    {
+      "<leader>fg",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Grep",
+    },
+    {
+      "<leader>fb",
+      function()
+        require("telescope.builtin").buffers()
+      end,
+      desc = "Buffers",
+    },
+    {
+      "<leader>bf",
+      function()
+        require("telescope.builtin").buffers()
+      end,
+      desc = "Find buffers",
+    },
+    {
+      "<leader>fa",
+      function()
+        require("telescope.builtin").find_files({ hidden = true })
+      end,
+      desc = "Hidden files",
+    },
+  },
   config = function()
     require("telescope").setup({
       extensions = {
@@ -29,28 +80,5 @@ return {
     })
 
     require("telescope").load_extension("fzf")
-    local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Files" })
-    vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recent files" })
-    vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Grep" })
-    vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
-    vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Find buffers" })
-    vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope keywords=TODO,FIX<CR>", { desc = "Find Todos" })
-    vim.keymap.set(
-      "n",
-      "<leader>fa",
-      "<cmd> lua require('telescope.builtin').find_files({hidden = true})<cr>",
-      { desc = "Hidden files" }
-    )
-    require("telescope").load_extension("undo")
-    vim.keymap.set("n", "<leader>fu", "<cmd>Telescope undo<cr>", { desc = "Undo" })
   end,
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-    },
-    "debugloop/telescope-undo.nvim",
-  },
 }

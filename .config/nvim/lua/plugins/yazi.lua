@@ -1,6 +1,6 @@
 return {
   "mikavilpas/yazi.nvim",
-  event = "VeryLazy",
+  lazy = true,
   keys = {
     {
       "<leader>ee",

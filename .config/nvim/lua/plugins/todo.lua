@@ -1,6 +1,6 @@
 return {
   "folke/todo-comments.nvim",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
   keys = {
     { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Todo" },

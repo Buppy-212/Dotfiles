@@ -6,6 +6,7 @@ return {
     "mfussenegger/nvim-lint",
     "stevearc/conform.nvim",
   },
+  event = "VeryLazy",
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup()

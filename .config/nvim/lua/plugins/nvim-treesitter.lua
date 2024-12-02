@@ -2,6 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
+  lazy = true,
   config = function()
     require("nvim-treesitter.configs").setup({
       highlight = {
