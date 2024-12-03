@@ -243,19 +243,19 @@
   },
   "Integral": {
     "prefix": "int",
-    "body": "\\int_{$1}^{$2} $4 \\, \\mathrm{d}$3 $0"
+    "body": "\\int_{$1}^{$2} $4 \\, d$3 $0"
   },
   "DoubleIntegral": {
     "prefix": "iint",
-    "body": "\\iint_{R} $1 \\, \\mathrm{d}A $0"
+    "body": "\\iint_{R} $1 \\, dA $0"
   },
   "TripleIntegral": {
     "prefix": "iiint",
-    "body": "\\iiint_{E} $1 \\, \\mathrm{d}V $0"
+    "body": "\\iiint_{E} $1 \\, dV $0"
   },
   "ClosedIntegral": {
     "prefix": "oint",
-    "body": "\\oint_{C} $2 \\, \\mathrm{d}$1 $0"
+    "body": "\\oint_{C} $2 \\, d$1 $0"
   },
   "DefiniteIntegral": {
     "prefix": "dint",
@@ -263,7 +263,7 @@
   },
   "Derivative": {
     "prefix": "der",
-    "body": "\\frac{\\mathrm{d}$1}{\\mathrm{d}$2} $0"
+    "body": "\\frac{d$1}{d$2} $0"
   },
   "ParitalDerivative": {
     "prefix": "part",
