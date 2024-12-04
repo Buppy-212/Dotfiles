@@ -8,8 +8,11 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+vim.opt.foldlevelstart = 99
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.diagnostic.config({
   virtual_text = true,
   update_in_insert = false,

@@ -28,3 +28,15 @@ map("i", "<C-C>", "<ESC>", { silent = true })
 -- Changing directory
 map("n", "<leader>e.", "<cmd>cd %:p:h<cr>", { desc = "Change CWD" })
 map("n", "<leader>e,", "<cmd>cd ..<cr>", { desc = "Up directory" })
+
+-- Folds
+map("n", "<leader>za", "za", { desc = "Toggle fold under cursor" })
+map("n", "<leader>zA", "zA", { desc = "Toggle all folds under cursor" })
+map("n", "<leader>zj", "<cmd>set foldlevel=1<cr>", { desc = "Foldlevel 1" })
+map("n", "<leader>zk", "<cmd>set foldlevel=2<cr>", { desc = "Foldlevel 2" })
+map("n", "<leader>zl", "<cmd>set foldlevel=3<cr>", { desc = "Foldlevel 3" })
+map("n", "<leader>z;", "<cmd>set foldlevel=4<cr>", { desc = "Foldlevel 4" })
+map("n", "<leader>zM", "zM", { desc = "Close all folds" })
+map("n", "<leader>zm", "zm", { desc = "Fold more" })
+map("n", "<leader>zR", "zR", { desc = "Open all folds" })
+map("n", "<leader>zR", "zr", { desc = "Fold less" })

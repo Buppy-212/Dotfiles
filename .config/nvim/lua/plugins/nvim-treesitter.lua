@@ -7,7 +7,7 @@ return {
     require("nvim-treesitter.configs").setup({
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = true,
+        additional_vim_regex_highlighting = { "latex" },
       },
       incremental_selection = {
         enable = true,

@@ -19,7 +19,8 @@ return {
       { "<leader>n", group = "notifications" },
       { "<leader>v", proxy = "\\l", group = "vimtex", icon = " " },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
-      { "<leader>x", group = "diagnostics/todo" },
+      { "<leader>x", group = "diagnostics" },
+      { "<leader>z", group = "folds", icon = "" },
     },
   },
   config = function(_, opts)
