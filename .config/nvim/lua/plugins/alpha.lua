@@ -25,7 +25,7 @@ return {
     end
     dashboard.section.buttons.val = {
       buttonhl("e", "   File Explorer", function()
-        require("yazi").yazi(nil, vim.fn.getcwd())
+        require("oil").open()
       end, "Number"),
       buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),
       buttonhl("f", "󰱼   Find File", function()

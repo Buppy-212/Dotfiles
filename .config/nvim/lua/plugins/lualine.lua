@@ -31,7 +31,9 @@ return {
         "diff",
         "diagnostics",
       },
-      lualine_c = { { "buffers", symbols = { alternate_file = "" }, filetype_names = { lazy = "Lazy" } } },
+      lualine_c = {
+        { "buffers", symbols = { alternate_file = "" }, filetype_names = { lazy = "Lazy", oil = "Oil" } },
+      },
       lualine_x = { "macro_recording" },
       lualine_y = { "filetype" },
       lualine_z = { "location" },
