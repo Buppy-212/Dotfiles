@@ -24,7 +24,7 @@ return {
       return button
     end
     dashboard.section.buttons.val = {
-      buttonhl("e", "   File Explorer", function()
+      buttonhl("o", "   File Explorer", function()
         require("oil").open()
       end, "Number"),
       buttonhl("n", "   New File", "<cmd>ene<cr>", "Number"),

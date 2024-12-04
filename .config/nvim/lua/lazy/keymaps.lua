@@ -20,14 +20,10 @@ map("n", "<leader>bo", function()
 end, { desc = "Delete other buffers" })
 
 -- Clear Search
-map("n", "<C-l>", "<cmd>noh<cr>", { desc = "Clear search" })
+map("n", "<C-l>", "<cmd>noh<cr>", { silent = true })
 
 -- Ctrl-C works like Escape
 map("i", "<C-C>", "<ESC>", { silent = true })
-
--- Changing directory
-map("n", "<leader>e.", "<cmd>cd %:p:h<cr>", { desc = "Change CWD" })
-map("n", "<leader>e,", "<cmd>cd ..<cr>", { desc = "Up directory" })
 
 -- Folds
 map("n", "<leader>za", "za", { desc = "Toggle fold under cursor" })
