@@ -24,6 +24,5 @@ return {
       },
     })
     require("mini.indentscope").setup()
-    require("mini.icons").setup()
   end,
 }
