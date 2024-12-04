@@ -3,6 +3,24 @@ return {
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
   lazy = true,
+  init = function()
+    vim.wo.foldmethod = "expr"
+    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.treesitter.language.register("markdown", "vimwiki")
+    vim.filetype.add({
+      pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+    })
+    vim.filetype.add({
+      extension = {
+        zsh = "sh",
+        sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
+      },
+      filename = {
+        [".zshrc"] = "sh",
+        [".zshenv"] = "sh",
+      },
+    })
+  end,
   config = function()
     require("nvim-treesitter.configs").setup({
       highlight = {

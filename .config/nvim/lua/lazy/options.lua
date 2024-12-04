@@ -11,30 +11,12 @@ vim.opt.splitbelow = true
 vim.opt.foldlevelstart = 99
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.foldmethod = "expr"
-vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.diagnostic.config({
   virtual_text = true,
   update_in_insert = false,
   signs = false,
   underline = true,
 })
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrw = 1
 vim.g.python_recommended_style = 0
-vim.treesitter.language.register("markdown", "vimwiki")
-vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-})
-vim.filetype.add({
-  extension = {
-    zsh = "sh",
-    sh = "sh", -- force sh-files with zsh-shebang to still get sh as filetype
-  },
-  filename = {
-    [".zshrc"] = "sh",
-    [".zshenv"] = "sh",
-  },
-})
 vim.opt.spelllang = "en_gb"
 vim.opt.spelloptions = "camel,noplainbuffer"
