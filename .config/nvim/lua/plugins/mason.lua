@@ -7,6 +7,9 @@ return {
     "stevearc/conform.nvim",
   },
   event = "VeryLazy",
+  keys = {
+    { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" },
+  },
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup()
@@ -20,7 +23,6 @@ return {
           capabilities = capabilities,
         })
       end,
-      vim.keymap.set("n", "<leader>cm", "<cmd>Mason<cr>", { desc = "Mason" }),
     })
     require("lspconfig").lua_ls.setup({
       settings = {

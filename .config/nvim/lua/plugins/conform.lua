@@ -24,7 +24,7 @@ return {
         javascript = { "prettier" },
         json = { "jq", "prettier" },
         lua = { "stylua" },
-        markdown = { "markdownlint" },
+        markdown = { "prettier" },
         python = { "yapf", "isort", "docformatter" },
         sh = { "shfmt" },
         tex = { "latexindent" },
