@@ -37,7 +37,7 @@
     "body": [
       "\\begin{enumerate}[start=${1:number},label={\\bfseries(\\\\${2|arabic,alph,roman,Alph,Roman|}*)},leftmargin=${3|0,0.3|}in]",
       "\t\\item",
-      "\t\t$0",
+      "\t$0",
       "\\end{enumerate}"
     ],
     "description": "Enumerate Environment"
