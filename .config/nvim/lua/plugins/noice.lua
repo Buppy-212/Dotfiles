@@ -5,9 +5,6 @@ return {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
   },
-  keys = {
-    { "<Leader>fn", "<cmd>Noice telescope<cr>", desc = "History" },
-  },
   config = function()
     require("noice").setup({
       lsp = {

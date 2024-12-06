@@ -21,7 +21,7 @@ return {
     notifier = { enabled = true },
     quickfile = { enabled = true },
     statuscolumn = { enabled = false },
-    words = { enabled = true },
+    words = { enabled = false },
   },
   keys = {
     {
@@ -32,7 +32,7 @@ return {
       desc = "Toggle Scratch Buffer",
     },
     {
-      "<leader>S",
+      "<leader>s",
       function()
         Snacks.scratch.select()
       end,

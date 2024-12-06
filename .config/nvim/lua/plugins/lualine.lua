@@ -1,5 +1,4 @@
 return {
-
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons", "yavorski/lualine-macro-recording.nvim" },
   event = "VeryLazy",
@@ -32,7 +31,11 @@ return {
         "diagnostics",
       },
       lualine_c = {
-        { "buffers", symbols = { alternate_file = "" }, filetype_names = { lazy = "Lazy", oil = "Oil" } },
+        {
+          "buffers",
+          symbols = { alternate_file = "" },
+          filetype_names = { lazy = "Lazy", oil = "Oil", snacks_dashboard = "Dashboard" },
+        },
       },
       lualine_x = { "macro_recording" },
       lualine_y = { "filetype" },
