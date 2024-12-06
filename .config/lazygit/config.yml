@@ -4,7 +4,7 @@ gui:
   scrollHeight: 2
 
   # If true, allow scrolling past the bottom of the content in the main window
-  scrollPastBottom: true
+  scrollPastBottom: false
 
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#scroll-off-margin
   scrollOffMargin: 2
@@ -97,20 +97,20 @@ gui:
     show: true
 
   # If true, show the '5 of 20' footer at the bottom of list views
-  showListFooter: true
+  showListFooter: false
 
   # If true, display the files in the file views as a tree. If false, display the files as a flat list.
   # This can be toggled from within Lazygit with the '~' key, but that will not change the default.
   showFileTree: true
 
   # If true, show a random tip in the command log when Lazygit starts
-  showRandomTip: true
+  showRandomTip: false
 
   # If true, show the command log
-  showCommandLog: true
+  showCommandLog: false
 
   # If true, show the bottom line that contains keybinding info and useful buttons. If false, this line will be hidden except to display a loader for an in-progress action.
-  showBottomLine: true
+  showBottomLine: false
 
   # If true, show jump-to-window keybindings in window titles.
   showPanelJumps: true
