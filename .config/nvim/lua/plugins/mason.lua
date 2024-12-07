@@ -3,7 +3,6 @@ return {
   dependencies = {
     "neovim/nvim-lspconfig",
     "williamboman/mason-lspconfig",
-    "mfussenegger/nvim-lint",
     "stevearc/conform.nvim",
   },
   event = "VeryLazy",
