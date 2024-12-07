@@ -17,6 +17,5 @@ vim.diagnostic.config({
   signs = false,
   underline = true,
 })
-vim.g.python_recommended_style = 0
 vim.opt.spelllang = "en_gb"
 vim.opt.spelloptions = "camel,noplainbuffer"
