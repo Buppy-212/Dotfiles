@@ -17,6 +17,7 @@ return {
       { "<leader>g", group = "git" },
       { "<leader>m", group = "markdown", icon = "󰍔 " },
       { "<leader>r", group = "REPL", icon = " " },
+      { "<leader>s", group = "Scratch", icon = " " },
       { "<leader>u", group = "ui" },
       { "<leader>v", proxy = "\\l", group = "vimtex", icon = " " },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
