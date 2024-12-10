@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-if pidof rofi >/dev/null; then
+if pidof -q rofi; then
   killall rofi
   exit 0
 else
