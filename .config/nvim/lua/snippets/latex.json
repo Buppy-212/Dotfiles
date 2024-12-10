@@ -265,6 +265,10 @@
     "prefix": "der",
     "body": "\\frac{d$1}{d$2} $0"
   },
+  "Eval": {
+    "prefix": "eval",
+    "body": "\\left. $1 \\right\\vert_{$2} $0"
+  },
   "ParitalDerivative": {
     "prefix": "part",
     "body": "\\frac{\\partial $1}{\\partial $2} $0"
