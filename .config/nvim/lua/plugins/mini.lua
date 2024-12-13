@@ -23,6 +23,5 @@ return {
         update_n_lines = "gsn", -- Update `n_lines`
       },
     })
-    require("mini.indentscope").setup()
   end,
 }

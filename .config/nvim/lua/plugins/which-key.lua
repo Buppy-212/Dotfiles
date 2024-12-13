@@ -15,7 +15,6 @@ return {
       { "<leader>e", group = "files" },
       { "<leader>f", group = "find" },
       { "<leader>g", group = "git" },
-      { "<leader>m", group = "markdown", icon = "󰍔 " },
       { "<leader>r", group = "REPL", icon = " " },
       { "<leader>s", group = "Scratch", icon = " " },
       { "<leader>u", group = "ui" },
