@@ -18,10 +18,8 @@ return {
       },
     },
     bigfile = { enabled = true },
-    indent = { indent = {
-      enabled = false,
-    } },
-    input = { enabled = true },
+    indent = { enabled = true },
+    input = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scroll = { enabled = true },
@@ -29,105 +27,22 @@ return {
     statuscolumn = { enabled = false },
     words = { enabled = false },
   },
+  -- stylua: ignore
   keys = {
-    {
-      "<leader>Z",
-      function()
-        Snacks.zen()
-      end,
-      desc = "Toggle Zen Mode",
-    },
-    {
-      "<leader>ss",
-      function()
-        Snacks.scratch()
-      end,
-      desc = "Toggle Scratch Buffer",
-    },
-    {
-      "<leader>sf",
-      function()
-        Snacks.scratch.select()
-      end,
-      desc = "Select Scratch Buffer",
-    },
-    {
-      "<leader>n",
-      function()
-        Snacks.notifier.show_history()
-      end,
-      desc = "Notification History",
-    },
-    {
-      "<leader>bd",
-      function()
-        Snacks.bufdelete()
-      end,
-      desc = "Delete Buffer",
-    },
-    {
-      "<leader>bo",
-      function()
-        Snacks.bufdelete.other()
-      end,
-      desc = "Delete Other Buffers",
-    },
-    {
-      "<leader>cR",
-      function()
-        Snacks.rename.rename_file()
-      end,
-      desc = "Rename File",
-    },
-    {
-      "<leader>gB",
-      function()
-        Snacks.gitbrowse()
-      end,
-      desc = "Git Browse",
-    },
-    {
-      "<leader>gb",
-      function()
-        Snacks.git.blame_line()
-      end,
-      desc = "Git Blame Line",
-    },
-    {
-      "<leader>gf",
-      function()
-        Snacks.lazygit.log_file()
-      end,
-      desc = "Lazygit Current File History",
-    },
-    {
-      "<leader>gg",
-      function()
-        Snacks.lazygit()
-      end,
-      desc = "Lazygit",
-    },
-    {
-      "<leader>gl",
-      function()
-        Snacks.lazygit.log()
-      end,
-      desc = "Lazygit Log (cwd)",
-    },
-    {
-      "<leader>un",
-      function()
-        Snacks.notifier.hide()
-      end,
-      desc = "Dismiss All Notifications",
-    },
-    {
-      "<c-/>",
-      function()
-        Snacks.terminal()
-      end,
-      desc = "Toggle Terminal",
-    },
+    { "<leader>Z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
+    { "<leader>ss", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer", },
+    { "<leader>sf", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer", },
+    { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Notification History", },
+    { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer", },
+    { "<leader>bo", function() Snacks.bufdelete.other() end, desc = "Delete Other Buffers", },
+    { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File", },
+    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", },
+    { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line", },
+    { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History", },
+    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit", },
+    { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)", },
+    { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications", },
+    { "<c-/>", function() Snacks.terminal() end, desc = "Toggle Terminal", },
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
