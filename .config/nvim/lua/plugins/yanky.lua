@@ -2,13 +2,13 @@ return {
   "gbprod/yanky.nvim",
   lazy = true,
   dependencies = {
-    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
   },
   opts = {
     highlight = { timer = 150 },
   },
   keys = {
-    { "<leader>fp", "<cmd>Telescope yank_history<cr>", desc = "Clipboard" },
+    { "<leader>fp", "<cmd>YankyRingHistory<cr>", desc = "Clipboard" },
     { "y", "<Plug>(YankyYank)", mode = { "n", "x" }, desc = "Yank Text" },
     { "p", "<Plug>(YankyPutIndentAfterLinewise)", desc = "Put Indented After Cursor (Linewise)" },
     { "P", "<Plug>(YankyPutIndentBeforeLinewise)", desc = "Put Indented Before Cursor (Linewise)" },

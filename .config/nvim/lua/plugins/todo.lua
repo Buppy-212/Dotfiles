@@ -1,9 +1,9 @@
 return {
   "folke/todo-comments.nvim",
   lazy = true,
-  dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim" },
   keys = {
-    { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+    { "<leader>ft", "<cmd>TodoFzfLua<cr>", desc = "Todo" },
     {
       "<leader>xn",
       function()

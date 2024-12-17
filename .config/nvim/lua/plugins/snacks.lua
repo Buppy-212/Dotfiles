@@ -19,13 +19,16 @@ return {
     },
     bigfile = { enabled = true },
     indent = { enabled = true },
-    input = { enabled = false },
+    input = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scroll = { enabled = true },
     scope = { enabled = true },
     statuscolumn = { enabled = false },
     words = { enabled = false },
+    styles = {
+      zen = { width = 125 },
+    },
   },
   -- stylua: ignore
   keys = {
