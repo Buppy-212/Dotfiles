@@ -1,6 +1,5 @@
 return {
   "saghen/blink.cmp",
-  enabled = false,
   event = "InsertEnter",
   dependencies = {
     "rafamadriz/friendly-snippets",
@@ -28,17 +27,14 @@ return {
       nerd_font_variant = "mono",
     },
     sources = {
-      default = { "lsp", "path", "luasnip", "buffer" },
+      completion = {
+        enabled_providers = { "lsp", "path", "snippets" },
+      },
+      default = { "lsp", "path", "snippets" },
       providers = {
         snippets = {
-          opts = {
-            friendly_snippets = false,
-            search_paths = { "~/Dotfiles/.config/nvim/snippets" },
-          },
+          min_keyword_length = 1,
         },
-      },
-      fuzzy = {
-        use_typo_resistance = false,
       },
       opts_extend = { "sources.default" },
     },
