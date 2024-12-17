@@ -6,6 +6,7 @@ return {
   keys = {
     {"<leader>ff", "<cmd>FzfLua files<CR>", desc = "Files"},
     {"<leader>fa", "<cmd>FzfLua files --hidden<CR>", desc = "Hidden"},
+    {"<leader>fc", "<cmd>FzfLua files cwd=~/.config/nvim<CR>", desc = "Config"},
     {"<leader>fr", "<cmd>FzfLua oldfiles<CR>", desc = "Recent"},
     {"<leader>fg", "<cmd>FzfLua live_grep<CR>", desc = "Grep"},
     {"<leader>fb", "<cmd>FzfLua buffers<CR>", desc = "Buffers"},

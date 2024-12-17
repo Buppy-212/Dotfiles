@@ -3,7 +3,6 @@ return {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
   },
   config = function()
     require("noice").setup({
@@ -29,12 +28,6 @@ return {
       cmdline = {
         view = "cmdline",
       },
-    })
-    require("notify").setup({
-      enabled = false,
-      timeout = 500,
-      top_down = false,
-      render = "compact",
     })
   end,
 }
