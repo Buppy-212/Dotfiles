@@ -23,7 +23,7 @@
   ],
   "custom/power_btn": {
     "format": "",
-    "on-click": "rofi -show power -config ~/.config/rofi/power.rasi",
+    "on-click": "rofi -show power -config ~/.config/rofi/grid.rasi",
     "tooltip": false
   },
   "hyprland/workspaces": {
