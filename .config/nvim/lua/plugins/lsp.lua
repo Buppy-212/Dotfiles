@@ -10,6 +10,15 @@ return {
   },
   opts = {
     servers = {
+      bashls = {},
+      html = {},
+      hyprls = {},
+      jsonls = {},
+      marksman = {},
+      rust_analyzer = {},
+      taplo = {},
+      texlab = {},
+      ts_ls = {},
       lua_ls = {
         settings = {
           Lua = {
