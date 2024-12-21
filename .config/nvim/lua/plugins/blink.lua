@@ -44,7 +44,7 @@ return {
       ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<C-l>"] = { "snippet_forward" },
       ["<C-h>"] = { "snippet_backward" },
-      ["<C-k>"] = { "show_documentation", "hide_documentation" },
+      ["<C-k>"] = { "show_documentation", "hide_documentation", "fallback" },
       ["<C-d>"] = { "scroll_documentation_down" },
       ["<C-u>"] = { "scroll_documentation_up" },
     },
