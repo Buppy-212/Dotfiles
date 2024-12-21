@@ -3,6 +3,7 @@ return {
   event = "InsertEnter",
   dependencies = {
     "rafamadriz/friendly-snippets",
+    { "L3MON4D3/LuaSnip", version = "v2.*" },
   },
   version = "v0.*",
   opts = {
@@ -27,16 +28,15 @@ return {
       nerd_font_variant = "mono",
     },
     sources = {
-      completion = {
-        enabled_providers = { "lsp", "path", "snippets" },
-      },
       default = { "lsp", "path", "snippets" },
       providers = {
         snippets = {
           min_keyword_length = 1,
+          opts = {
+            friendly_snippets = true,
+          },
         },
       },
-      opts_extend = { "sources.default" },
     },
   },
 }
