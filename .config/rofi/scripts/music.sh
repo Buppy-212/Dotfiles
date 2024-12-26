@@ -7,10 +7,10 @@ case "$1" in
   ;;
 "--Shuffle All--")
   pkill mpv
-  coproc mpv --shuffle "$MUSIC"
+  hyprctl -q dispatch exec mpv --shuffle "$MUSIC"
   ;;
 *)
   pkill mpv
-  coproc mpv "$MUSIC""$1" --shuffle
+  hyprctl -q dispatch exec mpv "$MUSIC""$1" --shuffle
   ;;
 esac

@@ -10,7 +10,7 @@ change() {
   NEW_PIC=${1/\.\//"$DIR"}
   ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
   killall hyprpaper
-  coproc hyprpaper
+  hyprctl -q dispatch exec hyprpaper
 }
 case "$1" in
 "")
