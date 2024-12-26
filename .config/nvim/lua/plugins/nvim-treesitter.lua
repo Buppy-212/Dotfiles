@@ -1,7 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  event = { "BufReadPre", "BufNewFile" },
+  event = "VeryLazy",
   lazy = true,
   init = function()
     vim.wo.foldmethod = "expr"
