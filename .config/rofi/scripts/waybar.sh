@@ -15,27 +15,27 @@ case "$1" in
   ;;
 "Top")
   killall waybar
-  hyprctl -q dispatch exec waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css
+  coproc waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css
   OPTS=()
   ;;
 "Left Float")
   killall waybar
-  hyprctl -q dispatch exec waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
+  coproc waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
   OPTS=()
   ;;
 "Left Alt")
   killall waybar
-  hyprctl -q dispatch exec waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css
+  coproc waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css
   OPTS=()
   ;;
 "Left")
   killall waybar
-  hyprctl -q dispatch exec waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css
+  coproc waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css
   OPTS=()
   ;;
 "Bottom")
   killall waybar
-  hyprctl -q dispatch exec waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css
+  coproc waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css
   OPTS=()
   ;;
 "No Bar")

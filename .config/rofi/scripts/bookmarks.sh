@@ -6,10 +6,10 @@ case "$1" in
   cat "$BOOKMARKS" || touch "$BOOKMARKS"
   ;;
 "Window")
-  hyprctl -q dispatch exec $BROWSER -new-window "$(cat /tmp/bookmark)"
+  coproc $BROWSER -new-window "$(cat /tmp/bookmark)"
   ;;
 "Tab")
-  hyprctl -q dispatch exec $BROWSER "$(cat /tmp/bookmark)"
+  coproc $BROWSER "$(cat /tmp/bookmark)"
   ;;
 *)
   if grep -q -e "^$1$" "$BOOKMARKS"; then
