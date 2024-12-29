@@ -77,7 +77,7 @@
     "tooltip-format": "{timeTo}\nPower: {power}W",
     "format-time": "{H}h{m}m",
     "interval": 90,
-    "on-click-right": "kitty -e btop"
+    "on-click-right": "ghostty -e btop"
   },
   "pulseaudio": {
     "format": "{icon}",
