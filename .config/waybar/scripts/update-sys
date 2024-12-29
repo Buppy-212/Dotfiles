@@ -2,7 +2,7 @@
 
 case "$1" in
 update)
-  ghostty --title update-sys sh -c 'yay -Syu; flatpak update'
+  ghostty --title=Update -e 'yay -Syu; flatpak update'
   echo "0" >"$HOME"/.local/state/updates
   ;;
 check)

@@ -18,7 +18,7 @@
 - Swappy
 - Slurp (for printscreen)
 - Grim (for printscreen)
-- Kitty
+- Ghostty
 
 ### Terminal Programs
 
