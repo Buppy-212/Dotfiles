@@ -7,30 +7,30 @@
 
 ### Hyprland Desktop Environment
 
-- Hyprland
+- Ghostty
+- Grim (for printscreen)
 - Hypridle
+- Hyprland
 - Hyprlock
 - Hyprpaper
-- Rofi-wayland
 - Rofi-emoji-git (AUR)
-- Waybar
-- Swaync
-- Swappy
+- Rofi-wayland
 - Slurp (for printscreen)
-- Grim (for printscreen)
-- Ghostty
+- Swappy
+- Swaync
+- Waybar
 
 ### Terminal Programs
 
-- Zsh
-- Eza
-- Zoxide
 - Btop
-- Yazi
+- Eza
 - Fastfetch
 - Fzf
-- Neovim
 - Mpv
+- Neovim
+- Yazi
+- Zoxide
+- Zsh
 
 ### Other Programs
 
