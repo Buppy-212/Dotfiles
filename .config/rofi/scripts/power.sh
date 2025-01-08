@@ -31,10 +31,10 @@ icons[cancel]="\Uf0156"
 declare -A actions
 actions[lockscreen]="uwsm app -- hyprlock"
 actions[logout]="uwsm stop"
-actions[suspend]="uwsm app -- systemctl suspend"
-actions[hibernate]="uswm app -- systemctl hibernate"
-actions[reboot]="uswm app -- systemctl reboot"
-actions[shutdown]="uswm app -- systemctl poweroff"
+actions[suspend]="systemctl suspend"
+actions[hibernate]="systemctl hibernate"
+actions[reboot]="systemctl reboot"
+actions[shutdown]="systemctl poweroff"
 
 # By default, ask for confirmation for actions that are irreversible
 confirmations=(reboot shutdown logout)
@@ -131,8 +131,8 @@ else
       else
         # Perform the action
         ${actions[$entry]} &
-        if [ "$entry" = "logout" ]; then
-          sleep 5
+        if [ "$entry" != "lockscreen" ]; then
+          sleep 1
         fi
         pkill rofi
       fi
