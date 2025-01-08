@@ -14,3 +14,4 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MANPAGER="nvim +Man!"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export DOT_SAGE="$XDG_CONFIG_HOME"/sage
+export EDITOR=nvim

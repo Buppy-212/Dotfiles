@@ -26,7 +26,7 @@ case "$1" in
   killall hypridle
   ;;
 "Idle On")
-  hyprctl -q dispatch exec hypridle
+  uwsm app -S out -- hypridle &
   ;;
 "Gamemode Off")
   hyprctl -q --batch "\

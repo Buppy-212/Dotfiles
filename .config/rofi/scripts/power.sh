@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-# This script defines just a mode for rofi instead of being a self-contained
-# executable that launches rofi by itself. This makes it more flexible than
-# running rofi inside this script as now the user can call rofi as one pleases.
-# For instance:
-#
-#   rofi -show powermenu -modi powermenu:./rofi-power-menu
-#
-# See README.md for more information.
-
 set -e
 set -u
 
@@ -38,13 +29,12 @@ icons[shutdown]="\Uf0425"
 icons[cancel]="\Uf0156"
 
 declare -A actions
-actions[lockscreen]="hyprlock"
-#actions[switchuser]="???"
-actions[logout]="hyprctl dispatch exit 0"
-actions[suspend]="systemctl suspend"
-actions[hibernate]="systemctl hibernate"
-actions[reboot]="systemctl reboot"
-actions[shutdown]="systemctl poweroff"
+actions[lockscreen]="uwsm app -- hyprlock"
+actions[logout]="uwsm stop"
+actions[suspend]="uwsm app -- systemctl suspend"
+actions[hibernate]="uswm app -- systemctl hibernate"
+actions[reboot]="uswm app -- systemctl reboot"
+actions[shutdown]="uswm app -- systemctl poweroff"
 
 # By default, ask for confirmation for actions that are irreversible
 confirmations=(reboot shutdown logout)
@@ -64,114 +54,6 @@ function check_valid {
     fi
   done
 }
-
-# Parse command-line options
-parsed=$(getopt --options=h --longoptions=help,dry-run,confirm:,choices:,choose:,symbols,no-symbols,text,no-text,symbols-font: --name "$0" -- "$@")
-if [ $? -ne 0 ]; then
-  echo 'Terminating...' >&2
-  exit 1
-fi
-eval set -- "$parsed"
-unset parsed
-while true; do
-  case "$1" in
-  "-h" | "--help")
-    echo "rofi-power-menu - a power menu mode for Rofi"
-    echo
-    echo "Usage: rofi-power-menu [--choices CHOICES] [--confirm CHOICES]"
-    echo "                       [--choose CHOICE] [--dry-run] [--symbols|--no-symbols]"
-    echo
-    echo "Use with Rofi in script mode. For instance, to ask for shutdown or reboot:"
-    echo
-    echo "  rofi -show menu -modi \"menu:rofi-power-menu --choices=shutdown/reboot\""
-    echo
-    echo "Available options:"
-    echo "  --dry-run            Don't perform the selected action but print it to stderr."
-    echo "  --choices CHOICES    Show only the selected choices in the given order. Use /"
-    echo "                       as the separator. Available choices are lockscreen,"
-    echo "                       logout,suspend, hibernate, reboot and shutdown. By"
-    echo "                       default, all available choices are shown."
-    echo "  --confirm CHOICES    Require confirmation for the gives choices only. Use / as"
-    echo "                       the separator. Available choices are lockscreen, logout,"
-    echo "                       suspend, hibernate, reboot and shutdown. By default, only"
-    echo "                       irreversible actions logout, reboot and shutdown require"
-    echo "                       confirmation."
-    echo "  --choose CHOICE      Preselect the given choice and only ask for a"
-    echo "                       confirmation (if confirmation is set to be requested). It"
-    echo "                       is strongly recommended to combine this option with"
-    echo "                       --confirm=CHOICE if the choice wouldn't require"
-    echo "                       confirmation by default. Available choices are"
-    echo "                       lockscreen, logout, suspend, hibernate, reboot and"
-    echo "                       shutdown."
-    echo "  --[no-]symbols       Show Unicode symbols or not. Requires a font with support"
-    echo "                       for the symbols. Use, for instance, fonts from the"
-    echo "                       Nerdfonts collection. By default, they are shown"
-    echo "  --[no-]text          Show text description or not."
-    echo "  --symbols-font FONT  Use the given font for symbols. By default, the symbols"
-    echo "                       use the same font as the text. That font is configured"
-    echo "                       with rofi."
-    echo "  -h,--help            Show this help text."
-    exit 0
-    ;;
-  "--dry-run")
-    dryrun=true
-    shift 1
-    ;;
-  "--confirm")
-    IFS='/' read -ra confirmations <<<"$2"
-    check_valid "$1" "${confirmations[@]}"
-    shift 2
-    ;;
-  "--choices")
-    IFS='/' read -ra show <<<"$2"
-    check_valid "$1" "${show[@]}"
-    shift 2
-    ;;
-  "--choose")
-    # Check that the choice is valid
-    check_valid "$1" "$2"
-    selectionID="$2"
-    shift 2
-    ;;
-  "--symbols")
-    showsymbols=true
-    shift 1
-    ;;
-  "--no-symbols")
-    showsymbols=false
-    shift 1
-    ;;
-  "--text")
-    showtext=true
-    shift 1
-    ;;
-  "--no-text")
-    showtext=false
-    shift 1
-    ;;
-  "--symbols-font")
-    symbols_font="$2"
-    shift 2
-    ;;
-  "--")
-    shift
-    break
-    ;;
-  *)
-    echo "Internal error" >&2
-    exit 1
-    ;;
-  esac
-done
-
-if [ "$showsymbols" = "false" -a "$showtext" = "false" ]; then
-  echo "Invalid options: cannot have --no-symbols and --no-text enabled at the same time." >&2
-  exit 1
-fi
-
-# Define the messages after parsing the CLI options so that it is possible to
-# configure them in the future.
-
 function write_message {
   if [ -z ${symbols_font+x} ]; then
     icon="<span font_size=\"medium\">$1</span>"
@@ -248,8 +130,11 @@ else
         echo "Selected: $entry" >&2
       else
         # Perform the action
+        ${actions[$entry]} &
+        if [ "$entry" = "logout" ]; then
+          sleep 5
+        fi
         pkill rofi
-        ${actions[$entry]}
       fi
       exit 0
     fi

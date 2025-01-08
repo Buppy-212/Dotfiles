@@ -7,10 +7,12 @@ case "$1" in
   ;;
 "--Shuffle All--")
   pkill mpv
-  coproc mpv --shuffle "$MUSIC"
+  uwsm app -- mpv --shuffle "$MUSIC" &
+  pkill rofi
   ;;
 *)
   pkill mpv
-  coproc mpv "$MUSIC""$1" --shuffle
+  uwsm app -- mpv "$MUSIC""$1" --shuffle &
+  pkill rofi
   ;;
 esac

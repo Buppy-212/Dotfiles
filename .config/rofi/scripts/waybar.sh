@@ -15,27 +15,32 @@ case "$1" in
   ;;
 "Top")
   killall waybar
-  coproc waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css
+  uwsm app -a waybar -- waybar --config "$HOME"/.config/waybar/config_top.jsonc --style "$HOME"/.config/waybar/style_top.css &
+  pkill rofi
   OPTS=()
   ;;
 "Left Float")
   killall waybar
-  coproc waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css
+  uwsm app -a waybar -- waybar --config "$HOME"/.config/waybar/config.jsonc --style "$HOME"/.config/waybar/style.css &
+  pkill rofi
   OPTS=()
   ;;
 "Left Alt")
   killall waybar
-  coproc waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css
+  uwsm app -a waybar -- waybar --config "$HOME"/.config/waybar/config_s.jsonc --style "$HOME"/.config/waybar/style.css &
+  pkill rofi
   OPTS=()
   ;;
 "Left")
   killall waybar
-  coproc waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css
+  uwsm app -a waybar -- waybar --config "$HOME"/.config/waybar/config_flat.jsonc --style "$HOME"/.config/waybar/style_flat.css &
+  pkill rofi
   OPTS=()
   ;;
 "Bottom")
   killall waybar
-  coproc waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css
+  uwsm app -a waybar -- waybar --config "$HOME"/.config/waybar/config_bottom.jsonc --style "$HOME"/.config/waybar/style_top.css &
+  pkill rofi
   OPTS=()
   ;;
 "No Bar")

@@ -18,6 +18,7 @@
 - Slurp (for printscreen)
 - Swappy
 - Swaync
+- Uwsm (AUR)
 - Waybar
 
 ### Terminal Programs

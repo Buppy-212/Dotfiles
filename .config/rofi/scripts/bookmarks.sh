@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
-BROWSER=zen-browser
+BROWSER="uwsm app -- zen-browser"
 BOOKMARKS=$HOME/.local/state/bookmarks.txt
 case "$1" in
 "")
   cat "$BOOKMARKS" || touch "$BOOKMARKS"
   ;;
 "Window")
-  coproc $BROWSER -new-window "$(cat /tmp/bookmark)"
+  $BROWSER -new-window "$(cat /tmp/bookmark)" &
+  pkill rofi
   ;;
 "Tab")
-  coproc $BROWSER "$(cat /tmp/bookmark)"
+  $BROWSER "$(cat /tmp/bookmark)" &
+  pkill rofi
   ;;
 *)
   if grep -q -e "^$1$" "$BOOKMARKS"; then

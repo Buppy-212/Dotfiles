@@ -24,7 +24,7 @@
   ],
   "custom/power_btn": {
     "format": "",
-    "on-click": "rofi -show power -config ~/.config/rofi/grid.rasi",
+    "on-click": "uwsm app -- ~/.config/rofi/scripts/rofi.sh power grid",
     "tooltip": false
   },
   "hyprland/workspaces": {
@@ -60,15 +60,15 @@
     "tooltip-format": "{timeTo}\nPower: {power}W",
     "format-time": "{H}h{m}m",
     "interval": 90,
-    "on-click-right": "ghostty -e btop"
+    "on-click-right": "uwsm app -- ghostty -e btop"
   },
   "pulseaudio": {
     "format": "{icon}",
     "format-muted": "",
-    "on-click": "~/.config/waybar/scripts/volume --toggle",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.config/waybar/scripts/volume --inc",
-    "on-scroll-down": "~/.config/waybar/scripts/volume --dec",
+    "on-click": "~/.config/swaync/scripts/volume --toggle",
+    "on-click-right": "uwsm app -- pavucontrol",
+    "on-scroll-up": "~/.config/swaync/scripts/volume --inc",
+    "on-scroll-down": "~/.config/swaync/scripts/volume --dec",
     "scroll-step": 5,
     "format-icons": {
       "headphone": "",
@@ -120,7 +120,7 @@
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
+    "on-click": "uwsm app -- swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   }
