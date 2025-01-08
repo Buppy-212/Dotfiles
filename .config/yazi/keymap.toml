@@ -228,6 +228,14 @@ keymap = [
   { on = [
     "Z",
   ], run = "plugin fzf", desc = "Jump to a directory, or reveal a file using fzf" },
+  { on = [
+    "m",
+    "m",
+  ], run = "shell 'udiskie-mount -a'", desc = "Mount media" },
+  { on = [
+    "m",
+    "e",
+  ], run = "shell 'udiskie-umount -a'", desc = "Eject media" },
 
   # Linemode
   { on = [
@@ -240,7 +248,7 @@ keymap = [
   ], run = "linemode permissions", desc = "Set linemode to permissions" },
   { on = [
     "m",
-    "m",
+    "t",
   ], run = "linemode mtime", desc = "Set linemode to mtime" },
   { on = [
     "m",
@@ -402,7 +410,7 @@ keymap = [
   { on = [
     "g",
     "m",
-  ], run = "cd /run/media/$USER", desc = "Go to the removable media directory" },
+  ], run = "cd /run/media/$USER", desc = "Go to the media directory" },
   { on = [
     "g",
     "<Space>",
