@@ -15,3 +15,4 @@ export MANPAGER="nvim +Man!"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export DOT_SAGE="$XDG_CONFIG_HOME"/sage
 export EDITOR=nvim
+export GOPATH="$XDG_DATA_HOME"/go
