@@ -3,7 +3,13 @@ return {
   lazy = true,
   dependencies = { "nvim-lua/plenary.nvim" },
   keys = {
-    { "<leader>ft", "<cmd>TodoFzfLua<cr>", desc = "Todo" },
+    {
+      "<leader>ft",
+      function()
+        Snacks.pickers.todo_comments()
+      end,
+      desc = "Todo",
+    },
     {
       "<leader>xn",
       function()

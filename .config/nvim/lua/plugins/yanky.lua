@@ -1,9 +1,6 @@
 return {
   "gbprod/yanky.nvim",
   lazy = true,
-  dependencies = {
-    "ibhagwan/fzf-lua",
-  },
   opts = {
     highlight = { timer = 150 },
   },

@@ -15,6 +15,9 @@ map("n", "<C-l>", "<cmd>noh<cr>", { silent = true })
 -- Ctrl-C works like Escape
 map("i", "<C-C>", "<ESC>", { silent = true })
 
+-- Undo
+map("n", "U", "<C-r>", { silent = true })
+
 -- Folds
 map("n", "<leader>za", "za", { desc = "Toggle fold under cursor" })
 map("n", "<leader>zA", "zA", { desc = "Toggle all folds under cursor" })
