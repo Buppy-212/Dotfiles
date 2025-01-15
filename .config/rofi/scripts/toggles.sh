@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 get() {
   HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
-  SHADER=$(hyprctl getoption decoration:screen_shader | awk 'NR==1 {print $2}')
   if pidof -q hypridle; then
     echo "Idle Off"
   else
@@ -12,10 +11,10 @@ get() {
   else
     echo "Gamemode Off"
   fi
-  if [ "$SHADER" = "[[EMPTY]]" ]; then
-    echo "Filter On"
-  else
+  if pidof -q hyprsunset; then
     echo "Filter Off"
+  else
+    echo "Filter On"
   fi
 }
 case "$1" in
@@ -23,10 +22,11 @@ case "$1" in
   get
   ;;
 "Idle Off")
-  killall hypridle
+  pkill hypridle
   ;;
 "Idle On")
   uwsm app -S out -- hypridle &
+  pkill rofi
   ;;
 "Gamemode Off")
   hyprctl -q --batch "\
@@ -43,9 +43,10 @@ case "$1" in
       keyword decoration:rounding 0"
   ;;
 "Filter Off")
-  hyprctl -q keyword decoration:screen_shader "[[EMPTY]]"
+  pkill hyprsunset
   ;;
 "Filter On")
-  hyprctl -q keyword decoration:screen_shader ~/.config/hypr/shaders/blue-light-filter.glsl
+  uwsm app -S out -- hyprsunset -t 4000 &
+  pkill rofi
   ;;
 esac
