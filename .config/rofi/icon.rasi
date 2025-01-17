@@ -1,5 +1,6 @@
 configuration {
   modi: "drun,window,filebrowser,emoji";
+  run-command: "uwsm app -- {cmd}";
   sort:	true;
   sorting-method:	"fzf";
   disable-history:	true;
