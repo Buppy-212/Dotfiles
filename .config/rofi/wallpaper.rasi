@@ -31,7 +31,6 @@ configuration {
 }
 
 window {
-  width: 60%;
   border: 2px 2px 2px 2px;
   border-radius: 3px;
   border-color: @blue;
@@ -69,16 +68,16 @@ listview {
 }
 
 element {
-  padding: 1px 4px 1px 3px;
-}
-
-element-text {
-  enabled:false;
+  orientation: vertical;
+  children: [ element-icon ];
+  padding: 2px;
 }
 
 element-icon {
   size: 375px;
   padding: -80px 0px -80px 0px;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
 }
 
 element selected {
