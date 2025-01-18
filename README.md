@@ -21,6 +21,10 @@
 - Uwsm (AUR)
 - Waybar
 
+### Greeter
+
+- Nwg-hello (requires greetd)
+
 ### Terminal Programs
 
 - Btop
