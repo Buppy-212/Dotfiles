@@ -42,6 +42,7 @@ return {
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers"},
     { "<leader>bf", function() Snacks.picker.buffers() end, desc = "Find"},
     { "<leader>f:", function() Snacks.picker.command_history() end, desc = "Command History" },
+    { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo"},
     { "<leader>Z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
     { "<leader>ss", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer", },
     { "<leader>sf", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer", },
