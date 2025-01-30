@@ -21,7 +21,16 @@ return {
     indent = { enabled = true },
     input = { enabled = true },
     notifier = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      win = {
+        input = {
+          keys = {
+            ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+            ["<S-Tab>"] = { "list_up", mode = { "i", "n" } },
+          },
+        },
+      },
+    },
     quickfile = { enabled = true },
     scroll = { enabled = true },
     scope = { enabled = true },
