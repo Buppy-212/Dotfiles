@@ -19,7 +19,7 @@
 - Swappy
 - Swaync
 - Uwsm (AUR)
-- Waybar
+- Eww (AUR)
 
 ### Greeter
 
@@ -33,6 +33,7 @@
 - Fzf
 - Mpv
 - Neovim
+- Playerctl
 - Yazi
 - Zoxide
 - Zsh
