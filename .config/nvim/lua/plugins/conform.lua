@@ -26,6 +26,7 @@ return {
         lua = { "stylua" },
         markdown = { "prettier" },
         python = { "yapf", "isort", "docformatter" },
+        scss = { "prettier" },
         sh = { "shfmt" },
         tex = { "latexindent" },
         yaml = { "prettier" },
