@@ -1,0 +1,14 @@
+.bluetooth-button {
+  padding: 0 0.3rem;
+  background: transparent;
+}
+.bluetooth-button:hover {
+  background-color: $darkgray;
+}
+.bluetooth-button:active {
+  background-color: $black;
+}
+.bluetooth-icon {
+  color: $blue;
+  padding: 0 0.3rem;
+}

@@ -12,9 +12,11 @@
 
 (defwidget right []
   (box :class "right" :halign "end" :valign "center" :orientation "h" :spacing 4 :space-evenly false
-    (battery)
-    (volume)
     (tray)
+    (volume)
+    (bluetooth)
+    (wifi)
+    (battery)
     (updates)
     (power)
   )

@@ -1,11 +1,11 @@
 .battery {
-  padding: 0 0.2rem;
   color: $green;
   border-radius: 1rem;
+  padding: 0 0.2rem;
 }
 
 .battery label {
-  margin: 0 0.2rem;
+  margin: 0 0.1rem 0 0.2rem;
 }
 
 .battery:hover {

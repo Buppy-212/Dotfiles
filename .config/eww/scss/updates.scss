@@ -1,4 +1,17 @@
 .updates {
-  color: #c8d3f5;
-  padding: 0px 4px 0px 4px;
+  padding: 0;
+  border-radius: 1rem;
+}
+
+.updates:hover {
+  background-color: $darkgray;
+}
+
+.updates:active {
+  background-color: $black;
+}
+
+.update-icon {
+  color: $foreground;
+  padding: 0 0 0 0.4rem;
 }

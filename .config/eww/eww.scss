@@ -1,7 +1,7 @@
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
-  font-size: 12pt;
+  font-size: 100%;
 }
 
 $background: #222436;
@@ -28,8 +28,11 @@ tooltip {
 }
 
 @import "scss/battery.scss";
+@import "scss/bluetooth.scss";
 @import "scss/clock.scss";
 @import "scss/power.scss";
 @import "scss/tray.scss";
+@import "scss/updates.scss";
 @import "scss/volume.scss";
+@import "scss/wifi.scss";
 @import "scss/workspaces.scss";

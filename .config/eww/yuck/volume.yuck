@@ -1,5 +1,5 @@
 (defwidget volume []
-  (eventbox :class "volume" :onclick "eww update revealVolume=true" :onhoverlost "eww update revealVolume=false" :onrightclick "uwsm app -- pavucontrol &" :onmiddleclick "~/.config/swaync/scripts/volume --toggle"
+  (eventbox :class "volume" :onclick "eww update revealVolume=true" :onhoverlost "eww update revealVolume=false" :onrightclick "uwsm app -- pavucontrol &" :onmiddleclick "~/.config/swaync/scripts/volume --toggle" :onscroll "~/.config/swaync/scripts/volume {}"
     (box :orientation "h" :space-evenly false :class "volumebox"
       " "
       (revealer :reveal revealVolume :transition "slideright"

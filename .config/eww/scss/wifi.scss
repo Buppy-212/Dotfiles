@@ -1,0 +1,17 @@
+.wifi-button {
+  color: $green;
+  padding: 0 0.2rem;
+  background: transparent;
+}
+
+.wifi-button:hover {
+  background-color: $darkgray;
+}
+
+.wifi-button:active {
+  background-color: $black;
+}
+
+.wifi-icon {
+  padding: 0 0.45rem 0 0.2rem;
+}

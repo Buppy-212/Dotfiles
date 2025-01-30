@@ -1,10 +1,27 @@
 .power {
-  color: $red;
   box-shadow: 0 0 4px 2px $black;
   border-radius: 1rem;
+  padding: 0;
 }
+
 .menu {
-  padding: 0 0.5rem;
-  color: $foreground;
   background: transparent;
+  padding: 0;
+  &.shutdown {
+    color: $red;
+    padding: 0 0 0 0.4rem;
+    margin: 0 0.1rem 0 0;
+  }
+  &.reboot {
+    color: $orange;
+    padding: 0 0.4rem;
+  }
+  &.logout {
+    color: $magenta;
+    padding: 0 0.4rem;
+  }
+  &.lock {
+    color: $blue;
+    padding: 0 0.4rem;
+  }
 }

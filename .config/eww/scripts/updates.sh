@@ -16,7 +16,7 @@ case "$1" in
 *)
   COUNT=$(cat "$HOME"/.local/state/updates)
   if test "$COUNT" = "0"; then
-    printf "{\"tooltip\":\"\",\"text\":\"\"}"
+    printf "{\"tooltip\":\"No Updates\",\"text\":\" \"}"
   else
     printf "{\"tooltip\":\"%s\",\"text\":\" \"}" "$COUNT"
   fi
