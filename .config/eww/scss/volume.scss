@@ -19,12 +19,8 @@
   padding: 0 1rem;
 }
 
-.slider highlight {
-  padding: 0 1rem;
-  border-radius: 0.2em;
-}
-
 .slider trough {
-  background-color: $cyan;
+  background-color: $blue;
   border-radius: 0.2em;
+  min-width: 100px;
 }
