@@ -1,0 +1,30 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+$background: #222436;
+$foreground: #c8d3f5;
+
+$black: #1b1d2b;
+$red: #ff757f;
+$green: #c3e88d;
+$orange: #ffc777;
+$blue: #82aaff;
+$magenta: #c099ff;
+$cyan: #86e1fc;
+$darkgray: #444a73;
+$lightgray: #828bb8;
+
+tooltip {
+  border: 2px solid $foreground;
+  color: $foreground;
+  background-color: $background;
+}
+
+@import "scss/battery.scss";
+@import "scss/clock.scss";
+@import "scss/power.scss";
+@import "scss/volume.scss";
+@import "scss/workspaces.scss";

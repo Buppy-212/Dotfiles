@@ -1,0 +1,5 @@
+(defpoll updates :initial "{\"tooltip\":\"\",\"text\":\"\"}" :interval "15m" "scripts/updates.sh")
+(defvar volume 0)
+(deflisten current_workspace :initial "1" "scripts/active-workspace.sh")
+(defvar revealPower false)
+(defvar revealVolume false)

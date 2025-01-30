@@ -1,0 +1,30 @@
+.volume {
+  color: $blue;
+  padding: 0px 4px 0px 4px;
+  border-radius: 1rem;
+}
+
+.volumebox {
+  padding: 0 0.2rem;
+}
+.volume:hover {
+  background-color: $darkgray;
+}
+
+.volume:active {
+  background-color: $black;
+}
+
+.slider {
+  padding: 0 1rem;
+}
+
+.slider highlight {
+  padding: 0 1rem;
+  border-radius: 0.2em;
+}
+
+.slider trough {
+  background-color: $cyan;
+  border-radius: 0.2em;
+}

@@ -1,0 +1,17 @@
+.battery {
+  padding: 0px 4px 0px 4px;
+  color: #c3e88d;
+  border-radius: 1rem;
+}
+
+.battery label {
+  margin: 0 0.2rem;
+}
+
+.battery:hover {
+  background-color: #2f334d;
+}
+
+.battery:active {
+  background-color: #1b1d2b;
+}

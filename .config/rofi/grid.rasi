@@ -1,5 +1,5 @@
 configuration {
-  modi: "power,toggles,waybar";
+  modi: "power,toggles";
   font: "JetBrainsMono Nerd Font 24";
   matching:	"fuzzy";
   hover-select: true;

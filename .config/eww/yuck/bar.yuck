@@ -1,0 +1,29 @@
+(defwidget left []
+  (box :class "left" :orientation "h" :halign "start"
+    (workspaces)
+  )
+)
+
+(defwidget center []
+  (box :class "center" :halign "center" :valign "center" :orientation "h"  :space-evenly false  
+    (clock)
+  )
+)
+
+(defwidget right []
+  (box :class "right" :halign "end" :valign "center" :orientation "h" :spacing 4 :space-evenly false
+    (battery)
+    (volume)
+    (tray)
+    (updates)
+    (power)
+  )
+)
+
+(defwidget bar []
+  (centerbox :orientation "h"
+      (left)
+      (center)
+      (right)
+    )
+)

@@ -1,0 +1,15 @@
+(defwidget power []
+(eventbox :class "power" :onhover "eww update revealPower=true" :onhoverlost "eww update revealPower=false" :onclick "uwsm app -- ~/.config/rofi/scripts/rofi.sh power grid"
+  (box :orientation "h" :space-evenly false
+      (revealer :reveal revealPower :transition "slideright"
+        (box :class "menu" :orientation "h" :space-evenly true
+          (button :class "menu shutdown" :onclick "systemctl poweroff" "")
+          (button :class "menu reboot" :onclick "systemctl reboot" "󰜉")
+          (button :class "menu logout" :onclick "uwsm stop" "󰍃")
+          (button :class "menu lock" :onclick "uwsm app -- hyprlock &" "󰌾")
+        )
+      )
+      " "
+    )
+  )
+)

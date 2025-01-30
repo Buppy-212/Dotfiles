@@ -1,0 +1,11 @@
+(include "variables.yuck")
+(include "windows.yuck")
+
+(include "yuck/bar.yuck")
+(include "yuck/battery.yuck")
+(include "yuck/clock.yuck")
+(include "yuck/power.yuck")
+(include "yuck/tray.yuck")
+(include "yuck/updates.yuck")
+(include "yuck/volume.yuck")
+(include "yuck/workspaces.yuck")
