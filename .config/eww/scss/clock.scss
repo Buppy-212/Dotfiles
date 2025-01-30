@@ -3,28 +3,3 @@
   padding: 0px 4px 0px 4px;
   border-radius: 1rem;
 }
-
-.clock:hover {
-  background-color: $darkgray;
-}
-
-.clock:active {
-  background-color: $black;
-}
-
-.time {
-  padding: 0 0.5rem;
-}
-
-.calendarbox {
-  background: $background;
-  border-radius: 1em;
-}
-.calendar {
-  border: 2px solid $blue;
-  padding: 2px;
-}
-
-.eww_calendar {
-  border-radius: 1rem;
-}

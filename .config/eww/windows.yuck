@@ -7,12 +7,3 @@
   :namespace "eww"
   (bar)
 )
-
-(defwindow calendar []
-  :geometry (geometry :x "0%" :y "4px" :width "15%" :height "10%" :anchor "top center")
-  :stacking "fg"
-  :exclusive false
-  :focusable true
-  :namespace "eww"
-  (mycalendar)
-)

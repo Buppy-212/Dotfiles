@@ -1,10 +1,5 @@
 (defwidget clock []
-    (eventbox :class "clock" :onclick "eww close calendar || eww open calendar --screen $(hyprctl monitors -j | jq '.[] | select(.focused) | .id')"
-        (label :class "time" :text {formattime(EWW_TIME, "%d %B %Y %H:%M")})
-    )
-)
-(defwidget mycalendar []
-    (eventbox :onhoverlost "eww close calendar" :class "calendarbox"
-        (calendar :class "calendar")
+    (box :class "clock" :orientation "h"
+        (label :text {formattime(EWW_TIME, "%A %d %B %Y %H:%M")})
     )
 )
