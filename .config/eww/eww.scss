@@ -23,6 +23,10 @@ tooltip {
   background-color: $background;
 }
 
+.bar {
+  background-color: $background;
+}
+
 @import "scss/battery.scss";
 @import "scss/clock.scss";
 @import "scss/power.scss";

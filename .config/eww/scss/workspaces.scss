@@ -1,24 +1,24 @@
 .workspaces {
-  border-radius: 5px;
-  box-shadow: 0 0 4px 2px #1b1d2b;
+  border-radius: 1rem;
   padding: 0;
   margin: 0;
-  background-color: rgba($color: #222436, $alpha: 0.65);
 }
 
 .workspace {
   border-radius: 1rem;
-  background-color: rgba($color: #fdfffd, $alpha: 0.1);
   margin: 0 0.25rem;
   padding: 0 0.7rem;
 
+  &.occupied {
+    background-color: $darkgray;
+  }
   &.current {
-    background-color: #ffc777;
+    background-color: $orange;
   }
 }
 
 .workspace:hover {
-  background-color: #2f334d;
+  background-color: $lightgray;
   &.current {
     background-color: #c38846;
   }
