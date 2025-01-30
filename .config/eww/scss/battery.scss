@@ -1,6 +1,6 @@
 .battery {
   padding: 0 0.2rem;
-  color: #c3e88d;
+  color: $green;
   border-radius: 1rem;
 }
 
@@ -9,9 +9,9 @@
 }
 
 .battery:hover {
-  background-color: #2f334d;
+  background-color: $darkgray;
 }
 
 .battery:active {
-  background-color: #1b1d2b;
+  background-color: $black;
 }

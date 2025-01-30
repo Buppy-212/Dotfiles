@@ -20,6 +20,6 @@
 .workspace:hover {
   background-color: $lightgray;
   &.current {
-    background-color: #c38846;
+    background-color: darker($orange);
   }
 }
