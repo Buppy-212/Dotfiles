@@ -11,7 +11,7 @@ case "$1" in
   AUR=$(yay -Qua | wc -l)
   OFFICIAL=$(checkupdates | wc -l)
   FLATPAK=$(flatpak remote-ls --updates | wc -l)
-  echo $((OFFICIAL + AUR + FLATPAK))
+  echo $((OFFICIAL + AUR + FLATPAK)) >"$HOME"/.local/state/updates
   ;;
 *)
   COUNT=$(cat "$HOME"/.local/state/updates)
