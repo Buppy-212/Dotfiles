@@ -7,19 +7,20 @@
 
 ### Hyprland Desktop Environment
 
+- Eww (AUR)
 - Ghostty
 - Grim (for printscreen)
 - Hypridle
 - Hyprland
 - Hyprlock
 - Hyprpaper
+- Rbw (rofi bitwarden)
 - Rofi-emoji-git (AUR)
 - Rofi-wayland
 - Slurp (for printscreen)
 - Swappy
 - Swaync
 - Uwsm (AUR)
-- Eww (AUR)
 
 ### Greeter
 
@@ -27,13 +28,20 @@
 
 ### Terminal Programs
 
+- Bluetui
 - Btop
+- Dash
 - Eza
 - Fastfetch
 - Fzf
+- Jq
+- Latexindent
 - Mpv
 - Neovim
+- Networkmanger
 - Playerctl
+- Python
+- Tmux
 - Yazi
 - Zoxide
 - Zsh
