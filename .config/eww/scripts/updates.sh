@@ -4,7 +4,7 @@ case "$1" in
 --update)
   ghostty --title=Update -e 'yay -Syu; flatpak update'
   echo "0" >"$HOME"/.local/state/updates
-  eww update updates="{\"tooltip\":\"\",\"text\":\"\"}"
+  eww update updates="{\"tooltip\":\"Updated\",\"text\":\" \"}"
   ;;
 --check)
   AUR=$(yay -Qua | wc -l)
@@ -15,7 +15,7 @@ case "$1" in
 *)
   COUNT=$(cat "$HOME"/.local/state/updates)
   if test "$COUNT" = "0"; then
-    printf "{\"tooltip\":\"No Updates\",\"text\":\" \"}"
+    printf "{\"tooltip\":\"Updated\",\"text\":\" \"}"
   else
     printf "{\"tooltip\":\"%s\",\"text\":\" \"}" "$COUNT"
   fi

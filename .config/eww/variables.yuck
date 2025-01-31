@@ -1,4 +1,4 @@
-(defpoll updates :initial "{\"tooltip\":\"No Updates\",\"text\":\" \"}" :interval "15m" "scripts/updates.sh")
+(defpoll updates :initial "{\"tooltip\":\"Updated\",\"text\":\" \"}" :interval "15m" "scripts/updates.sh")
 (defpoll volume :initial 0 :interval "1s" "pamixer --get-volume")
 (defpoll wifi-icon :interval "1m" "scripts/wifi.sh icon")
 (defpoll wifi-name :interval "1m" "scripts/wifi.sh name")
