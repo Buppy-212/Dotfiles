@@ -5,7 +5,6 @@ case "$1" in
   ghostty --title=Update -e 'yay -Syu; flatpak update'
   echo "0" >"$HOME"/.local/state/updates
   eww update updates="{\"tooltip\":\"\",\"text\":\"\"}"
-  eww reload
   ;;
 --check)
   AUR=$(yay -Qua | wc -l)

@@ -15,12 +15,12 @@
 - Hyprlock
 - Hyprpaper
 - Rbw (rofi bitwarden)
-- Rofi-emoji-git (AUR)
+- Rofi-emoji
 - Rofi-wayland
 - Slurp (for printscreen)
 - Swappy
 - Swaync
-- Uwsm (AUR)
+- Uwsm
 
 ### Greeter
 
