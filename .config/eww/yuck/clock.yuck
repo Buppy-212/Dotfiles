@@ -1,5 +1,5 @@
 (defwidget clock []
     (box :class "clock" :orientation "h"
-        (label :text {formattime(EWW_TIME, "%A %d %B %Y %H:%M")})
+        (label :text {formattime(EWW_TIME, "%a %d %b %H:%M")})
     )
 )

@@ -1,7 +1,7 @@
 # My Dotfiles
 
-![My desktop with waybar and neovim running](Screenshots/neovim.png)
-![Rofi Wallpaper Script](Screenshots/rofi.png)
+![Desktop with eww bar](Screenshots/Desktop.png)
+![Desktop with rofi,swaync and nvim open](Screenshots/Desktop-rofi.png)
 
 ## List of programs
 
