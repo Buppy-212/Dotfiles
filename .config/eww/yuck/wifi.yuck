@@ -1,7 +1,7 @@
 (defwidget wifi []
-  (box  :orientation "h"  :tooltip wifi-name
+  (box  :orientation "h"  :tooltip "${wifi.name}"
   (button :onclick "uwsm app -- ghostty  --title=nmtui -e ~/.local/bin/nmtuiwrapper &" :class "wifi-button" :valign "center"
-      (label :class "wifi-icon" :text wifi-icon)
+      (label :class "wifi-icon" :text "${wifi.icon}")
     )
   )
 )
