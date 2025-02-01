@@ -1,15 +1,17 @@
 #!/usr/bin/env dash
 
-icon() {
-  [ "$(cat /sys/class/net/enp2s0/operstate)" = up ] && icon="" && return
-  [ "$(cat /sys/class/net/wlp3s0/operstate)" = up ] && icon="󰖩" && return
-  icon="󰖪"
-}
-name() {
-  name=$(nmcli | grep "^enp" | sed 's/\ connected\ to\ /Connected to /g' | cut -d ':' -f2) && return
-  name=$(nmcli | grep "^wlp" | sed 's/\ connected\ to\ /Connected to /g' | cut -d ':' -f2)
-}
+WIRED=$(nmcli | grep "^enp")
+WIRELESS=$(nmcli | grep "^wlp")
 
-icon
-name
+if [ "$(echo "$WIRED" | cut -d" " -f2)" = connected ]; then
+  icon=""
+  name=$(echo "$WIRED" | sed 's/\ connected\ to\ /Connected to /g' | cut -d ':' -f2)
+elif [ "$(echo "$WIRELESS" | cut -d" " -f2)" = connected ]; then
+  icon="󰖩"
+  name=$(echo "$WIRELESS" | sed 's/\ connected\ to\ /Connected to /g' | cut -d ':' -f2)
+else
+  icon="󰖪"
+  name="Disconnected"
+fi
+
 printf "{\"name\":\"%s\",\"icon\":\"%s\"}" "$name" "$icon"
