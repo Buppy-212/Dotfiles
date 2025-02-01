@@ -14,8 +14,9 @@
 - Hyprland
 - Hyprlock
 - Hyprpaper
+- Hyprpolkit
+- Hyprsunset
 - Rbw (rofi bitwarden)
-- Rofi-emoji
 - Rofi-wayland
 - Slurp (for printscreen)
 - Swappy

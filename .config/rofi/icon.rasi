@@ -1,5 +1,5 @@
 configuration {
-  modi: "drun,window,filebrowser,emoji";
+  modi: "drun,window,filebrowser";
   run-command: "uwsm app -- {cmd}";
   sort:	true;
   sorting-method:	"fzf";
@@ -8,7 +8,6 @@ configuration {
   matching:	"fuzzy";
   display-drun: "Applications";
   display-window: "Windows";
-  display-emoji: "Emoji";
   display-filebrowser: "Files";
   display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font 12";
