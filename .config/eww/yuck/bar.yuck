@@ -1,22 +1,25 @@
 (defwidget left []
-  (box :class "left" :orientation "h" :halign "start"
+  (box :class "left" :orientation "h" :halign "start" :space-evenly false
     (workspaces)
   )
 )
 
 (defwidget center []
-  (box :class "center" :halign "center" :valign "center" :orientation "h"  :space-evenly false  
+  (box :class "center" :halign "center" :valign "center" :orientation "h"  :space-evenly false
     (clock)
   )
 )
 
 (defwidget right []
-  (box :class "right" :halign "end" :valign "center" :orientation "h" :spacing 4 :space-evenly false
+  (box :class "right" :halign "end" :valign "center" :orientation "h" :spacing 8 :space-evenly false
     (tray)
-    (volume)
     (bluetooth)
+    (volume)
+    (gamemode)
+    (idle)
     (wifi)
     (battery)
+    (filter)
     (updates)
     (power)
   )

@@ -1,0 +1,7 @@
+(defwidget filter []
+  (box :orientation "h"
+    (button :class "filter-button" :onclick "scripts/filter.sh --toggle" :tooltip "Night Light"
+      (label :class "filter-icon" :text filter)
+    )
+  )
+)
