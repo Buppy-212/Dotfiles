@@ -1,12 +1,10 @@
 configuration {
-  modi: "power,toggles";
+  modi: "power";
   font: "JetBrainsMono Nerd Font 24";
   matching:	"fuzzy";
   hover-select: true;
   me-accept-entry: "!MousePrimary";
   display-power: "Power";
-  display-toggles: "Toggles";
-  display-waybar: "Waybar";
   kb-cancel: "Control+[47],Escape,Control+C";
 }
 
@@ -39,19 +37,16 @@ window {
   background-color: @bg;
 }
 
-mainbox { children: [ mode-switcher, inputbar, listview ]; }
+mainbox { children: [ mode-switcher, listview, inputbar ]; }
 
 mode-switcher {
-  border-radius:	10px;
   text-color:		inherit;
-  margin:		4px 4px 4px 4px;
 }
 
 button {
   padding: 6px;
   vertical-align:	0.5; 
   horizontal-align:	0.5;
-  border-radius: 10px;
 }
 
 button selected {
@@ -62,22 +57,19 @@ button selected {
 inputbar {
   children:	[ entry ];
   expand:	false;
-  padding: 4px 4px 4px 4px;
-}
-
-prompt { 
-  enabled: true; 
+  padding: 6px;
+  border-radius: 0;
+  background-color: @fg-alt;
 }
 
 entry {
   expand: true;
-  padding: 0px 7px 0px 7px;
-  border-radius:	10px;
+  padding: 0px 7px;
   cursor:  text;
 }
 
 listview {
-  columns: 3;
+  columns: 2;
   cycle: true;
   flow: horizontal;
   layout:	vertical;
