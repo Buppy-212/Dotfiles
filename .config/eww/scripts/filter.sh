@@ -6,7 +6,7 @@ case "$1" in
     pkill hyprsunset
     eww update filter=" "
   else
-    uwsm app -- hyprsunset -t 4000 &
+    uwsm app -- hyprsunset -t 2500 &
     eww update filter=" "
   fi
   ;;
