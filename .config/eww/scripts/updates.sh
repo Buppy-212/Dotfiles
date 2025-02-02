@@ -1,10 +1,11 @@
 #!/usr/bin/env dash
 
 check() {
-  AUR=$(yay -Qua | wc -l)
-  OFFICIAL=$(checkupdates | wc -l)
-  FLATPAK=$(flatpak remote-ls --updates | wc -l)
-  echo $((OFFICIAL + AUR + FLATPAK)) >"$HOME"/.local/state/updates
+  {
+    yay -Qua
+    checkupdates
+    flatpak remote-ls --updates
+  } | wc -l >"$HOME"/.local/state/updates
   eww update updates="$(display)"
 }
 
