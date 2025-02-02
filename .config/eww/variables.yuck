@@ -1,5 +1,5 @@
 (defpoll updates :initial "{\"tooltip\":\"Updated\",\"text\":\" \"}" :interval "12h" "scripts/updates.sh")
-(defpoll volume :initial 0 :interval "1s" "scripts/volume.sh")
+(defpoll volume :initial "{\"volume\":\"0\",\"icon\":\" \"}"  :interval "1s" "scripts/volume.sh")
 (defpoll wifi :interval "1s" "scripts/wifi.sh")
 (defpoll idle :initial " " :interval "12h" "scripts/idle.sh")
 (defpoll filter :initial " " :interval "12h" "scripts/filter.sh")
