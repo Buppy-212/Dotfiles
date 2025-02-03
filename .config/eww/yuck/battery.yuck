@@ -1,5 +1,5 @@
 (defwidget battery []
-  (eventbox  :class "battery" :onclick "uwsm app -- ghostty -e btop &" :tooltip "${EWW_BATTERY.BAT0.status}"
+  (eventbox  :class "battery" :onclick "uwsm app -- ghostty --title=btop -e btop &" :tooltip "${EWW_BATTERY.BAT0.status}"
     (label :class "battery label" :halign "center" :text "${EWW_BATTERY.BAT0.capacity}%")
   )
 )
