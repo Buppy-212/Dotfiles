@@ -1,9 +1,11 @@
 configuration {
+  modi: "wallpaper";
   sort:	true;
   sorting-method: "fzf";
   disable-history: true;
   scroll-method: 0;
   matching:	"fuzzy";
+  display-wallpaper: "Wallpaper";
   display-format: "{icon}";
   show-icons: true;
   font: "JetBrainsMono Nerd Font 12";
@@ -17,12 +19,15 @@ configuration {
 * {
   bg: rgba(34,36,54,0.95);
   fg: #C8D3F5;
-  orange: #2F334D;
+  bg-selected: #2F334D;
+  fg-alt: #1E2030;
+  orange: #FFC777;
   blue: #82AAFF;
   purple: #C099FF;
 
   background-color: transparent;
   text-color: @fg;
+  highlight: bold #FF9E64;
 
   margin: 0;
   border: 0;
@@ -37,23 +42,36 @@ window {
   background-color: @bg;
 }
 
-mainbox { children: [ inputbar, listview ]; }
+mainbox { children: [ mode-switcher, listview, inputbar ]; }
 
-inputbar {
-  children: [ entry ];
-  expand: false;
-  margin: 4px 4px 2px 4px;
+mode-switcher {
+  padding: 4px;
+  text-color:		inherit;
+  background-color: @fg-alt;
 }
 
-prompt { 
-  enabled: true; 
+button {
+  border-radius: 10px;
+  padding: 6px;
+  vertical-align:	0.5; 
+  horizontal-align:	0.5;
+}
+
+button selected {
+  background-color:	@orange;
+  text-color: @fg-alt;
+}
+
+inputbar {
+  children:	[ entry ];
+  expand:	false;
+  padding: 6px;
+  background-color: @fg-alt;
 }
 
 entry {
-  placeholder: "Search";
-  expand:	true;
-  padding: 5px;
-  border-radius: 10px;
+  expand: true;
+  padding: 0px 7px;
   cursor:  text;
 }
 
@@ -64,13 +82,14 @@ listview {
   flow: horizontal;
   scrollbar: false;
   lines: 4;
-  margin: 0px 2px 0px 2px;
+  margin: 4px;
 }
 
 element {
   orientation: vertical;
   children: [ element-icon ];
   padding: 2px;
+  border-radius: 10px;
 }
 
 element-icon {
@@ -81,7 +100,7 @@ element-icon {
 }
 
 element selected {
-  background-color:	@purple;
-  border-color: @purple;
+  background-color:	@bg-selected;
   border: 2px;
+  border-color: @purple;
 }

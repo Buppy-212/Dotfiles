@@ -56,9 +56,9 @@ window {
 mainbox { children: [ mode-switcher, inputbar, listview ]; }
 
 mode-switcher {
-  border-radius:	10px;
   text-color:		inherit;
-  margin:		4px 4px 4px 4px;
+  padding: 4px;
+  background-color: @fg-alt;
 }
 
 button {
@@ -74,20 +74,15 @@ button selected {
 }
 
 inputbar {
-  children:		[ entry ];
-  expand:		false;
-  padding:		2px 4px 2px 4px;
-}
-
-prompt { 
-  enabled: true; 
+  children:	[ entry ];
+  expand:	false;
+  padding: 6px;
+  background-color: @fg-alt;
 }
 
 entry {
-  placeholder: "Search";
   expand: true;
-  padding: 7px;
-  border-radius:	10px;
+  padding: 0px 7px;
   cursor:  text;
 }
 
