@@ -9,23 +9,23 @@
 
 - Eww (AUR)
 - Ghostty
-- Grim (for printscreen)
+- Grim
 - Hypridle
 - Hyprland
 - Hyprlock
 - Hyprpaper
 - Hyprpolkit
 - Hyprsunset
-- Rbw (rofi bitwarden)
+- Rbw
 - Rofi-wayland
-- Slurp (for printscreen)
+- Slurp
 - Swappy
 - Swaync
 - Uwsm
 
 ### Greeter
 
-- Nwg-hello (requires greetd)
+- Nwg-hello
 
 ### Terminal Programs
 
@@ -55,16 +55,8 @@
 
 Ensure you have the following installed on your system
 
-### Git
-
 ```Bash
-sudo pacman -S git
-```
-
-### Stow
-
-```Bash
-sudo pacman -S stow
+sudo pacman -S git stow
 ```
 
 Then run the following commands from the home directory
