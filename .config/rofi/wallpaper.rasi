@@ -20,7 +20,7 @@ configuration {
   bg: rgba(34,36,54,0.95);
   fg: #C8D3F5;
   bg-selected: #2F334D;
-  fg-alt: #1E2030;
+  black: #1E2030;
   orange: #FFC777;
   blue: #82AAFF;
   purple: #C099FF;
@@ -39,7 +39,7 @@ window {
   border: 2px 2px 2px 2px;
   border-radius: 3px;
   border-color: @blue;
-  background-color: @bg;
+  background-color: @black;
 }
 
 mainbox { children: [ mode-switcher, listview, inputbar ]; }
@@ -47,7 +47,7 @@ mainbox { children: [ mode-switcher, listview, inputbar ]; }
 mode-switcher {
   padding: 4px;
   text-color:		inherit;
-  background-color: @fg-alt;
+  background-color: @black;
 }
 
 button {
@@ -59,14 +59,14 @@ button {
 
 button selected {
   background-color:	@orange;
-  text-color: @fg-alt;
+  text-color: @black;
 }
 
 inputbar {
   children:	[ entry ];
   expand:	false;
   padding: 6px;
-  background-color: @fg-alt;
+  background-color: @black;
 }
 
 entry {
@@ -82,7 +82,9 @@ listview {
   flow: horizontal;
   scrollbar: false;
   lines: 4;
-  margin: 4px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: @bg;
 }
 
 element {
