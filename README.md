@@ -37,9 +37,11 @@
 - Fzf
 - Jq
 - Latexindent
+- Mpd
 - Mpv
 - Neovim
 - Networkmanger
+- Ncmpcpp
 - Playerctl
 - Python
 - Tmux
