@@ -20,7 +20,7 @@ display() {
 
 case "$1" in
 --update)
-  ghostty --title=update -e 'yay -Syu; flatpak update'
+  ghostty --title=specialtty -e 'yay -Syu; flatpak update'
   check
   ;;
 --check)
