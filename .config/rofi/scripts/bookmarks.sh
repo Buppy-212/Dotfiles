@@ -13,13 +13,21 @@ case "$1" in
   $BROWSER "$(cat /tmp/bookmark)" &
   pkill rofi
   ;;
+"Delete")
+  mv "$BOOKMARKS" "$BOOKMARKS".bak
+  grep --invert-match "$(cat /tmp/bookmark)" "$BOOKMARKS".bak >"$BOOKMARKS"
+  cat "$BOOKMARKS"
+  ;;
 *)
   if grep -q -e "^$1$" "$BOOKMARKS"; then
     echo "Tab"
     echo "Window"
+    echo "Delete"
     echo "$1" >/tmp/bookmark
   else
     echo "$1" >>"$BOOKMARKS"
+    sort "$BOOKMARKS" >"$BOOKMARKS".new
+    mv "$BOOKMARKS".new "$BOOKMARKS"
   fi
   ;;
 esac
