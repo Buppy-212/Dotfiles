@@ -2,6 +2,14 @@ return {
 	{
 		"folke/snacks.nvim",
 		opts = {
+			image = {
+				enabled = true,
+				markdown = {
+					float = true,
+					inline = false,
+				},
+			},
+			statuscolumn = { enabled = true },
 			picker = {
 				win = {
 					input = {

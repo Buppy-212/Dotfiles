@@ -1,7 +1,8 @@
 # My Dotfiles
 
-![Desktop with eww bar](Screenshots/Desktop.png)
-![Desktop with rofi,swaync and nvim open](Screenshots/Desktop-rofi.png)
+![Desktop with eww bar](./Screenshots/Desktop.png)
+
+![Desktop with rofi,swaync and nvim open](./Screenshots/Desktop-rofi.png)
 
 ## List of programs
 
