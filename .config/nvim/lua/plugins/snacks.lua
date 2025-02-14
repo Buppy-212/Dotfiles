@@ -6,7 +6,7 @@ return {
 				win = {
 					input = {
 						keys = {
-							["g."] = { "toggle_hidden", mode = { "i", "n" } },
+							["<c-h>"] = { "toggle_hidden", mode = { "i", "n" } },
 						},
 					},
 				},
