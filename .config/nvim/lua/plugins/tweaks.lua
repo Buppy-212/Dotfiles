@@ -21,4 +21,21 @@ return {
 			},
 		},
 	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		ft = { "markdown", "norg", "rmd", "org", "codecompanion", "quarto" },
+	},
+	{
+		"stevearc/conform.nvim",
+		opts = {
+			formatters_by_ft = {
+				tex = { "latexindent" },
+			},
+			formatters = {
+				latexindent = {
+					args = { "-g", "/dev/null" },
+				},
+			},
+		},
+	},
 }
