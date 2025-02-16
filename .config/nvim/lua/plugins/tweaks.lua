@@ -4,10 +4,6 @@ return {
 		opts = {
 			image = {
 				enabled = true,
-				markdown = {
-					float = true,
-					inline = false,
-				},
 			},
 			statuscolumn = { enabled = true },
 			picker = {
