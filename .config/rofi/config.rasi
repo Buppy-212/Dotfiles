@@ -40,14 +40,17 @@ configuration {
 }
 
 window {
-  width:		60%;
-  border:		2px 2px 2px 2px;
-  border-radius:	3px;
-  border-color: @blue;
-  background-color:	@black;
+  width: 60%;
+  border: 2px 2px 2px 2px;
+  padding: 1px;
+  border-radius: 3px;
+  background-image: linear-gradient(45deg,#82aaff,#86e1f3);
 }
 
-mainbox { children: [ mode-switcher, inputbar, listview ]; }
+mainbox {
+  children: [ mode-switcher, inputbar, listview ]; 
+  background-color: @black;
+}
 
 mode-switcher {
   padding: 4px;
