@@ -28,7 +28,7 @@ return {
     author: Will
     date: today
     date-format: Do MMM YYYY
-    engine knitr
+    engine: knitr
     toc: TRUE
     number-sections: TRUE
     number-depth: 3
