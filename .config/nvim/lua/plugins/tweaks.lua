@@ -34,4 +34,11 @@ return {
 			},
 		},
 	},
+	{
+		"R-nvim/R.nvim",
+		opts = {
+			pdfviewer = "zathura",
+			auto_start = "on startup",
+		},
+	},
 }
