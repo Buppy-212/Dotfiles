@@ -5,7 +5,7 @@ configuration {
   disable-history: true;
   scroll-method: 0;
   matching:	"fuzzy";
-  display-wallpaper: "Wallpaper";
+  display-wallpaper: "Wallpapers";
   display-format: "{icon}";
   show-icons: true;
   font: "JetBrainsMono Nerd Font 12";
@@ -44,7 +44,7 @@ window {
 }
 
 mainbox {
- children: [ mode-switcher, listview, inputbar ]; 
+ children: [ mode-switcher, listview ]; 
   background-color: @black;
 }
 
@@ -66,26 +66,13 @@ button selected {
   text-color: @black;
 }
 
-inputbar {
-  children:	[ entry ];
-  expand:	false;
-  padding: 6px;
-  background-color: @black;
-}
-
-entry {
-  expand: true;
-  padding: 0px 7px;
-  cursor:  text;
-}
-
 listview {
   columns: 3;
   cycle: true;
   layout: vertical;
   flow: horizontal;
   scrollbar: false;
-  lines: 4;
+  lines: 3;
   margin: 10px;
   border-radius: 10px;
   background-color: @bg;
@@ -99,8 +86,9 @@ element {
 }
 
 element-icon {
-  size: 375px;
-  padding: -80px 0px -80px 0px;
+  size: 35.5%;
+  padding: -8% 0;
+  border-radius: 10px;
   horizontal-align: 0.5;
   vertical-align: 0.5;
 }
