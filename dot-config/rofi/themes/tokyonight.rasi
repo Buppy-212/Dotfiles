@@ -30,6 +30,7 @@ window {
 horibox {
   orientation: horizontal;
   children: [ mainbox, imagebox, mode-switcher ];
+  background-color: @black;
   background-image: url("~/.local/state/wallpaper",width);
 }
 
