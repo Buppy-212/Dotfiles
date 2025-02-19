@@ -17,6 +17,7 @@ cursor-style-blink = false
 
 window-padding-x = 0
 window-padding-y = 0
+adjust-cell-height = 2
 window-padding-balance = true
 window-decoration = false
 window-theme = ghostty
