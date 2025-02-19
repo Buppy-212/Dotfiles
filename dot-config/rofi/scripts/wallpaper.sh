@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 DIR="$HOME"/Pictures/Wallpapers/
 get() {
-  readarray -t PICS < <(find "$HOME"/Pictures/Wallpapers/ | grep -e ".png$" -e ".jpg$" -e ".jpeg$" -e ".webp$")
+  readarray -t PICS < <(find "$DIR" | grep -e ".png$" -e ".jpg$" -e ".jpeg$" -e ".webp$")
   for a in "${PICS[@]}"; do
-    echo -en "$a\0icon\x1f$a\n"
+    name=$(basename "$a")
+    echo -en "$name\0icon\x1f$a\n"
   done
 }
 change() {
-  NEW_PIC=${1/\.\//"$DIR"}
+  NEW_PIC=$DIR/$1
   ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
   cp "$NEW_PIC" /usr/share/nwg-hello/wallpaper
   killall hyprpaper
