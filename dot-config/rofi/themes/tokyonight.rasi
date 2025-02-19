@@ -53,7 +53,8 @@ mode-switcher {
 }
 
 button {
-  padding: 50px;
+  font: "JetBrainsMono Nerd Font 24";
+  padding: 30px 50px;
   vertical-align: 0.5; 
   horizontal-align: 0.5;
   border-radius: 10px;
