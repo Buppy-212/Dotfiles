@@ -3,9 +3,9 @@
     (box :orientation "h" :space-evenly false :class "power"
       (revealer :reveal revealPower :transition "slideright"
         (box :class "menu" :orientation "h" :space-evenly true
-          (button :class "menu reboot" :onclick "systemctl reboot" :tooltip "Reboot" "󰜉")
-          (button :class "menu logout" :onclick "uwsm stop" :tooltip "Log Out" "󰍃")
           (button :class "menu lock" :onclick "uwsm app -- hyprlock &" :tooltip "Lock" "󰌾")
+          (button :class "menu logout" :onclick "uwsm stop" :tooltip "Log Out" "󰍃")
+          (button :class "menu reboot" :onclick "systemctl reboot" :tooltip "Reboot" "󰜉")
         )
       )
       (button :class "menu shutdown" :onclick "systemctl poweroff" :tooltip "Shutdown" " ")
