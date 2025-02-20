@@ -1,16 +1,7 @@
 * {
-  bg: rgba(34,36,54,0.75);
-  fg: #C8D3F5;
-  darkgrey: #444A73;
-  lightgrey: #8A92BD;
-  black: #1E2030;
-  orange: #FFC777;
-  blue: #82AAFF;
-  purple: #C099FF;
-
   background-color: transparent;
-  text-color: @fg;
-
+  text-color: #C8D3F5;
+  highlight: bold #65BCFF;
   margin: 0;
   border: 0;
   padding: 0;
@@ -19,7 +10,6 @@
 }
 
 window {
-  border-radius: 10px;
   background-image: linear-gradient(45deg,#82aaff,#86e1f3);
   padding: 2px;
   height: 900px;
@@ -30,14 +20,14 @@ window {
 horibox {
   orientation: horizontal;
   children: [ mainbox, imagebox, mode-switcher ];
-  background-color: @black;
+  background-color: #1E2030;
   background-image: url("~/.local/state/wallpaper",width);
 }
 
 mainbox {
   expand: true;
   children: [ inputbar, listview ]; 
-  background-color: @bg;
+  background-color: rgba(30,32,48,0.75);
 }
 
 dummy {
@@ -47,7 +37,7 @@ dummy {
 mode-switcher {
   expand: false;
   orientation: vertical;
-  background-color: @bg;
+  background-color: rgba(30,32,48,0.75);
   padding: 10px;
   spacing: 70px;
 }
@@ -57,19 +47,27 @@ button {
   padding: 30px 50px;
   vertical-align: 0.5; 
   horizontal-align: 0.5;
-  border-radius: 10px;
 }
 
 button selected {
-  background-color: @darkgrey;
+  background-color: #444A73;
 }
 
 inputbar {
   expand: false;
   horizontal-align: 0.5;
   padding: 10px;
+  margin: 0 0 1px 0;
   background-color: transparent;
-  children: [entry];
+  border: 0 0 2px 0;
+  border-color: #FF966C;
+  children: [textbox, entry];
+}
+
+textbox {
+  expand: false;
+  color: #65BCFF;
+  content: ">";
 }
 
 entry {
@@ -84,15 +82,13 @@ listview {
   flow: horizontal;
   scrollbar: false;
   margin: 0 10px 10px 10px;
-  border-radius: 10px;
   background-color: transparent;
 }
 
 element {
   orientation: horizontal;
   margin: 4px;
-  padding: 4px;
-  border-radius: 10px;
+  padding: 4px 8px;
 }
 
 element-text {
@@ -108,7 +104,7 @@ element-icon {
 }
 
 element selected {
-  background-color:	@darkgrey;
-  border: 2px;
-  border-color: @blue;
+  background-color: #2D3F76;
+  border: 0 0 0 4px;
+  border-color: #FF007C;
 }
