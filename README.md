@@ -8,51 +8,41 @@
 
 ### Hyprland Desktop Environment
 
-- Eww (AUR)
-- Ghostty
-- Grim
-- Hypridle
-- Hyprland
-- Hyprlock
-- Hyprpaper
-- Hyprpolkit
-- Hyprsunset
-- Rbw
-- Rofi-wayland
-- Slurp
-- Swappy
-- Swaync
-- Uwsm
+```Bash
+sudo pacman -S hyprland hyprlock hyprpaper hyprpolkit rofi-wayland uwsm ghostty nwg-hello
+sudo pacman -S grim slurp swappy
+```
 
-### Greeter
+### Music/Swaync
 
-- Nwg-hello
+```Bash
+sudo pacman -S swaync mpd mcmpcpp playerctl mpd-mpris
+systemctl --user enable mpd
+systemctl --user enable mpd-mpris
+```
 
-### Terminal Programs
+### Eww
 
-- Bluetui
-- Btop
-- Dash
-- Eza
-- Fastfetch
-- Fzf
-- Jq
-- Latexindent
-- Mpd
-- Mpv
-- Neovim
-- Networkmanger
-- Ncmpcpp
-- Playerctl
-- Python
-- Tmux
-- Yazi
-- Zoxide
-- Zsh
+```Bash
+yay -S eww
+sudo pacman -S bluetui pulsemixer hypridle networkmanger btop hyprsunset
+sudo pacman -S dash python jq
+systemctl --user enable update-check.service
+```
 
-### Other Programs
+### Terminal programs
 
-- Zathura
+```bash
+sudo pacman -S neovim fzf eza fastfetch tmux yazi zoxide zsh lazygit
+```
+
+### Extras
+
+```Bash
+sudo pacman -S rbw zathura mpv
+```
+
+Latexindent can be installed via mason.nvim
 
 ## Installation
 
