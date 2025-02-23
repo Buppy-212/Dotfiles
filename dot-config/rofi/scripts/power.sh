@@ -18,7 +18,10 @@ case "$1" in
   done
   ;;
 *)
-  pkill rofi
+  if [ "$1" = "Lock" ]; then
+    pkill rofi
+  fi
   ${actions["$1"]}
+  pkill rofi
   ;;
 esac
