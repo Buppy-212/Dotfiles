@@ -1,5 +1,7 @@
 (defwidget clock []
-    (box :class "clock" :orientation "h"
-        (label :text {formattime(EWW_TIME, "%a %d %b %H:%M")})
+  (box :orientation "h"
+    (button :class "clock" :onclick "uwsm app -- $XDG_CONFIG_HOME/rofi/scripts/rofi.sh drun icon &"
+      (label :text {formattime(EWW_TIME, "%a %d %b %H:%M")})
     )
+  )
 )

@@ -1,5 +1,12 @@
 .clock {
   color: $foreground;
-  padding: 0 1rem;
-  border-radius: 1rem;
+  padding: 0 0.5rem;
+  margin: 0 0.1rem 0 0;
+  background: transparent;
+}
+.clock:hover {
+  background-color: $darkgray;
+}
+.clock:active {
+  background-color: $black;
 }
