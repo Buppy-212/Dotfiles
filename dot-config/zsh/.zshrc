@@ -36,7 +36,8 @@ zinit cdreplay -q
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
 # Keybindings
-bindkey -e
+bindkey -v
+bindkey 'jj' vi-cmd-mode
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^ ' autosuggest-accept
