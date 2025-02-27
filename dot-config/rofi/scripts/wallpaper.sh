@@ -8,7 +8,7 @@ get() {
   done
 }
 change() {
-  NEW_PIC=$DIR/$1
+  NEW_PIC=$DIR$1
   ln -sf "$NEW_PIC" "$HOME"/.local/state/wallpaper
   cp "$NEW_PIC" /usr/share/nwg-hello/wallpaper
   killall hyprpaper
