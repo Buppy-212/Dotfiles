@@ -235,8 +235,8 @@ keymap = [
   ], run = "cd ~/.local", desc = "Goto ~/.local" },
   { on = [
     "g",
-    "d",
-  ], run = "cd ~/Downloads", desc = "Goto ~/Downloads" },
+    "t",
+  ], run = "cd ~/.local/share/Trash/files", desc = "Goto Wastebasket" },
   { on = [
     "g",
     "<Space>",
