@@ -3,7 +3,7 @@ return {
     "folke/snacks.nvim",
     opts = {
       image = {
-        enabled = true,
+        doc = { inline = false },
         math = {
           latex = { font_size = "Small" },
         },
