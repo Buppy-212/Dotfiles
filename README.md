@@ -9,7 +9,7 @@
 ### Hyprland Desktop Environment
 
 ```Bash
-sudo pacman -S hyprland hyprlock hyprpaper hyprpolkit rofi-wayland uwsm ghostty nwg-hello
+sudo pacman -S hyprland hyprlock hyprpaper hyprpolkit rofi-wayland uwsm kitty nwg-hello
 sudo pacman -S grim slurp swappy
 ```
 
