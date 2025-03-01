@@ -10,34 +10,30 @@
 }
 
 window {
-  background-image: linear-gradient(45deg,#82aaff,#86e1f3);
+  location: north;
+  anchor: north;
+  background-image: linear-gradient(45deg,#82AAFF,#86E1F3);
   padding: 2px;
-  height: 900px;
-  width: 1600px;
+  width: 60%;
+  margin: 4px 0 0 0;
+  height: calc(100%-4px);
   children: [ horibox ];
 }
 
 horibox {
   orientation: horizontal;
-  children: [ mainbox, imagebox, mode-switcher ];
+  children: [ mainbox, mode-switcher ];
   background-color: #1E2030;
-  background-image: url("~/.local/state/wallpaper",width);
 }
 
 mainbox {
   expand: true;
   children: [ inputbar, listview ]; 
-  background-color: rgba(30,32,48,0.75);
-}
-
-dummy {
-  expand: true;
 }
 
 mode-switcher {
   expand: false;
   orientation: vertical;
-  background-color: rgba(30,32,48,0.75);
   padding: 10px;
   spacing: 70px;
 }
@@ -58,7 +54,6 @@ inputbar {
   horizontal-align: 0.5;
   padding: 10px;
   margin: 0 0 1px 0;
-  background-color: transparent;
   border: 0 0 2px 0;
   border-color: #FF966C;
   children: [textbox, entry];
@@ -77,12 +72,10 @@ entry {
 listview {
   cycle: true;
   columns: 1;
-  lines: 4;
   layout: vertical;
   flow: horizontal;
   scrollbar: false;
   margin: 0 10px 10px 10px;
-  background-color: transparent;
 }
 
 element {
@@ -98,7 +91,7 @@ element-text {
 }
 
 element-icon {
-  size: 40px;
+  size: 48px;
   margin: 0 0 0 4px;
   horizontal-align: 0;
 }
