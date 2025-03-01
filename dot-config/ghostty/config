@@ -12,8 +12,6 @@ keybind = ctrl+enter=text:\x0D
 shell-integration = zsh
 confirm-close-surface = false
 
-shell-integration-features = no-cursor
-cursor-style = block
 cursor-style-blink = false
 
 window-padding-x = 0
@@ -21,7 +19,8 @@ window-padding-y = 0
 adjust-cell-height = 1
 window-padding-balance = true
 window-decoration = false
-window-theme = ghostty
+gtk-adwaita = false
+gtk-single-instance = true
 background-opacity = 0.95
 
 theme = tokyonight_moon
