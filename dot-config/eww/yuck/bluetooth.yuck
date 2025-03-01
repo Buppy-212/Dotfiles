@@ -1,6 +1,6 @@
 (defwidget bluetooth []
   (box :orientation "h"
-    (button :onclick "uwsm app -- kitty --title=minitty -e bluetui &" :class "bluetooth-button"
+    (button :onclick "uwsm app -- kitty --title=minitty -e bluetui &" :class "bluetooth-button" :tooltip "Bluetooth"
       (label :text "󰂯" :class "bluetooth-icon")
     )
   )
