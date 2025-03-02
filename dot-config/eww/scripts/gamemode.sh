@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/dash
 
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 

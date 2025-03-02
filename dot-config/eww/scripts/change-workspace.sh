@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/dash
 clamp() {
   current=$1
   val=$2

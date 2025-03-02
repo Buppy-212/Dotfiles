@@ -85,7 +85,7 @@ function y() {
 . "$HOME"/.config/fzf/theme.sh
 
 # Add local bin to path
-export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Shell integrations
 eval "$(fzf --zsh)"

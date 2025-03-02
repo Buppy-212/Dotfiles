@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/dash
 switch_to() {
-  if [[ -z $TMUX ]]; then
+  if [ -z "$TMUX" ]; then
     tmux attach-session -t "$1"
   else
     tmux switch-client -t "$1"
@@ -11,20 +11,20 @@ has_session() {
   tmux list-sessions | grep -q "^$1:"
 }
 
-if [[ $# -eq 1 ]]; then
+if [ $# -eq 1 ]; then
   selected=$1
 else
   selected=$(find ~/Dotfiles ~/Documents/Maths/* ~/Documents/Programming/*/* ~/Documents/Notes -mindepth 0 -maxdepth 0 -type d | fzf)
 fi
 
-if [[ -z $selected ]]; then
+if [ -z "$selected" ]; then
   exit 0
 fi
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+if [ -z "$TMUX" ] && [ -z "$tmux_running" ]; then
   tmux new-session -s "$selected_name" -c "$selected"
   exit 0
 fi

@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/dash
 
 getVolume() {
   volume=$(pamixer --get-volume)
