@@ -1,0 +1,23 @@
+#!/usr/bin/dash
+
+check() {
+  {
+    yay -Qua
+    checkupdates
+    flatpak remote-ls --updates
+  } | wc -l >"$HOME"/.local/state/updates
+  eww update updates="$(display)"
+}
+
+display() {
+  COUNT=$(cat "$HOME"/.local/state/updates)
+  if [ "$COUNT" = "0" ]; then
+    printf "{\"tooltip\":\"Updated\",\"text\":\" \"}"
+  else
+    printf "{\"tooltip\":\"%s\",\"text\":\" \"}" "$COUNT"
+  fi
+}
+
+yay -Syu
+flatpak update
+check
