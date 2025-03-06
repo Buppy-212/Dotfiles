@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/env dash
 switch_to() {
   if [ -z "$TMUX" ]; then
     tmux attach-session -t "$1"

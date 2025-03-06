@@ -1,0 +1,12 @@
+-f bestaudio
+-x
+-P "~/Music/Playlist/"
+-o "%(uploader)s/%(album)s/%(track_number)s - %(title)s.%(ext)s"
+--no-mtime
+--cookies ~/.zen/0amq3nwn.buppy/cookies.sqlite.wal
+--extractor-args "youtube:lang=en-GB"
+--add-metadata
+--parse-metadata "playlist_index:%(track_number)s"
+--parse-metadata "uploader:%(album_artist)s"
+--parse-metadata ":(?P<meta_date>)"
+--embed-thumbnail

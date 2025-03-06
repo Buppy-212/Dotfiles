@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 ICONDIR="$HOME"/.config/rofi/icons/
 ICONS=(Shutdown Reboot Logout Lock Suspend Hibernate)
 

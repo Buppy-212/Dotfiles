@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 DIR="$HOME"/Pictures/Wallpapers/
 get() {
   readarray -t PICS < <(find "$DIR" -maxdepth 1 | grep -e ".png$" -e ".jpg$" -e ".jpeg$" -e ".webp$")

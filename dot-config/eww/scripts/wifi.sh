@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/env dash
 
 WIRED=$(nmcli | grep "^enp")
 WIRELESS=$(nmcli | grep "^wlp")

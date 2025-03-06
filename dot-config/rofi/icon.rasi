@@ -5,7 +5,11 @@ configuration {
   disable-history: true;
   hover-select: true;
   me-accept-entry: "!MousePrimary";
-  kb-cancel: "Control+[47],Escape,Control+C";
+  kb-cancel: "Control+[47],Escape";
+  kb-row-down: "Control+n,Control+j";
+  kb-row-up: "Control+p,Control+k";
+  kb-remove-to-eol: "";
+  kb-accept-entry: "Return,Control+m,Control+o";
   sort: true;
   sorting-method: "fzf";
   matching: "fuzzy";

@@ -4,7 +4,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/usr/bin/dash -c "~/.config/eww/scripts/updates.sh --check"
+ExecStart=/usr/bin/env dash -c "~/.config/eww/scripts/updates.sh --check"
 
 [Install]
 WantedBy=default.target

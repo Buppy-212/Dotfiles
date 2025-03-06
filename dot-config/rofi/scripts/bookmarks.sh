@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/env dash
 BROWSER="uwsm app -- zen-browser"
 BOOKMARKS=$HOME/.local/state/bookmarks.txt
 case "$1" in

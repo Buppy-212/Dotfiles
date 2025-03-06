@@ -1,4 +1,4 @@
-#!/usr/bin/dash
+#!/usr/bin/env dash
 
 check() {
   {
@@ -20,7 +20,7 @@ display() {
 
 case "$1" in
 --update)
-  kitty --title=specialtty -e sh -c "yay -Syu; flatpak update"
+  kitty --title=specialtty -e dash -c "yay -Syu; flatpak update"
   check
   ;;
 --check)

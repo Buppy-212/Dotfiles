@@ -72,6 +72,7 @@ alias ls="eza --icons --group-directories-first"
 alias ll="eza -alh --icons --group-directories-first"
 alias tree="eza -T --icons"
 alias grep='grep --color=auto'
+alias ytm='yt-dlp --config-locations $XDG_CONFIG_HOME/yt-dlp/musicconf'
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
