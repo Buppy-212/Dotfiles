@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-iDIR="$HOME/.config/dunst/icons"
+iDIR="$HOME/.config/mako/icons"
 
 # Get Volume
 get_volume() {

@@ -1,0 +1,11 @@
+max-history=5
+font=Inter Variable 13
+background-color=#1e2030
+text-color=#c8d3f5
+width=350
+height=150
+border-color=#82aaff
+border-radius=3
+margin=4
+default-timeout=3000
+layer=overlay
