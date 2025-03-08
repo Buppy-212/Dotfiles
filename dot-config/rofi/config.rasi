@@ -8,8 +8,8 @@ configuration {
   hover-select: true;
   me-accept-entry: "!MousePrimary";
   kb-cancel: "Control+[47],Escape";
-  kb-row-down: "Control+n,Control+j";
-  kb-row-up: "Control+p,Control+k";
+  kb-row-down: "Control+n,Control+j,Down";
+  kb-row-up: "Control+p,Control+k,Up";
   kb-remove-to-eol: "";
   kb-accept-entry: "Return,Control+m,Control+o";
 }
