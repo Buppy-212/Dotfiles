@@ -9,14 +9,14 @@
 ### Hyprland Desktop Environment
 
 ```Bash
-sudo pacman -S hyprland hyprlock hyprpaper hyprpolkit rofi-wayland uwsm kitty nwg-hello
-sudo pacman -S grim slurp swappy
+sudo pacman -S hyprland hyprlock hyprpaper hyprpolkit uwsm kitty nwg-hello mako
+sudo pacman -S grim slurp swappy rofi-wayland
 ```
 
-### Music/Swaync
+### Music
 
 ```Bash
-sudo pacman -S swaync mpd mcmpcpp playerctl mpd-mpris
+sudo pacman -S mpd mcmpcpp playerctl mpd-mpris
 systemctl --user enable mpd
 systemctl --user enable mpd-mpris
 ```
@@ -39,7 +39,7 @@ sudo pacman -S neovim fzf eza fastfetch tmux yazi zoxide zsh lazygit
 ### Extras
 
 ```Bash
-sudo pacman -S rbw zathura mpv
+sudo pacman -S rbw zathura mpv yt-dlp
 ```
 
 Latexindent can be installed via mason.nvim
