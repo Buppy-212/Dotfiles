@@ -1,0 +1,7 @@
+#!/usr/bin/env dash
+
+path=$(find ~/Dotfiles ~/Documents/Maths/* ~/Documents/Programming/*/* ~/Documents/Notes -mindepth 0 -maxdepth 0 -type d | fzf)
+[ "$path" = "" ] && exit 1
+name=$(basename "$path" | tr . _)
+
+kitty -d "$path" -T "$name" --detach -o tab_bar_min_tabs=1
