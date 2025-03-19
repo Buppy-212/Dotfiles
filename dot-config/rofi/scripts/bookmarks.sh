@@ -10,11 +10,7 @@ case "$1" in
   pkill rofi
   ;;
 "Tab")
-  if pidof zen-bin; then
-    $BROWSER "$(cat /tmp/bookmark)" &
-  else
-    $BROWSER -new-window "$(cat /tmp/bookmark)"
-  fi
+  $BROWSER "$(cat /tmp/bookmark)" &
   pkill rofi
   ;;
 "Delete")
