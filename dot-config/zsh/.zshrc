@@ -41,7 +41,7 @@ bindkey 'jj' vi-cmd-mode
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^ ' autosuggest-accept
-bindkey -s '^F' 'kitty-sessioniser && exit\n'
+bindkey -s '^F' 'tmux-sessioniser\n'
 
 # History
 HISTSIZE=5000
