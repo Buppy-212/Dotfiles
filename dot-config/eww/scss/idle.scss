@@ -13,3 +13,15 @@
   color: $cyan;
   padding: 0 0 0 0.2rem;
 }
+
+.vidle-button {
+  padding: 0;
+  margin: 0 0 0 0.1rem;
+  background: transparent;
+}
+.vidle-button:hover {
+  background-color: $darkgray;
+}
+.vidle-button:active {
+  background-color: $black;
+}

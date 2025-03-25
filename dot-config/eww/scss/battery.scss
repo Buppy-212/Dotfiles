@@ -4,7 +4,7 @@
   padding: 0 0.1rem 0 0;
 }
 
-.battery label {
+.battery-label {
   margin: 0 0.1rem 0 0.2rem;
 }
 
@@ -13,5 +13,18 @@
 }
 
 .battery:active {
+  background-color: $black;
+}
+
+.vbattery {
+  color: $green;
+  border-radius: 1rem;
+}
+
+.vbattery:hover {
+  background-color: $darkgray;
+}
+
+.vbattery:active {
   background-color: $black;
 }

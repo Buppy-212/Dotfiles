@@ -12,3 +12,14 @@
 .gamemode-icon {
   color: $cyan;
 }
+
+.vgamemode-button {
+  padding: 0;
+  background: transparent;
+}
+.vgamemode-button:hover {
+  background-color: $darkgray;
+}
+.vgamemode-button:active {
+  background-color: $black;
+}

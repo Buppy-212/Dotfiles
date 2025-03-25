@@ -8,3 +8,14 @@
     )
   )
 )
+
+(defwidget vworkspaces []
+  (eventbox :onscroll "scripts/change-workspace.sh {} ${current_workspace}"
+    (box :orientation "v" :space-evenly false :class "vworkspaces"
+      (for workspace in workspaces
+        (button :class "vworkspace ${current_workspace == workspace.id ? "current" : ""} ${workspace.windows > 0 ? "occupied" : ""}" :onclick "hyprctl dispatch workspace ${workspace.id}"
+        )
+      )
+    )
+  )
+)

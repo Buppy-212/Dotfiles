@@ -5,3 +5,11 @@
     )
   )
 )
+
+(defwidget vbluetooth []
+  (box :orientation "v"
+    (button :onclick "uwsm app -- kitty --title=leftty -e bluetui &" :class "vbluetooth-button" :tooltip "Bluetooth"
+      (label :text "󰂯" :class "bluetooth-icon")
+    )
+  )
+)

@@ -5,3 +5,11 @@
     )
   )
 )
+
+(defwidget vfilter []
+  (box :orientation "v"
+    (button :class "filter-button" :onclick "scripts/filter.sh --toggle" :tooltip "Night Light"
+      (label :class "vfilter-icon" :text filter)
+    )
+  )
+)

@@ -7,3 +7,13 @@
   :namespace "eww"
   (bar)
 )
+
+(defwindow vbar [screen]
+  :monitor screen
+  :geometry (geometry :x "0%" :y "0%" :width "30px" :height "100%" :anchor "left center")
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+  :namespace "eww"
+  (vbar)
+)

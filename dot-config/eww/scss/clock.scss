@@ -10,3 +10,16 @@
 .clock:active {
   background-color: $black;
 }
+
+.vclock {
+  color: $foreground;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+.vclock:hover {
+  background-color: $darkgray;
+}
+.vclock:active {
+  background-color: $black;
+}

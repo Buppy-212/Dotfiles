@@ -27,6 +27,25 @@ tooltip {
   background-color: $background;
 }
 
+.vbar {
+  background-color: $background;
+}
+
+.left {
+  box-shadow: 0 0 4px 2px $black;
+  border-radius: 1rem;
+}
+
+.center {
+  box-shadow: 0 0 4px 2px $black;
+  border-radius: 1rem;
+}
+
+.right {
+  box-shadow: 0 0 4px 2px $black;
+  border-radius: 1rem;
+}
+
 @import "scss/battery.scss";
 @import "scss/bluetooth.scss";
 @import "scss/clock.scss";

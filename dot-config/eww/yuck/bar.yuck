@@ -32,3 +32,33 @@
       (right)
     )
 )
+
+(defwidget vleft []
+  (box :class "left" :orientation "v" :halign "center" :valign "start" :space-evenly false
+    (vworkspaces)
+  )
+)
+
+(defwidget vright []
+  (box :class "right" :halign "center" :valign "end" :orientation "v" :spacing 8 :space-evenly false
+    (vtray)
+    (vbluetooth)
+    (vvolume)
+    (vgamemode)
+    (vidle)
+    (vwifi)
+    (vbattery)
+    (vfilter)
+    (vclock)
+    (updates)
+    (vpower)
+  )
+)
+
+(defwidget vbar []
+  (centerbox :orientation "v"
+      (vleft)
+      (box)
+      (vright)
+    )
+)

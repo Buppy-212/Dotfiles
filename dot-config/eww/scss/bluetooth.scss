@@ -13,3 +13,14 @@
   color: $blue;
   padding: 0 0.3rem;
 }
+.vbluetooth-button {
+  padding: 0;
+  margin: 0.2rem 0;
+  background: transparent;
+}
+.vbluetooth-button:hover {
+  background-color: $darkgray;
+}
+.vbluetooth-button:active {
+  background-color: $black;
+}

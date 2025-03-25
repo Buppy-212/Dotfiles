@@ -13,5 +13,19 @@
 }
 
 .wifi-icon {
-  padding: 0 0.25rem 0 0rem;
+  padding: 0 0.31rem 0 0;
+}
+
+.vwifi-button {
+  color: $green;
+  padding: 0;
+  background: transparent;
+}
+
+.vwifi-button:hover {
+  background-color: $darkgray;
+}
+
+.vwifi-button:active {
+  background-color: $black;
 }

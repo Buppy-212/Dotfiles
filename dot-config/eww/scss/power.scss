@@ -25,3 +25,24 @@
     padding: 0 0.4rem;
   }
 }
+
+.vmenu {
+  background: transparent;
+  padding: 0;
+  &.shutdown {
+    color: $red;
+    padding: 0.1rem 0.3rem 0.2rem 0;
+  }
+  &.reboot {
+    color: $orange;
+    padding: 0.1rem 0;
+  }
+  &.logout {
+    color: $green;
+    padding: 0.1rem 0;
+  }
+  &.lock {
+    color: $cyan;
+    padding: 0.1rem 0;
+  }
+}

@@ -5,3 +5,11 @@
     )
   )
 )
+
+(defwidget vwifi []
+  (box  :orientation "v"  :tooltip "${wifi.name}"
+  (button :onclick "uwsm app -- kitty  --title=leftty -e nmtui &" :class "vwifi-button" :valign "center"
+      (label :class "wifi-icon" :text "${wifi.icon}")
+    )
+  )
+)

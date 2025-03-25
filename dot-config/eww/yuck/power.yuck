@@ -12,3 +12,18 @@
     )
   )
 )
+
+(defwidget vpower []
+  (eventbox :onhover "eww update revealPower=true" :onhoverlost "eww update revealPower=false"
+    (box :orientation "v" :space-evenly false :class "power"
+      (revealer :reveal revealPower :transition "slideup"
+        (box :class "vmenu" :orientation "v" :space-evenly true
+          (button :class "vmenu lock" :onclick "uwsm app -- hyprlock &" :tooltip "Lock" "󰌾")
+          (button :class "vmenu logout" :onclick "uwsm stop" :tooltip "Log Out" "󰍃")
+          (button :class "vmenu reboot" :onclick "systemctl reboot" :tooltip "Reboot" "󰜉")
+        )
+      )
+      (button :class "vmenu shutdown" :onclick "systemctl poweroff" :tooltip "Shutdown" "")
+    )
+  )
+)

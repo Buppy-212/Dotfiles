@@ -23,3 +23,13 @@
   border-radius: 0.2em;
   min-width: 50px;
 }
+
+.vslider {
+  padding: 1rem 0;
+}
+
+.vslider trough {
+  background-color: $blue;
+  border-radius: 0.2em;
+  min-height: 50px;
+}
