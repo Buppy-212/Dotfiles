@@ -8,7 +8,7 @@
 
 (defwidget vclock []
   (box :orientation "v"
-    (button :class "vclock" :onclick "uwsm app -- $XDG_CONFIG_HOME/rofi/scripts/rofi.sh drun icon &"
+    (button :class "vclock" :onclick "uwsm app -- $XDG_CONFIG_HOME/rofi/scripts/rofi.sh drun icon &" :tooltip {formattime(EWW_TIME, "%a %d %b")}
       (label :text {formattime(EWW_TIME, "%H%n%M")})
     )
   )
