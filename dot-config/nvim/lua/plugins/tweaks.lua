@@ -10,6 +10,16 @@ return {
       },
       statuscolumn = { enabled = true },
       picker = {
+        sources = {
+          explorer = {
+            layout = {
+              preset = "sidebar",
+              layout = {
+                position = "right",
+              },
+            },
+          },
+        },
         win = {
           input = {
             keys = {
