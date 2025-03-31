@@ -13,7 +13,7 @@
   (eventbox :class "volume" :onrightclick "eww update revealVolume=true" :onhoverlost "eww update revealVolume=false" :onclick "uwsm app -- kitty --title=leftty -e pulsemixer &" :onmiddleclick "pamixer -t" :onscroll "scripts/volume.sh {}" :tooltip "${volume.volume}%"
     (box :orientation "v" :space-evenly false :class "vvolumebox"
       (revealer :reveal revealVolume :transition "slideup"
-        (scale :onchange "pamixer --set-volume {}" :min 0 :max 101 :orientation "v" :flipped true :value {volume.volume} :class "vslider" :round-digits 0)
+        (scale :onchange "scripts/volume.sh {}" :min 0 :max 101 :orientation "v" :flipped true :value {volume.volume} :class "vslider" :round-digits 0)
       )
       "${volume.icon}"
       )
