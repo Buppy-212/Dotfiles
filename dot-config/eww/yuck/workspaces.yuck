@@ -3,6 +3,7 @@
     (box :orientation "h" :space-evenly false :class "workspaces"
       (for workspace in workspaces
         (button :class "workspace ${current_workspace == workspace.id ? "current" : ""} ${workspace.windows > 0 ? "occupied" : ""}" :onclick "hyprctl dispatch workspace ${workspace.id}"
+          {workspace.id == 10 ? 0 : workspace.id}
         )
       )
     )
@@ -14,6 +15,7 @@
     (box :orientation "v" :space-evenly false :class "vworkspaces"
       (for workspace in workspaces
         (button :class "vworkspace ${current_workspace == workspace.id ? "current" : ""} ${workspace.windows > 0 ? "occupied" : ""}" :onclick "hyprctl dispatch workspace ${workspace.id}"
+          {workspace.id == 10 ? 0 : workspace.id}
         )
       )
     )
