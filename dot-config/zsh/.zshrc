@@ -82,12 +82,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Fzf colorscheme
-. "$HOME"/.config/fzf/theme.sh
-
-# Add local bin to path
-export PATH="$HOME/.local/bin:$PATH"
-
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
